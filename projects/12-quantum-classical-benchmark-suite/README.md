@@ -127,7 +127,7 @@ docker build -t quantum-classical-bench .
 docker run --rm -v "$PWD/reports:/suite/reports" -v "$PWD/runs:/suite/runs" quantum-classical-bench
 ```
 
-Verified locally on macOS/Python 3.12 and in the Linux Docker image: 59 tests pass in both environments, and the container completes the 28-attempt strict smoke matrix. Editable installation and an installed wheel were also verified. The GitHub Actions workflow is supplied but has not been run on a remote repository. No cloud deployment is required.
+Local verification covered macOS with Python 3.12 and the Linux Docker image. All 59 tests passed in both environments, and the container completed the 28-attempt strict smoke matrix. Editable installation and an installed wheel were also verified. See the [GitHub Actions run history](https://github.com/vaibhavkapur/Quantum-Trading/actions/workflows/quantum-classical-benchmark-suite.yml) for hosted results.
 
 ## Roadmap status and boundaries
 
