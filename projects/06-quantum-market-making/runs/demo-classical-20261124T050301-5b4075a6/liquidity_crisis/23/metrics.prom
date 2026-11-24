@@ -1,0 +1,10 @@
+# TYPE mm_net_pnl gauge
+mm_net_pnl{solver="classical",scenario="liquidity_crisis",seed="23"} 24.36597279999999
+# TYPE mm_quote_ack_p99_seconds gauge
+mm_quote_ack_p99_seconds{solver="classical",scenario="liquidity_crisis",seed="23"} 2.517220000000001e-06
+# TYPE mm_inventory_max gauge
+mm_inventory_max{solver="classical",scenario="liquidity_crisis",seed="23"} 7
+# TYPE mm_fallbacks_total gauge
+mm_fallbacks_total{solver="classical",scenario="liquidity_crisis",seed="23"} 0
+# TYPE mm_risk_halted gauge
+mm_risk_halted{solver="classical",scenario="liquidity_crisis",seed="23"} 0

@@ -1,0 +1,21 @@
+# Reduced instance for CI and quick reviewer checks (a few seconds on one CPU core).
+name: tiny
+seeds: [3, 7]
+numeraire: USD
+runs_dir: runs
+
+data:
+  dir: data/tiny
+  currencies: [USD, BTC, ETH, SOL]
+  venues:
+    - {name: alpha, fee_bps: 5.0, feed_delay_ms: [5, 30],  symbol_style: dash}
+    - {name: beta,  fee_bps: 7.5, feed_delay_ms: [10, 50], symbol_style: concat_xbt}
+  n_ticks: 24
+  tick_ms: 250
+  planted: {n_profitable: 3, lengths: [2, 3], edge_bps: [15, 35], duration_ticks: [3, 6]}
+  decoys: {n_thin: 1, n_stale: 1, stale_ticks: 6, stale_jump_bps: 70}
+
+graph: {max_cycle_len: 3}
+qaoa: {maxiter: 20, shots_per_iter: 64, final_shots: 256}
+sa: {reads: 16, sweeps: 40}
+random_search: {samples: 500}

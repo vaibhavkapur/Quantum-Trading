@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "generator_version": 1,
+  "source": "synthetic causal L2 generator",
+  "license": "CC0-1.0 (generated sample only)",
+  "sha256": "500d0bcc491c0202a10e71776fa8ae1f4f1945e2b9cc6a09ec115a457c3344c5",
+  "timestamp_normalization": "integer Unix milliseconds, UTC; no local-time conversion",
+  "rows": 900,
+  "levels": 3,
+  "seed": 31415,
+  "interval_ms": 100,
+  "trades": "none; OFI is inferred from consecutive L2 quotes"
+}

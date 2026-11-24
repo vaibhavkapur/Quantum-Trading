@@ -1,0 +1,34 @@
+{
+  "validated_utc": "2026-11-24T05:07:44.466737+00:00",
+  "source_id": "a1bd776db4597e514b6b5a1b1463b36c2d778a19549bc531dbcf817d45872580",
+  "native_macos_tests": {
+    "passed": 52,
+    "command": ".venv/bin/python -m pytest -q"
+  },
+  "linux_docker_tests": {
+    "passed": 52,
+    "command": "docker run --rm --network none -v \"$PWD/tests:/app/tests:ro\" quantum-market-making:local python -m pytest -q"
+  },
+  "native_sanitizers": {
+    "address": "passed",
+    "undefined_behavior": "passed",
+    "randomized_quote_flow_cycles": 5000
+  },
+  "demo": {
+    "trials": 60,
+    "failed": 0,
+    "fallbacks": 0,
+    "scenarios": 4,
+    "seeds": 3,
+    "strategies": 5
+  },
+  "docker_ci": {
+    "trials": 20,
+    "failed": 0,
+    "fallbacks": 0,
+    "network": "disabled"
+  },
+  "packaging": "editable install and pip check passed",
+  "html_report": "rendered and visually inspected in browser",
+  "monitoring": "Compose configuration validated; exporter rendered 301 samples from stored demo; full monitoring stack not launched"
+}

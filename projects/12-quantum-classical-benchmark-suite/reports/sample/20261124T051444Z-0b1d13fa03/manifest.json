@@ -1,0 +1,872 @@
+{
+  "schema_version": 1,
+  "batch_id": "20261124T051444Z-0b1d13fa03",
+  "status": "complete",
+  "created_at": "2026-11-24T05:14:44.365762+00:00",
+  "config": {
+    "schema_version": 1,
+    "name": "cpu-demo-v1",
+    "dataset": "data/demo-v1",
+    "runs": "runs",
+    "data_seed": 2026,
+    "instances": [
+      {
+        "track": "portfolio",
+        "sizes": [
+          4,
+          6
+        ]
+      },
+      {
+        "track": "basket",
+        "sizes": [
+          4,
+          6
+        ]
+      },
+      {
+        "track": "estimation",
+        "sizes": [
+          4,
+          8
+        ]
+      }
+    ],
+    "seeds": [
+      11,
+      29,
+      47
+    ],
+    "warmups": 1,
+    "budget": {
+      "wall_seconds": 30,
+      "max_evaluations": 256,
+      "max_shots": 4096,
+      "max_oracle_queries": 2048,
+      "mip_nodes": 10000
+    },
+    "algorithm": {
+      "qaoa_layers": 1,
+      "qaoa_iterations": 24,
+      "shots_per_circuit": 128,
+      "qae_powers": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "repair": true
+    },
+    "solvers": [
+      "exact",
+      "milp",
+      "greedy",
+      "annealing",
+      "qaoa",
+      "exact-expectation",
+      "mc",
+      "mc-antithetic",
+      "qae"
+    ],
+    "success_tolerance": 0.05
+  },
+  "protocol_sha256": "fb6a140318d7e9ecb88295f35fede5218cc42781564e3c1549d475eb720da001",
+  "dataset_manifest": {
+    "data_seed": 2026,
+    "generator": "synthetic-finance-v1",
+    "instances": [
+      {
+        "file": "basket-n4-s3930902937-v1.json",
+        "instance_id": "basket-n4-s3930902937-v1",
+        "sha256": "396de809ba16079d1f94a25ec8d4e193ce662d83dc9ab55c30413b9e69cd64d0",
+        "size": 4,
+        "track": "basket"
+      },
+      {
+        "file": "basket-n6-s1144309437-v1.json",
+        "instance_id": "basket-n6-s1144309437-v1",
+        "sha256": "33d2ff88306442f65f696d3416f760d114297b8fdc8e6431c45a9d28b78ce233",
+        "size": 6,
+        "track": "basket"
+      },
+      {
+        "file": "estimation-n4-s896679031-v1.json",
+        "instance_id": "estimation-n4-s896679031-v1",
+        "sha256": "9fd6645003cf364455efaee618d0186581ece016f43d0846d8e79fc3a0d36116",
+        "size": 4,
+        "track": "estimation"
+      },
+      {
+        "file": "estimation-n8-s3993834745-v1.json",
+        "instance_id": "estimation-n8-s3993834745-v1",
+        "sha256": "4358c90ee7070e59ee8767fb2db68ba469cb00a97a8da6964af858942d98ccbb",
+        "size": 8,
+        "track": "estimation"
+      },
+      {
+        "file": "portfolio-n4-s2128604838-v1.json",
+        "instance_id": "portfolio-n4-s2128604838-v1",
+        "sha256": "5edb44ced24fc4a7e90f204fd23207c82dfff590c06d9dadc722dc2a474db6d5",
+        "size": 4,
+        "track": "portfolio"
+      },
+      {
+        "file": "portfolio-n6-s2322670865-v1.json",
+        "instance_id": "portfolio-n6-s2322670865-v1",
+        "sha256": "39e9c2ae875e81c8e9b012a67ec6dbea20d5a1dd3beb9a366d2acfbeca0cabef",
+        "size": 6,
+        "track": "portfolio"
+      }
+    ],
+    "license": "CC0-1.0",
+    "provenance": "Deterministic synthetic data; no external dataset or market timestamps.",
+    "schema_version": 1,
+    "timestamp_policy": "No time-series observations; experiment timestamps use UTC ISO-8601."
+  },
+  "environment": {
+    "python": "3.12.14 (main, Sep 24 2026, 17:46:32) [Clang 22.1.3 ]",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "cpu": "arm",
+    "logical_cpus": 10,
+    "dependencies": {
+      "numpy": "2.5.5",
+      "scipy": "1.18.1",
+      "qiskit": "2.6.2",
+      "PyYAML": "6.0.4",
+      "plotly": "6.5.0",
+      "pyarrow": "26.0.1"
+    },
+    "source_files": {
+      "benchmarks/__init__.py": "d8399e7ff3ec7fef3bc928bf8149170887ff5da7e794c21177e9184044510d8d",
+      "benchmarks/adapters/__init__.py": "96edaf9db4eb5689bddf74189d63403380775228848261c5af97a0acc12fb06a",
+      "benchmarks/adapters/base.py": "1625092c454b8e6579f9594d7d9f03958ea21dd4978c817d98c6485f131eb64d",
+      "benchmarks/adapters/classical.py": "9c158559d9bbe4fdf9fbb75245e3cd14f6f7dd3c774958e474da06af9fc19697",
+      "benchmarks/adapters/estimation.py": "238cf3f0c73302563ba317060d6010e2bc2d2682c0e9cf33ae7c7e5c3c53bffc",
+      "benchmarks/adapters/quantum.py": "ad1a083f444d6a0aeb8d1e33ff5dc3058ddcde4b06f3d375c26147fa151606f3",
+      "benchmarks/instances/__init__.py": "5ea340ae48c7de9f76472790e70628b80407706e9518237931790a5c7aab9c00",
+      "benchmarks/instances/dataset.py": "d6f3506bdb5e16d1cc53cea766c40d7e018e6d7658c1a129f6d4d973499eeb50",
+      "benchmarks/instances/generators.py": "22f928855a1ad733d40ee6a2829b1fffb5b6c6e1c0cc3a6e415bd6f655155011",
+      "benchmarks/instances/schema.py": "98d996fb7b6635280dffcb7ce59d5e79c2d59975a0bb85c27fb722b01e9608bd",
+      "experiments/__init__.py": "256118f8c1c9efdd32af5f2c1ab077dad9105432de29fc3b480bfecb2bc931ad",
+      "experiments/config.py": "42fb9546340e212004541a0ba1a0f439e7ad0c22cb6e769d71ea946bb8214e82",
+      "experiments/runner.py": "f88fd5662e98bb8ca1356c70b062dfa8effe5262a59de4799af205f8744d597c",
+      "experiments/worker.py": "b9bb29003d599da36342d9b4e8c5aea75213c8bea7aa69e3d8f1732c5e78a4d1",
+      "metrics/__init__.py": "541479c9053959c643db763dfa0a43df9626cba357fb5766f30dd8544fc75a45",
+      "metrics/report.py": "9d843fdd35eabac85bfb8c1f94e8ba398cc3f586bf2b5e06686aee9e6bb211aa",
+      "metrics/statistics.py": "320377ab5001e68c85c705b1ffd11352d8bc792c1c20591af2d6c5442d298292",
+      "project/__init__.py": "b2f1720cdbb8f9d990287feb9674e1f368435179c41fd4e67b8b2278fbdc7ec5",
+      "project/prepare_data.py": "79b3bd71e2dea5dbaf151e2f10777b376385b50cf6ea07fbf95cbe57fbcb093b",
+      "project/report.py": "8ff7c52cb57fd56baae96dae0b4d97528ccb30c5295d980a232df1dad7f2a06b",
+      "project/reproduce.py": "08c9e66e025d2fc48842b2061b27a290440810e52adc0690b3550e44d18fc775",
+      "project/run.py": "7a144e000b053f73bf37390ae5d28f8996ff6cec12a6af5e9cfed10842871eeb",
+      "pyproject.toml": "b8e87bf91c84ae2fd38aca89df5d34c35256e24df1b34a587070972b93dfc481",
+      "requirements.txt": "16027b04d1fbad27db948b7ca7871286184909999adbfaf1b44bc0bdcd2e33e0"
+    },
+    "source_sha256": "39756bcbdbac535624d2cbc1670cd09d179a9e92f98eff52a33930929b892899",
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "selected_solvers": [
+    "exact",
+    "milp",
+    "greedy",
+    "annealing",
+    "qaoa",
+    "exact-expectation",
+    "mc",
+    "mc-antithetic",
+    "qae"
+  ],
+  "dataset_validation_seconds": 0.0006720829987898469,
+  "protocol": {
+    "comparison_budget": "hard end-to-end wall seconds; other work units reported separately",
+    "warmup_policy": "isolated discarded attempts before measurements; measurements include cold process startup",
+    "execution_order": "predeclared seeded shuffle after warmups",
+    "repair": "common deterministic linear-score repair, separately timed and labeled",
+    "fallback_policy": "none; errors and timeouts retained",
+    "hardware": "CPU-only; no QPU submission",
+    "reported_wall_excludes": "campaign preflight, warmups, append-only result persistence, report generation; campaign overhead recorded"
+  },
+  "planned_runs": [
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "exact",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "milp",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "greedy",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "annealing",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "qaoa",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "exact",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "milp",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "greedy",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "annealing",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "qaoa",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "estimation-n4-s896679031-v1",
+      "solver": "exact-expectation",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "estimation-n4-s896679031-v1",
+      "solver": "mc",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "estimation-n4-s896679031-v1",
+      "solver": "mc-antithetic",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "estimation-n4-s896679031-v1",
+      "solver": "qae",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "estimation-n8-s3993834745-v1",
+      "solver": "exact-expectation",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "estimation-n8-s3993834745-v1",
+      "solver": "mc",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "estimation-n8-s3993834745-v1",
+      "solver": "mc-antithetic",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "estimation-n8-s3993834745-v1",
+      "solver": "qae",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "exact",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "milp",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "greedy",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "annealing",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "qaoa",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "exact",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "milp",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "greedy",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "annealing",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "qaoa",
+      "seed": 11,
+      "warmup": true
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "milp",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "greedy",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "milp",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "qaoa",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "greedy",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n8-s3993834745-v1",
+      "solver": "mc",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n8-s3993834745-v1",
+      "solver": "exact-expectation",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "annealing",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "milp",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n8-s3993834745-v1",
+      "solver": "mc-antithetic",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n4-s896679031-v1",
+      "solver": "mc-antithetic",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "exact",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n8-s3993834745-v1",
+      "solver": "mc",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "qaoa",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "annealing",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "greedy",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n4-s896679031-v1",
+      "solver": "mc",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "greedy",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "milp",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n8-s3993834745-v1",
+      "solver": "mc-antithetic",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "exact",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n4-s896679031-v1",
+      "solver": "mc-antithetic",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "exact",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "greedy",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "milp",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "qaoa",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "exact",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n8-s3993834745-v1",
+      "solver": "mc-antithetic",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "annealing",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "annealing",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "exact",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "qaoa",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n4-s896679031-v1",
+      "solver": "qae",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n8-s3993834745-v1",
+      "solver": "exact-expectation",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "greedy",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "annealing",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "milp",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "qaoa",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "annealing",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "qaoa",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n4-s896679031-v1",
+      "solver": "qae",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "milp",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n4-s896679031-v1",
+      "solver": "mc",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n4-s896679031-v1",
+      "solver": "mc",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "milp",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "greedy",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "milp",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "qaoa",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n4-s896679031-v1",
+      "solver": "exact-expectation",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n8-s3993834745-v1",
+      "solver": "mc",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "annealing",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n8-s3993834745-v1",
+      "solver": "qae",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "greedy",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "greedy",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "exact",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "annealing",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "annealing",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "milp",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "greedy",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n4-s896679031-v1",
+      "solver": "exact-expectation",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n8-s3993834745-v1",
+      "solver": "exact-expectation",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "qaoa",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n8-s3993834745-v1",
+      "solver": "qae",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "exact",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "milp",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "qaoa",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n4-s896679031-v1",
+      "solver": "mc-antithetic",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "qaoa",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "annealing",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "exact",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n4-s896679031-v1",
+      "solver": "exact-expectation",
+      "seed": 11,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "exact",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "greedy",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "exact",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "milp",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n8-s3993834745-v1",
+      "solver": "qae",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "exact",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n6-s2322670865-v1",
+      "solver": "greedy",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "qaoa",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n4-s3930902937-v1",
+      "solver": "qaoa",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "annealing",
+      "seed": 47,
+      "warmup": false
+    },
+    {
+      "instance_id": "portfolio-n4-s2128604838-v1",
+      "solver": "annealing",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "estimation-n4-s896679031-v1",
+      "solver": "qae",
+      "seed": 29,
+      "warmup": false
+    },
+    {
+      "instance_id": "basket-n6-s1144309437-v1",
+      "solver": "exact",
+      "seed": 11,
+      "warmup": false
+    }
+  ],
+  "completed_at": "2026-11-24T05:15:07.561753+00:00",
+  "measured_runs": 84,
+  "campaign_wall_seconds": 23.2157983329962,
+  "results_sha256": "c5f6b838665965ea058d944db0be017dc34bd02f7b96599e9b1b450cff3b24e2"
+}

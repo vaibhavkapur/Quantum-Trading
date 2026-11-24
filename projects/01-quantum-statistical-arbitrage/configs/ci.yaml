@@ -1,0 +1,9 @@
+# Reduced CPU-only reproducibility config (~1 minute).
+name: ci
+data: {source: synthetic, dir: data/ci, seed: 20240101, n_days: 1100, start: "2017-01-03", l2: {n_events: 60000, seed: 7}}
+walkforward: {train_days: 378, val_days: 126, test_days: 126, step_days: 252}
+budget: {max_evals: 32, time_limit_s: 2.0}
+solvers:
+  classical: [brute_force, greedy, cpsat, random_search, simulated_annealing]
+  quantum: {backend: numpy, p: 1, shots: 128, maxiter: 20, cvar_alpha: 0.5}
+seeds: [11, 23]

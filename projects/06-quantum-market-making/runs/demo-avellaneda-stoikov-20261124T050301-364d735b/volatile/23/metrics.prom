@@ -1,0 +1,10 @@
+# TYPE mm_net_pnl gauge
+mm_net_pnl{solver="avellaneda-stoikov",scenario="volatile",seed="23"} -2.5700363999999922
+# TYPE mm_quote_ack_p99_seconds gauge
+mm_quote_ack_p99_seconds{solver="avellaneda-stoikov",scenario="volatile",seed="23"} 2.391810000000001e-06
+# TYPE mm_inventory_max gauge
+mm_inventory_max{solver="avellaneda-stoikov",scenario="volatile",seed="23"} 5
+# TYPE mm_fallbacks_total gauge
+mm_fallbacks_total{solver="avellaneda-stoikov",scenario="volatile",seed="23"} 0
+# TYPE mm_risk_halted gauge
+mm_risk_halted{solver="avellaneda-stoikov",scenario="volatile",seed="23"} 0

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantum-classical-benchmark-suite"
+version = "0.1.0"
+description = "Reproducible, end-to-end quantum and classical finance benchmarks"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["numpy>=2.0", "scipy>=1.13", "PyYAML>=6.0", "qiskit>=2.2", "plotly>=6.0", "pyarrow>=18"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["benchmarks*", "experiments*", "metrics*", "project*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

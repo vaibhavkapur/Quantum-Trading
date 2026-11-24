@@ -1,0 +1,51 @@
+experiment: synthetic-pairs-v1
+data:
+  pointer: data/demo.json
+  seed: 2026
+  periods: 693
+  sectors: 3
+  assets_per_sector: 3
+  start: '2022-01-03'
+research:
+  train: 252
+  validation: 63
+  test: 63
+  max_candidates: 6
+  pvalue: 0.05
+  min_half_life: 1.0
+  max_half_life: 60.0
+  same_sector_only: true
+selection:
+  max_pairs: 3
+  capital_budget: 3
+  asset_limit: 1
+  sector_limit: 1
+  correlation_penalty: 0.35
+solver:
+  seeds: [7, 19, 41]
+  max_evaluations: 60
+  wall_seconds: 5.0
+  qaoa_depth: 1
+  shots: 512
+  max_qubits: 16
+  backend: qiskit
+  fallback: none
+execution:
+  initial_capital: 100000.0
+  entry_grid: [1.25, 1.75, 2.25]
+  exit_z: 0.25
+  stop_z: 4.0
+  stop_loss_pct: 0.08
+  max_holding: 20
+  refit_every: 21
+  lookback: 252
+  commission_bps: 1.0
+  slippage_bps: 2.0
+  borrow_rate: 0.03
+  financing_rate: 0.01
+  max_gross: 1.0
+output:
+  runs: runs
+  sensitivity_cost_multipliers: [0.5, 2.0]
+  sensitivity_entry_offsets: [-0.25, 0.25]
+

@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+project(market_making LANGUAGES CXX)
+add_library(mm_engine SHARED engine.cpp)
+target_compile_features(mm_engine PRIVATE cxx_std_20)
+target_compile_options(mm_engine PRIVATE -Wall -Wextra -Wpedantic)

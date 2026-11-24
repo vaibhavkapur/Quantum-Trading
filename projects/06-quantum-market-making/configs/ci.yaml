@@ -1,0 +1,15 @@
+extends: demo.yaml
+name: ci
+data:
+  steps: 180
+seeds: [11, 23]
+scenarios: [normal, volatile]
+optimizer:
+  spreads: [1, 2]
+  skews: [0.0, 0.5]
+  inventory_bands: [4, 8]
+  update_interval: 30
+  rolling_window: 30
+  max_evaluations: 12
+  shots: 64
+

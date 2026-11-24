@@ -1,0 +1,36 @@
+name: demo
+data:
+  seed: 1729
+  steps: 1200
+  interval_ns: 100000000
+  initial_mid_ticks: 10000
+  depth_levels: 5
+  depth_qty: 8
+  train_fraction: 0.5
+  validation_fraction: 0.2
+seeds: [11, 23, 37]
+scenarios: [normal, volatile, trend, liquidity_crisis]
+execution:
+  tick_value: 0.01
+  quote_size: 2
+  max_inventory: 12
+  maker_fee_bps: -0.2
+  taker_fee_bps: 2.0
+  cancel_cost: 0.0001
+  max_loss: 20.0
+  max_drawdown: 15.0
+  max_volatility_ticks: 8.0
+  adverse_horizon: 5
+optimizer:
+  spreads: [1, 2, 3]
+  skews: [0.0, 0.25, 0.5]
+  inventory_bands: [4, 8, 12]
+  inventory_penalty: 0.001
+  adverse_penalty: 0.5
+  update_interval: 120
+  rolling_window: 120
+  max_evaluations: 32
+  timeout_seconds: 15.0
+  qaoa_layers: 1
+  shots: 256
+

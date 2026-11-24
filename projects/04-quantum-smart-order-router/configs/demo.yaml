@@ -1,0 +1,90 @@
+# Demo experiment: three venues with a fee / latency / quote-fade trade-off.
+# Prices are in ticks of 0.01 around 100.00, so one tick is about one basis point.
+name: demo
+
+instrument: {tick_size: 0.01, lot_size: 100, start_price: 100.0}
+
+data:
+  seed: 20260101
+  steps: 60000        # x 10 ms = 600 s of market
+  dt_ms: 10
+  levels: 4
+  depth_decay: 1.15
+  splits: {train: 0.5, validation: 0.2, test: 0.3}
+
+venues:
+  - name: FAST          # deep, quick, expensive
+    depth_lots: 4
+    taker_fee: 0.0030
+    maker_fee: -0.0020
+    order_fee: 0.30
+    latency_ms: 0.2
+    latency_jitter_ms: 0.02
+    md_latency_ms: 0.2
+    fade_coeff: 0.2
+    fade_delay_ms: 0.3
+    est_fade_coeff: 0.25
+    impact_coeff: 0.01
+    flow_rate: 30
+    outage_rate_per_min: 0.5
+    outage_ms: 400
+  - name: MID           # cheaper, slower: fades after FAST prints
+    depth_lots: 3
+    taker_fee: 0.0018
+    maker_fee: -0.0012
+    order_fee: 0.30
+    latency_ms: 1.0
+    latency_jitter_ms: 0.1
+    md_latency_ms: 1.0
+    fade_coeff: 0.6
+    fade_delay_ms: 0.5
+    est_fade_coeff: 0.5
+    impact_coeff: 0.015
+    flow_rate: 20
+    throttle_max_orders: 4
+    throttle_window_ms: 100
+  - name: SLOW          # cheapest, thin, slowest: fades after FAST and MID
+    depth_lots: 3
+    taker_fee: 0.0005
+    maker_fee: 0.0
+    order_fee: 0.60
+    latency_ms: 3.0
+    latency_jitter_ms: 0.3
+    md_latency_ms: 2.5
+    fade_coeff: 0.8
+    fade_delay_ms: 1.0
+    est_fade_coeff: 0.9
+    impact_coeff: 0.02
+    flow_rate: 10
+    outage_rate_per_min: 1.0
+    outage_ms: 600
+
+orders: {rate_per_s: 3.0, sizes_lots: [2, 4, 6, 8], horizon_ms: 400, warmup_ms: 500}
+
+execution:
+  limit_ticks: 1
+  final_limit_ticks: 3
+  participation: 0.5
+  max_sweeps: 2
+  reprice_ms: 100
+  cooldown_ms: 200
+  heartbeat_ms: 20
+  replenish_halflife_ms: 200
+
+optimizer:
+  refresh_ms: 1000
+  delay_model: fixed      # "measured" publishes after the solver's real wall time (not reproducible)
+  publish_delay_ms: 50
+  timeout_ms: 2000
+  max_policy_age_ms: 3000
+  buckets_lots: [2, 4, 6, 8]
+  max_units: 4            # allocation granularity; 3 venues x 4 units = 12 qubits
+  nonfill_penalty_grid: [1.0, 2.0, 4.0]
+
+solvers:
+  qaoa: {layers: 2, maxiter: 40, shots: 256, max_qubits: 16, backend: numpy, warm_start: true}
+  sa: {sweeps: 60, restarts: 2}
+  random_repair: {shots: 256}
+
+seeds: [11, 23, 37, 41, 59]
+runs_root: runs

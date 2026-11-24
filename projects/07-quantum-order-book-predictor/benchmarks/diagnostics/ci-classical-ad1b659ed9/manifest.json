@@ -1,0 +1,1118 @@
+{
+  "schema_version": 1,
+  "run_id": "ci-classical-ad1b659ed9",
+  "protocol_id": "5f3b29f716ff89ee",
+  "solver": "classical",
+  "created_utc": "2026-11-24T04:56:59.093365+00:00",
+  "status": "completed_with_failures",
+  "config": {
+    "name": "ci",
+    "data_path": "data/ci.csv",
+    "runs_dir": "runs",
+    "n_snapshots": 240,
+    "levels": 3,
+    "interval_ms": 100,
+    "data_seed": 31415,
+    "horizon": 3,
+    "label_threshold_bps": 0.5,
+    "embargo": 3,
+    "train_fraction": 0.45,
+    "calibration_fraction": 0.12,
+    "validation_fraction": 0.12,
+    "folds": 1,
+    "train_samples": 18,
+    "seeds": [
+      11
+    ],
+    "qubits": [
+      2
+    ],
+    "encodings": [
+      "angle"
+    ],
+    "shots": [
+      null,
+      128
+    ],
+    "circuit_layers": 2,
+    "max_iterations": 3,
+    "fit_budget_seconds": 30,
+    "fee_bps": 0.5,
+    "slippage_bps": 0.2,
+    "execution_delay": 1,
+    "thresholds": [
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      1.0
+    ],
+    "latency_samples": 5
+  },
+  "config_sha256_prefix": "7d6876384daf",
+  "source_sha256": "0c0c131ccffd908b7d357b5d814f3cf4374ba36b58f056a13200b3df9fa41242",
+  "dataset": {
+    "schema_version": 1,
+    "generator_version": 1,
+    "source": "synthetic causal L2 generator",
+    "license": "CC0-1.0 (generated sample only)",
+    "sha256": "de0cb19816114f2941ffed8fb14bd8a42b2991ff2ab674f108f8500774d40bfa",
+    "timestamp_normalization": "integer Unix milliseconds, UTC; no local-time conversion",
+    "rows": 240,
+    "levels": 3,
+    "seed": 31415,
+    "interval_ms": 100,
+    "trades": "none; OFI is inferred from consecutive L2 quotes"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Sep 24 2026, 17:46:32) [Clang 22.1.3 ]",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "packages": {
+      "numpy": "2.5.5",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "polars": "2.1.0",
+      "pennylane": "0.45.1",
+      "torch": "2.15.0",
+      "xgboost": "3.4.1",
+      "PyYAML": "6.0.4"
+    },
+    "blas_threads": 1,
+    "torch_threads": 1,
+    "xgboost_threads": 1
+  },
+  "features": [
+    "imbalance_touch",
+    "imbalance_depth",
+    "microprice_offset_bps",
+    "spread_bps",
+    "log_bid_depth",
+    "log_ask_depth",
+    "weighted_imbalance",
+    "ofi_touch",
+    "ofi_5",
+    "return_1_bps",
+    "return_5_bps",
+    "volatility_5_bps"
+  ],
+  "class_order": [
+    "down",
+    "flat",
+    "up"
+  ],
+  "splits": [
+    {
+      "fold": 0,
+      "train": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "calibration": [
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132
+      ],
+      "validation": [
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160
+      ],
+      "test": [
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "majority-q2-shared-sNone-f0-seed11",
+      "model": "majority",
+      "qubits": 2,
+      "encoding": "shared",
+      "shots": null,
+      "fold": 0,
+      "seed": 11,
+      "status": "ok",
+      "train_indices": [
+        7,
+        11,
+        13,
+        18,
+        19,
+        32,
+        43,
+        48,
+        49,
+        56,
+        57,
+        58,
+        68,
+        79,
+        89,
+        92,
+        99,
+        101
+      ],
+      "train_class_counts": [
+        10,
+        2,
+        6
+      ],
+      "timing": {
+        "preprocessing_seconds": 0.017895582990604453,
+        "model_initialization_seconds": 4.458997864276171e-06,
+        "fit_seconds": 0.00013908300024922937,
+        "calibration_seconds": 0.0004571669996948913,
+        "threshold_selection_seconds": 0.00040262499533127993,
+        "batch_test_inference_seconds": 3.74590017599985e-05,
+        "stream_profile_seconds": 0.0011277500016149133,
+        "artifact_writing_seconds": 0.0008013339975150302,
+        "trial_total_seconds": 0.023689915993600152
+      },
+      "warnings": [],
+      "training_resources": {
+        "optimizer_iterations": 0,
+        "objective_evaluations": null,
+        "circuit_executions": 0,
+        "measurement_shots": 0,
+        "fallback": null
+      },
+      "temperature": 9.97412099447363,
+      "threshold_trials": [
+        {
+          "trades": 8,
+          "gross_bps": 3.0018009401660155,
+          "net_bps": -17.205546165925448,
+          "mean_trade_bps": -2.150693270740681,
+          "net_quote_currency": -0.17190970005993883,
+          "max_drawdown_bps": 17.20554616592545,
+          "hit_rate": 0.0,
+          "turnover_units": 16,
+          "threshold": 0.4
+        },
+        {
+          "trades": 8,
+          "gross_bps": 3.0018009401660155,
+          "net_bps": -17.205546165925448,
+          "mean_trade_bps": -2.150693270740681,
+          "net_quote_currency": -0.17190970005993883,
+          "max_drawdown_bps": 17.20554616592545,
+          "hit_rate": 0.0,
+          "turnover_units": 16,
+          "threshold": 0.5
+        },
+        {
+          "trades": 8,
+          "gross_bps": 3.0018009401660155,
+          "net_bps": -17.205546165925448,
+          "mean_trade_bps": -2.150693270740681,
+          "net_quote_currency": -0.17190970005993883,
+          "max_drawdown_bps": 17.20554616592545,
+          "hit_rate": 0.0,
+          "turnover_units": 16,
+          "threshold": 0.6
+        },
+        {
+          "trades": 8,
+          "gross_bps": 3.0018009401660155,
+          "net_bps": -17.205546165925448,
+          "mean_trade_bps": -2.150693270740681,
+          "net_quote_currency": -0.17190970005993883,
+          "max_drawdown_bps": 17.20554616592545,
+          "hit_rate": 0.0,
+          "turnover_units": 16,
+          "threshold": 0.7
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 1.0
+        }
+      ],
+      "uncalibrated_metrics": {
+        "balanced_accuracy": 0.3333333333333333,
+        "macro_f1": 0.18055555555555555,
+        "log_loss": 22.656010701730782,
+        "brier_score": 1.2571428571428571,
+        "ece": 0.6285714285714286,
+        "per_class": {
+          "down": {
+            "precision": 0.37142857142857144,
+            "recall": 1.0,
+            "f1": 0.5416666666666666,
+            "support": 26
+          },
+          "flat": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          "up": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 29
+          }
+        },
+        "confusion_matrix": [
+          [
+            26,
+            0,
+            0
+          ],
+          [
+            15,
+            0,
+            0
+          ],
+          [
+            29,
+            0,
+            0
+          ]
+        ]
+      },
+      "metrics": {
+        "balanced_accuracy": 0.3333333333333333,
+        "macro_f1": 0.18055555555555555,
+        "log_loss": 1.8593541800318771,
+        "brier_score": 1.065782013413724,
+        "ece": 0.5172312297192663,
+        "per_class": {
+          "down": {
+            "precision": 0.37142857142857144,
+            "recall": 1.0,
+            "f1": 0.5416666666666666,
+            "support": 26
+          },
+          "flat": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          "up": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 29
+          }
+        },
+        "confusion_matrix": [
+          [
+            26,
+            0,
+            0
+          ],
+          [
+            15,
+            0,
+            0
+          ],
+          [
+            29,
+            0,
+            0
+          ]
+        ]
+      },
+      "trading": {
+        "trades": 0,
+        "gross_bps": 0.0,
+        "net_bps": 0.0,
+        "mean_trade_bps": 0.0,
+        "net_quote_currency": 0.0,
+        "max_drawdown_bps": 0.0,
+        "hit_rate": 0.0,
+        "turnover_units": 0,
+        "threshold": 1.0
+      },
+      "test_resources": {
+        "optimizer_iterations": 0,
+        "objective_evaluations": null,
+        "circuit_executions": 0,
+        "measurement_shots": 0,
+        "fallback": null
+      },
+      "latency": {
+        "samples": 5,
+        "p50_ms": 0.17175,
+        "p95_ms": 0.2055162,
+        "p99_ms": 0.21013604,
+        "max_ms": 0.211291,
+        "throughput_per_second": 5551.959119814608,
+        "scope": "snapshot conversion + validation + causal features + scaling/PCA + model + calibration + decision",
+        "includes_network": false
+      },
+      "model_bytes": 2374,
+      "model_path": "models/majority-q2-shared-sNone-f0-seed11.pkl",
+      "resources_including_profile": {
+        "optimizer_iterations": 0,
+        "objective_evaluations": null,
+        "circuit_executions": 0,
+        "measurement_shots": 0,
+        "fallback": null
+      }
+    },
+    {
+      "id": "logistic-q2-shared-sNone-f0-seed11",
+      "model": "logistic",
+      "qubits": 2,
+      "encoding": "shared",
+      "shots": null,
+      "fold": 0,
+      "seed": 11,
+      "status": "ok",
+      "train_indices": [
+        7,
+        11,
+        13,
+        18,
+        19,
+        32,
+        43,
+        48,
+        49,
+        56,
+        57,
+        58,
+        68,
+        79,
+        89,
+        92,
+        99,
+        101
+      ],
+      "train_class_counts": [
+        10,
+        2,
+        6
+      ],
+      "timing": {
+        "preprocessing_seconds": 0.017895582990604453,
+        "model_initialization_seconds": 2.1249870769679546e-06,
+        "fit_seconds": 0.0027704579988494515,
+        "calibration_seconds": 0.00026825000531971455,
+        "threshold_selection_seconds": 0.00036012500640936196,
+        "batch_test_inference_seconds": 7.72500061430037e-05,
+        "stream_profile_seconds": 0.0012397079990478233,
+        "artifact_writing_seconds": 0.0006828750047134236,
+        "trial_total_seconds": 0.025643207991379313
+      },
+      "warnings": [
+        "lbfgs failed to converge after 3 iteration(s) (status=1):\nSTOP: TOTAL NO. OF ITERATIONS REACHED LIMIT\n\nIncrease the number of iterations to improve the convergence (max_iter=3).\nYou might also want to scale the data as shown in:\n    https://scikit-learn.org/stable/modules/preprocessing.html\nPlease also refer to the documentation for alternative solver options:\n    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression"
+      ],
+      "training_resources": {
+        "optimizer_iterations": 3,
+        "objective_evaluations": null,
+        "circuit_executions": 0,
+        "measurement_shots": 0
+      },
+      "temperature": 2.74559332228974,
+      "threshold_trials": [
+        {
+          "trades": 7,
+          "gross_bps": 6.0044034829416795,
+          "net_bps": -11.801231391266123,
+          "mean_trade_bps": -1.6858901987523034,
+          "net_quote_currency": -0.11792300001994369,
+          "max_drawdown_bps": 11.801231391266123,
+          "hit_rate": 0.0,
+          "turnover_units": 14,
+          "threshold": 0.4
+        },
+        {
+          "trades": 6,
+          "gross_bps": 6.003501329089679,
+          "net_bps": -8.901318202253094,
+          "mean_trade_bps": -1.483553033708849,
+          "net_quote_currency": -0.0889275500049463,
+          "max_drawdown_bps": 8.901318202253094,
+          "hit_rate": 0.16666666666666666,
+          "turnover_units": 12,
+          "threshold": 0.5
+        },
+        {
+          "trades": 5,
+          "gross_bps": 6.004503593031325,
+          "net_bps": -7.000030641790634,
+          "mean_trade_bps": -1.4000061283581267,
+          "net_quote_currency": -0.06993839999996088,
+          "max_drawdown_bps": 7.000030641790634,
+          "hit_rate": 0.0,
+          "turnover_units": 10,
+          "threshold": 0.6
+        },
+        {
+          "trades": 1,
+          "gross_bps": 2.002402883458331,
+          "net_bps": -0.8992240683817819,
+          "mean_trade_bps": -0.8992240683817819,
+          "net_quote_currency": -0.008981449994997238,
+          "max_drawdown_bps": 0.8992240683817819,
+          "hit_rate": 0.0,
+          "turnover_units": 2,
+          "threshold": 0.7
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 1.0
+        }
+      ],
+      "uncalibrated_metrics": {
+        "balanced_accuracy": 0.46198054818744466,
+        "macro_f1": 0.41260593220338987,
+        "log_loss": 1.1562294661713997,
+        "brier_score": 0.6471337923336481,
+        "ece": 0.19237002744754317,
+        "per_class": {
+          "down": {
+            "precision": 0.5,
+            "recall": 0.7307692307692307,
+            "f1": 0.59375,
+            "support": 26
+          },
+          "flat": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          "up": {
+            "precision": 0.6333333333333333,
+            "recall": 0.6551724137931034,
+            "f1": 0.6440677966101694,
+            "support": 29
+          }
+        },
+        "confusion_matrix": [
+          [
+            19,
+            1,
+            6
+          ],
+          [
+            10,
+            0,
+            5
+          ],
+          [
+            9,
+            1,
+            19
+          ]
+        ]
+      },
+      "metrics": {
+        "balanced_accuracy": 0.46198054818744466,
+        "macro_f1": 0.41260593220338987,
+        "log_loss": 0.980725361986371,
+        "brier_score": 0.5920514761787423,
+        "ece": 0.1127055796239643,
+        "per_class": {
+          "down": {
+            "precision": 0.5,
+            "recall": 0.7307692307692307,
+            "f1": 0.59375,
+            "support": 26
+          },
+          "flat": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          "up": {
+            "precision": 0.6333333333333333,
+            "recall": 0.6551724137931034,
+            "f1": 0.6440677966101694,
+            "support": 29
+          }
+        },
+        "confusion_matrix": [
+          [
+            19,
+            1,
+            6
+          ],
+          [
+            10,
+            0,
+            5
+          ],
+          [
+            9,
+            1,
+            19
+          ]
+        ]
+      },
+      "trading": {
+        "trades": 0,
+        "gross_bps": 0.0,
+        "net_bps": 0.0,
+        "mean_trade_bps": 0.0,
+        "net_quote_currency": 0.0,
+        "max_drawdown_bps": 0.0,
+        "hit_rate": 0.0,
+        "turnover_units": 0,
+        "threshold": 1.0
+      },
+      "test_resources": {
+        "optimizer_iterations": 3,
+        "objective_evaluations": null,
+        "circuit_executions": 0,
+        "measurement_shots": 0
+      },
+      "latency": {
+        "samples": 5,
+        "p50_ms": 0.198458,
+        "p95_ms": 0.2384,
+        "p99_ms": 0.24348,
+        "max_ms": 0.24475,
+        "throughput_per_second": 4763.606049779683,
+        "scope": "snapshot conversion + validation + causal features + scaling/PCA + model + calibration + decision",
+        "includes_network": false
+      },
+      "model_bytes": 2632,
+      "model_path": "models/logistic-q2-shared-sNone-f0-seed11.pkl",
+      "resources_including_profile": {
+        "optimizer_iterations": 3,
+        "objective_evaluations": null,
+        "circuit_executions": 0,
+        "measurement_shots": 0
+      }
+    },
+    {
+      "id": "xgboost-q2-shared-sNone-f0-seed11",
+      "model": "xgboost",
+      "qubits": 2,
+      "encoding": "shared",
+      "shots": null,
+      "fold": 0,
+      "seed": 11,
+      "status": "failed",
+      "train_indices": [
+        7,
+        11,
+        13,
+        18,
+        19,
+        32,
+        43,
+        48,
+        49,
+        56,
+        57,
+        58,
+        68,
+        79,
+        89,
+        92,
+        99,
+        101
+      ],
+      "train_class_counts": [
+        10,
+        2,
+        6
+      ],
+      "timing": {
+        "preprocessing_seconds": 0.017895582990604453,
+        "model_initialization_seconds": 1.5419936971738935e-06,
+        "trial_total_seconds": 0.2617619159864262
+      },
+      "warnings": [],
+      "error": "XGBoostError: \nXGBoost Library (libxgboost.dylib) could not be loaded.\nLikely causes:\n  * OpenMP runtime is not installed\n    - vcomp140.dll or libgomp-1.dll for Windows\n    - libomp.dylib for Mac OSX\n    - libgomp.so for Linux and other UNIX-like OSes\n    Mac OSX users: Run `brew install libomp` to install OpenMP runtime.\n\n  * You are running 32-bit Python on a 64-bit OS\n\nError message(s): [\"dlopen(/Users/vaibhavkapur/Desktop/quantum-trading-projects/07-quantum-order-book-predictor/.venv/lib/python3.12/site-packages/xgboost/lib/libxgboost.dylib, 0x0006): Library not loaded: @rpath/libomp.dylib\\n  Referenced from: <09B43001-8527-34F6-AAE4-B97DA8A6CBC0> /Users/vaibhavkapur/Desktop/quantum-trading-projects/07-quantum-order-book-predictor/.venv/lib/python3.12/site-packages/xgboost/lib/libxgboost.dylib\\n  Reason: tried: '/opt/homebrew/opt/libomp/lib/libomp.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/opt/libomp/lib/libomp.dylib' (no such file), '/opt/homebrew/opt/libomp/lib/libomp.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/opt/libomp/lib/libomp.dylib' (no such file), '/Users/vaibhavkapur/Desktop/agentic-finance-plans/01 - Personal Banker/.tools/python/cpython-3.12.14-macos-aarch64-none/lib/libomp.dylib' (no such file), '/Users/vaibhavkapur/Desktop/agentic-finance-plans/01 - Personal Banker/.tools/python/cpython-3.12.14-macos-aarch64-none/lib/libomp.dylib' (no such file)\"]\n",
+      "resources_at_failure": {
+        "optimizer_iterations": 0,
+        "objective_evaluations": null,
+        "circuit_executions": 0,
+        "measurement_shots": 0
+      }
+    },
+    {
+      "id": "mlp-q2-shared-sNone-f0-seed11",
+      "model": "mlp",
+      "qubits": 2,
+      "encoding": "shared",
+      "shots": null,
+      "fold": 0,
+      "seed": 11,
+      "status": "ok",
+      "train_indices": [
+        7,
+        11,
+        13,
+        18,
+        19,
+        32,
+        43,
+        48,
+        49,
+        56,
+        57,
+        58,
+        68,
+        79,
+        89,
+        92,
+        99,
+        101
+      ],
+      "train_class_counts": [
+        10,
+        2,
+        6
+      ],
+      "timing": {
+        "preprocessing_seconds": 0.017895582990604453,
+        "model_initialization_seconds": 2.7080095605924726e-06,
+        "fit_seconds": 5.912976124993293,
+        "calibration_seconds": 0.0003152090066578239,
+        "threshold_selection_seconds": 0.00035458400088828057,
+        "batch_test_inference_seconds": 6.125000072643161e-05,
+        "stream_profile_seconds": 0.0011065410071751103,
+        "artifact_writing_seconds": 0.0010077909973915666,
+        "trial_total_seconds": 5.9366953739809105
+      },
+      "warnings": [],
+      "training_resources": {
+        "optimizer_iterations": 3,
+        "objective_evaluations": 3,
+        "circuit_executions": 0,
+        "measurement_shots": 0
+      },
+      "temperature": 0.46877795376488346,
+      "threshold_trials": [
+        {
+          "trades": 8,
+          "gross_bps": 1.0008004399148664,
+          "net_bps": -19.206546668176177,
+          "mean_trade_bps": -2.400818333522022,
+          "net_quote_currency": -0.19190970007993485,
+          "max_drawdown_bps": 19.206546668176177,
+          "hit_rate": 0.0,
+          "turnover_units": 16,
+          "threshold": 0.4
+        },
+        {
+          "trades": 7,
+          "gross_bps": 5.003803122725038,
+          "net_bps": -12.802001904599514,
+          "mean_trade_bps": -1.8288574149427876,
+          "net_quote_currency": -0.12792230002994645,
+          "max_drawdown_bps": 12.802001904599514,
+          "hit_rate": 0.0,
+          "turnover_units": 14,
+          "threshold": 0.5
+        },
+        {
+          "trades": 6,
+          "gross_bps": 6.003501329089679,
+          "net_bps": -8.901318202253094,
+          "mean_trade_bps": -1.483553033708849,
+          "net_quote_currency": -0.0889275500049463,
+          "max_drawdown_bps": 8.901318202253094,
+          "hit_rate": 0.16666666666666666,
+          "turnover_units": 12,
+          "threshold": 0.6
+        },
+        {
+          "trades": 6,
+          "gross_bps": 6.003501329089679,
+          "net_bps": -8.901318202253094,
+          "mean_trade_bps": -1.483553033708849,
+          "net_quote_currency": -0.0889275500049463,
+          "max_drawdown_bps": 8.901318202253094,
+          "hit_rate": 0.16666666666666666,
+          "turnover_units": 12,
+          "threshold": 0.7
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 1.0
+        }
+      ],
+      "uncalibrated_metrics": {
+        "balanced_accuracy": 0.46198054818744466,
+        "macro_f1": 0.40598290598290604,
+        "log_loss": 0.9905657071501224,
+        "brier_score": 0.590478305079244,
+        "ece": 0.06762904823839598,
+        "per_class": {
+          "down": {
+            "precision": 0.48717948717948717,
+            "recall": 0.7307692307692307,
+            "f1": 0.5846153846153846,
+            "support": 26
+          },
+          "flat": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          "up": {
+            "precision": 0.6129032258064516,
+            "recall": 0.6551724137931034,
+            "f1": 0.6333333333333333,
+            "support": 29
+          }
+        },
+        "confusion_matrix": [
+          [
+            19,
+            0,
+            7
+          ],
+          [
+            10,
+            0,
+            5
+          ],
+          [
+            10,
+            0,
+            19
+          ]
+        ]
+      },
+      "metrics": {
+        "balanced_accuracy": 0.46198054818744466,
+        "macro_f1": 0.40598290598290604,
+        "log_loss": 1.0511891842890753,
+        "brier_score": 0.6125789104689967,
+        "ece": 0.14876507254059618,
+        "per_class": {
+          "down": {
+            "precision": 0.48717948717948717,
+            "recall": 0.7307692307692307,
+            "f1": 0.5846153846153846,
+            "support": 26
+          },
+          "flat": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          "up": {
+            "precision": 0.6129032258064516,
+            "recall": 0.6551724137931034,
+            "f1": 0.6333333333333333,
+            "support": 29
+          }
+        },
+        "confusion_matrix": [
+          [
+            19,
+            0,
+            7
+          ],
+          [
+            10,
+            0,
+            5
+          ],
+          [
+            10,
+            0,
+            19
+          ]
+        ]
+      },
+      "trading": {
+        "trades": 0,
+        "gross_bps": 0.0,
+        "net_bps": 0.0,
+        "mean_trade_bps": 0.0,
+        "net_quote_currency": 0.0,
+        "max_drawdown_bps": 0.0,
+        "hit_rate": 0.0,
+        "turnover_units": 0,
+        "threshold": 1.0
+      },
+      "test_resources": {
+        "optimizer_iterations": 3,
+        "objective_evaluations": 3,
+        "circuit_executions": 0,
+        "measurement_shots": 0
+      },
+      "latency": {
+        "samples": 5,
+        "p50_ms": 0.173125,
+        "p95_ms": 0.2182,
+        "p99_ms": 0.22504000000000002,
+        "max_ms": 0.22675,
+        "throughput_per_second": 5410.031713605905,
+        "scope": "snapshot conversion + validation + causal features + scaling/PCA + model + calibration + decision",
+        "includes_network": false
+      },
+      "model_bytes": 5109,
+      "model_path": "models/mlp-q2-shared-sNone-f0-seed11.pkl",
+      "resources_including_profile": {
+        "optimizer_iterations": 3,
+        "objective_evaluations": 3,
+        "circuit_executions": 0,
+        "measurement_shots": 0
+      }
+    }
+  ],
+  "shared_timing": {
+    "bootstrap_seconds": 18.143818500000634,
+    "data_loading_seconds": 0.005939832990407012,
+    "features_labels_splits_seconds": 0.0012056249979650602
+  },
+  "budget": {
+    "max_training_rows": 18,
+    "fit_seconds_per_candidate": 30,
+    "candidates_per_model": 1,
+    "native_iteration_cap": 3,
+    "enforcement": "cooperative checks plus post-fit rejection; native calls may overrun before rejection",
+    "comparison": "same rows, reduced inputs, horizon, cost model, wall-time allowance; iterations are not equivalent work"
+  },
+  "execution": {
+    "unit_size": 1,
+    "delay_snapshots": 1,
+    "holding_exit": "signal index + horizon",
+    "fees_per_side_bps": 0.5,
+    "slippage_per_side_bps": 0.2,
+    "spread": "actual future touch quotes",
+    "overlap": "at most one position"
+  },
+  "hardware": false,
+  "notes": [
+    "Synthetic research experiment; no evidence of live profitability or quantum advantage.",
+    "Quantum kernel caches exact simulator states. Binomial shots are a CPU measurement model, not hardware queries.",
+    "Compilation is eager QNode construction/execution; no QPU compilation, queue or communication.",
+    "Training, calibration, threshold tuning and test windows are separate and purged."
+  ],
+  "wall_seconds": 24.386418916998082
+}

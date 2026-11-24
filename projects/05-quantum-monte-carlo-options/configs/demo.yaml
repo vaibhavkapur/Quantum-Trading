@@ -1,0 +1,57 @@
+# Demo experiment: runs on a laptop CPU in well under a minute.
+name: demo
+market: {spot: 100.0, rate: 0.05, vol: 0.2}
+confidence: 0.95
+seeds: [11, 23, 37, 41, 53, 67, 79, 83, 97, 101]   # predeclared; every stochastic result is repeated over these
+
+instruments:
+  - {name: european_call, kind: european_call, strike: 100.0, maturity: 1.0}
+  - {name: european_put, kind: european_put, strike: 100.0, maturity: 1.0}
+  - {name: asian_call_3, kind: asian_call, strike: 100.0, maturity: 1.0, steps: 3}
+  - {name: up_out_call_3, kind: barrier_up_out_call, strike: 100.0, maturity: 1.0, steps: 3, barrier: 130.0}
+
+data:
+  path: data/gbm_paths.npz
+  n_paths: 50000
+  seed: 20240101
+
+reference:            # high-precision classical price where no closed form exists
+  n_paths: 4194304
+  seed: 999
+
+classical:
+  n_paths: 200000
+  methods: [plain, antithetic, control_variate, qmc]
+  greeks: {n_paths: 200000, rel_bump: 0.01}
+  error_curve:
+    instrument: european_call
+    n_paths: [1024, 4096, 16384, 65536, 262144, 1048576]
+    repeats: 40
+
+quantum:
+  qubits_european: 5                 # 32 terminal-price grid points
+  truncation_european: 4.0           # normal cut at +/- 4 sigma (see the discretisation sweep)
+  qubits_per_step: 3                 # path-dependent: 3 steps x 3 qubits = 512 paths
+  truncation_path_dependent: 3.0     # 8 points per step cannot resolve a wider range
+  iqae: {epsilon: 0.002, shots: 100}
+  mlae: {max_power_exponent: 6, shots: 100}
+  direct_sampling: {shots: 20000}
+  scaling:
+    instrument: european_call
+    repeats: 40
+    direct_sampling_shots: [100, 400, 1600, 6400, 25600, 102400]
+    mlae_exponents: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    mlae_shots: 32
+    iqae_epsilons: [0.05, 0.02, 0.01, 0.005, 0.002, 0.001, 0.0005, 0.0002]
+  discretization_qubits: [2, 3, 4, 5, 6, 7, 8]      # grid-resolution sweep ...
+  discretization_truncations: [3.0, 4.0, 5.0]       # ... at several tail cut-offs
+  noise: {rates: [0.0, 0.001, 0.005, 0.02], max_power_exponent: 8, shots: 100, repeats: 200}
+  delta: {instrument: european_call, rel_bumps: [0.05, 0.02, 0.01], epsilon: 0.001}
+
+# Assumptions for turning query counts into hypothetical device time.
+# These are inputs, not measurements.
+resource_model:
+  target_price_errors: [0.1, 0.01, 0.001]
+  physical_two_qubit_gate_s: 1.0e-7      # optimistic NISQ gate time, no error correction
+  logical_cx_s: 1.0e-4                   # assumed fault-tolerant logical CX time
+  t_gates_per_rotation: 50               # rough synthesis cost of one arbitrary RZ

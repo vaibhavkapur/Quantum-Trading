@@ -1,0 +1,10 @@
+# TYPE mm_net_pnl gauge
+mm_net_pnl{solver="quantum-sim",scenario="liquidity_crisis",seed="37"} 25.294514799999945
+# TYPE mm_quote_ack_p99_seconds gauge
+mm_quote_ack_p99_seconds{solver="quantum-sim",scenario="liquidity_crisis",seed="37"} 8.807720000000083e-06
+# TYPE mm_inventory_max gauge
+mm_inventory_max{solver="quantum-sim",scenario="liquidity_crisis",seed="37"} 3
+# TYPE mm_fallbacks_total gauge
+mm_fallbacks_total{solver="quantum-sim",scenario="liquidity_crisis",seed="37"} 0
+# TYPE mm_risk_halted gauge
+mm_risk_halted{solver="quantum-sim",scenario="liquidity_crisis",seed="37"} 0

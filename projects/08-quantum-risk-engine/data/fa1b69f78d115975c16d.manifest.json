@@ -1,0 +1,46 @@
+{
+  "spec": {
+    "format_version": 1,
+    "generator": "numpy-pcg64-eigenfactor-einsum-v1",
+    "seed": 42,
+    "assets": [
+      "EQUITY",
+      "BONDS",
+      "GOLD"
+    ],
+    "model": {
+      "mean": [
+        0.0003,
+        0.0001,
+        0.00015
+      ],
+      "covariance": [
+        [
+          0.000144,
+          1.08e-05,
+          1.44e-05
+        ],
+        [
+          1.08e-05,
+          3.6e-05,
+          -4.8e-06
+        ],
+        [
+          1.44e-05,
+          -4.8e-06,
+          6.4e-05
+        ]
+      ],
+      "distribution": "gaussian",
+      "df": 5.0
+    },
+    "observations": 1000,
+    "start_date": "2020-01-01"
+  },
+  "spec_sha256": "fa1b69f78d115975c16d1832298a59f018bce20e76087f295344b24fd91c54a4",
+  "file": "78f4c9cd09d4a79ff938b432599b475ce4f51e4bc4b83b86ca6c9b9bc57d8175.csv",
+  "sha256": "78f4c9cd09d4a79ff938b432599b475ce4f51e4bc4b83b86ca6c9b9bc57d8175",
+  "license": "CC0-1.0 (generated synthetic data)",
+  "timestamp_normalization": "UTC midnight, synthetic weekdays, no exchange holiday calendar",
+  "units": "one-day simple returns; not market observations"
+}

@@ -1,0 +1,12 @@
+reports/ci.html
+data/ci.csv
+{"id": "majority-q2-shared-sNone-f0-seed11", "status": "ok", "error": null}
+{"id": "logistic-q2-shared-sNone-f0-seed11", "status": "ok", "error": null}
+{"id": "xgboost-q2-shared-sNone-f0-seed11", "status": "ok", "error": null}
+{"id": "mlp-q2-shared-sNone-f0-seed11", "status": "ok", "error": null}
+runs/ci-classical-25bbab54d6/manifest.json
+{"id": "quantum_kernel-q2-angle-sNone-f0-seed11", "status": "ok", "error": null}
+{"id": "quantum_kernel-q2-angle-s128-f0-seed11", "status": "ok", "error": null}
+{"id": "vqc-q2-angle-sNone-f0-seed11", "status": "ok", "error": null}
+{"id": "vqc-q2-angle-s128-f0-seed11", "status": "ok", "error": null}
+runs/ci-quantum-sim-c23d18edca/manifest.json

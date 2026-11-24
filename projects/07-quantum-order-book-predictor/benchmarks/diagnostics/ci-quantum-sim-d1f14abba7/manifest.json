@@ -1,0 +1,1498 @@
+{
+  "schema_version": 1,
+  "run_id": "ci-quantum-sim-d1f14abba7",
+  "protocol_id": "99be2cebc954b5c9",
+  "solver": "quantum-sim",
+  "created_utc": "2026-11-24T04:58:25.613410+00:00",
+  "status": "complete",
+  "config": {
+    "name": "ci",
+    "data_path": "data/ci.csv",
+    "runs_dir": "runs",
+    "n_snapshots": 240,
+    "levels": 3,
+    "interval_ms": 100,
+    "data_seed": 31415,
+    "horizon": 3,
+    "label_threshold_bps": 0.5,
+    "embargo": 3,
+    "train_fraction": 0.45,
+    "calibration_fraction": 0.12,
+    "validation_fraction": 0.12,
+    "folds": 1,
+    "train_samples": 18,
+    "seeds": [
+      11
+    ],
+    "qubits": [
+      2
+    ],
+    "encodings": [
+      "angle"
+    ],
+    "shots": [
+      null,
+      128
+    ],
+    "circuit_layers": 2,
+    "max_iterations": 3,
+    "fit_budget_seconds": 30,
+    "fee_bps": 0.5,
+    "slippage_bps": 0.2,
+    "execution_delay": 1,
+    "thresholds": [
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      1.0
+    ],
+    "latency_samples": 5
+  },
+  "config_sha256_prefix": "7d6876384daf",
+  "source_sha256": "b78d9760d142136ca40c3d67f9f38357919e5b29d79a2bae129f1433b2822236",
+  "dataset": {
+    "schema_version": 1,
+    "generator_version": 1,
+    "source": "synthetic causal L2 generator",
+    "license": "CC0-1.0 (generated sample only)",
+    "sha256": "de0cb19816114f2941ffed8fb14bd8a42b2991ff2ab674f108f8500774d40bfa",
+    "timestamp_normalization": "integer Unix milliseconds, UTC; no local-time conversion",
+    "rows": 240,
+    "levels": 3,
+    "seed": 31415,
+    "interval_ms": 100,
+    "trades": "none; OFI is inferred from consecutive L2 quotes"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Sep 24 2026, 17:46:32) [Clang 22.1.3 ]",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "packages": {
+      "numpy": "2.5.5",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "polars": "2.1.0",
+      "pennylane": "0.45.1",
+      "torch": "2.15.0",
+      "xgboost": "3.4.1",
+      "PyYAML": "6.0.4"
+    },
+    "blas_threads": 1,
+    "torch_threads": 1,
+    "xgboost_threads": 1
+  },
+  "features": [
+    "imbalance_touch",
+    "imbalance_depth",
+    "microprice_offset_bps",
+    "spread_bps",
+    "log_bid_depth",
+    "log_ask_depth",
+    "weighted_imbalance",
+    "ofi_touch",
+    "ofi_5",
+    "return_1_bps",
+    "return_5_bps",
+    "volatility_5_bps"
+  ],
+  "class_order": [
+    "down",
+    "flat",
+    "up"
+  ],
+  "splits": [
+    {
+      "fold": 0,
+      "train": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "calibration": [
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132
+      ],
+      "validation": [
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160
+      ],
+      "test": [
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "quantum_kernel-q2-angle-sNone-f0-seed11",
+      "model": "quantum_kernel",
+      "qubits": 2,
+      "encoding": "angle",
+      "shots": null,
+      "fold": 0,
+      "seed": 11,
+      "status": "ok",
+      "train_indices": [
+        7,
+        11,
+        13,
+        18,
+        19,
+        32,
+        43,
+        48,
+        49,
+        56,
+        57,
+        58,
+        68,
+        79,
+        89,
+        92,
+        99,
+        101
+      ],
+      "train_class_counts": [
+        10,
+        2,
+        6
+      ],
+      "timing": {
+        "preprocessing_seconds": 0.005799791993922554,
+        "model_initialization_seconds": 0.7020136670034844,
+        "fit_seconds": 0.005679791996954009,
+        "calibration_seconds": 0.0024637089954921976,
+        "threshold_selection_seconds": 0.0020537499949568883,
+        "batch_test_inference_seconds": 0.0011737500026356429,
+        "stream_profile_seconds": 0.004980166006134823,
+        "artifact_writing_seconds": 0.0010479159973328933,
+        "trial_total_seconds": 0.7293241250008577
+      },
+      "warnings": [
+        "The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`"
+      ],
+      "training_resources": {
+        "optimizer_iterations": 39,
+        "objective_evaluations": null,
+        "circuit_executions": 18,
+        "measurement_shots": 0,
+        "state_preparation_seconds": 0.0014214159891707823,
+        "kernel_seconds": 6.020799628458917e-05,
+        "repair_seconds": 0.003083791001699865,
+        "decode_seconds": 0.0,
+        "backend": "PennyLane default.qubit CPU simulator",
+        "hardware": false,
+        "noise_model": "none",
+        "queue_seconds": 0.0,
+        "communication_seconds": 0.0,
+        "qpu_cost_usd": 0.0,
+        "circuit_construction_seconds": 0.0003588750114431605,
+        "fallback": null,
+        "negative_eigenvalues": 0,
+        "measurement_method": "exact fidelity",
+        "encoding_gate_count": 6
+      },
+      "temperature": 3.9641529673410085,
+      "threshold_trials": [
+        {
+          "trades": 8,
+          "gross_bps": 1.0008004399148664,
+          "net_bps": -19.206546668176177,
+          "mean_trade_bps": -2.400818333522022,
+          "net_quote_currency": -0.19190970007993485,
+          "max_drawdown_bps": 19.206546668176177,
+          "hit_rate": 0.0,
+          "turnover_units": 16,
+          "threshold": 0.4
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 0.5
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 0.6
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 0.7
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 1.0
+        }
+      ],
+      "uncalibrated_metrics": {
+        "balanced_accuracy": 0.33819628647214856,
+        "macro_f1": 0.26391279403327594,
+        "log_loss": 1.3610129541820264,
+        "brier_score": 0.8186916928967508,
+        "ece": 0.3316925531734757,
+        "per_class": {
+          "down": {
+            "precision": 0.3684210526315789,
+            "recall": 0.8076923076923077,
+            "f1": 0.5060240963855421,
+            "support": 26
+          },
+          "flat": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          "up": {
+            "precision": 0.46153846153846156,
+            "recall": 0.20689655172413793,
+            "f1": 0.2857142857142857,
+            "support": 29
+          }
+        },
+        "confusion_matrix": [
+          [
+            21,
+            0,
+            5
+          ],
+          [
+            13,
+            0,
+            2
+          ],
+          [
+            23,
+            0,
+            6
+          ]
+        ]
+      },
+      "metrics": {
+        "balanced_accuracy": 0.33819628647214856,
+        "macro_f1": 0.26391279403327594,
+        "log_loss": 1.0861853388440152,
+        "brier_score": 0.659436213495773,
+        "ece": 0.051789641969707145,
+        "per_class": {
+          "down": {
+            "precision": 0.3684210526315789,
+            "recall": 0.8076923076923077,
+            "f1": 0.5060240963855421,
+            "support": 26
+          },
+          "flat": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          "up": {
+            "precision": 0.46153846153846156,
+            "recall": 0.20689655172413793,
+            "f1": 0.2857142857142857,
+            "support": 29
+          }
+        },
+        "confusion_matrix": [
+          [
+            21,
+            0,
+            5
+          ],
+          [
+            13,
+            0,
+            2
+          ],
+          [
+            23,
+            0,
+            6
+          ]
+        ]
+      },
+      "trading": {
+        "trades": 0,
+        "gross_bps": 0.0,
+        "net_bps": 0.0,
+        "mean_trade_bps": 0.0,
+        "net_quote_currency": 0.0,
+        "max_drawdown_bps": 0.0,
+        "hit_rate": 0.0,
+        "turnover_units": 0,
+        "threshold": 1.0
+      },
+      "test_resources": {
+        "optimizer_iterations": 39,
+        "objective_evaluations": null,
+        "circuit_executions": 132,
+        "measurement_shots": 0,
+        "state_preparation_seconds": 0.004791582003235817,
+        "kernel_seconds": 0.0003620819916250184,
+        "repair_seconds": 0.003083791001699865,
+        "decode_seconds": 0.0008993740048026666,
+        "backend": "PennyLane default.qubit CPU simulator",
+        "hardware": false,
+        "noise_model": "none",
+        "queue_seconds": 0.0,
+        "communication_seconds": 0.0,
+        "qpu_cost_usd": 0.0,
+        "circuit_construction_seconds": 0.0003588750114431605,
+        "fallback": null,
+        "negative_eigenvalues": 0,
+        "measurement_method": "exact fidelity",
+        "encoding_gate_count": 6
+      },
+      "latency": {
+        "samples": 5,
+        "p50_ms": 0.842625,
+        "p95_ms": 1.2334082,
+        "p99_ms": 1.29718164,
+        "max_ms": 1.313125,
+        "throughput_per_second": 1060.8391237468836,
+        "scope": "snapshot conversion + validation + causal features + scaling/PCA + model + calibration + decision",
+        "includes_network": false
+      },
+      "model_bytes": 8094,
+      "model_path": "models/quantum_kernel-q2-angle-sNone-f0-seed11.pkl",
+      "resources_including_profile": {
+        "optimizer_iterations": 39,
+        "objective_evaluations": null,
+        "circuit_executions": 137,
+        "measurement_shots": 0,
+        "state_preparation_seconds": 0.0074452080152696,
+        "kernel_seconds": 0.0007201650005299598,
+        "repair_seconds": 0.003083791001699865,
+        "decode_seconds": 0.0014732490089954808,
+        "backend": "PennyLane default.qubit CPU simulator",
+        "hardware": false,
+        "noise_model": "none",
+        "queue_seconds": 0.0,
+        "communication_seconds": 0.0,
+        "qpu_cost_usd": 0.0,
+        "circuit_construction_seconds": 0.0003588750114431605,
+        "fallback": null,
+        "negative_eigenvalues": 0,
+        "measurement_method": "exact fidelity",
+        "encoding_gate_count": 6
+      }
+    },
+    {
+      "id": "quantum_kernel-q2-angle-s128-f0-seed11",
+      "model": "quantum_kernel",
+      "qubits": 2,
+      "encoding": "angle",
+      "shots": 128,
+      "fold": 0,
+      "seed": 11,
+      "status": "ok",
+      "train_indices": [
+        7,
+        11,
+        13,
+        18,
+        19,
+        32,
+        43,
+        48,
+        49,
+        56,
+        57,
+        58,
+        68,
+        79,
+        89,
+        92,
+        99,
+        101
+      ],
+      "train_class_counts": [
+        10,
+        2,
+        6
+      ],
+      "timing": {
+        "preprocessing_seconds": 0.005799791993922554,
+        "model_initialization_seconds": 0.00015891599468886852,
+        "fit_seconds": 0.002829583012498915,
+        "calibration_seconds": 0.0014161669969325885,
+        "threshold_selection_seconds": 0.0015707499987911433,
+        "batch_test_inference_seconds": 0.0009091670071939006,
+        "stream_profile_seconds": 0.004511166000156663,
+        "artifact_writing_seconds": 0.0012199580087326467,
+        "trial_total_seconds": 0.021164083998883143
+      },
+      "warnings": [
+        "The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`"
+      ],
+      "training_resources": {
+        "optimizer_iterations": 48,
+        "objective_evaluations": null,
+        "circuit_executions": 18,
+        "measurement_shots": 19584,
+        "state_preparation_seconds": 0.001237708012922667,
+        "kernel_seconds": 0.00014695800200570375,
+        "repair_seconds": 7.662500138394535e-05,
+        "decode_seconds": 0.0,
+        "backend": "PennyLane default.qubit CPU simulator",
+        "hardware": false,
+        "noise_model": "none",
+        "queue_seconds": 0.0,
+        "communication_seconds": 0.0,
+        "qpu_cost_usd": 0.0,
+        "circuit_construction_seconds": 0.00011649999942164868,
+        "fallback": null,
+        "sampled_overlap_estimates": 153,
+        "negative_eigenvalues": 5,
+        "measurement_method": "binomial fidelity sampling",
+        "encoding_gate_count": 6
+      },
+      "temperature": 5.1234585814558375,
+      "threshold_trials": [
+        {
+          "trades": 8,
+          "gross_bps": 1.0008004399148664,
+          "net_bps": -19.206546668176177,
+          "mean_trade_bps": -2.400818333522022,
+          "net_quote_currency": -0.19190970007993485,
+          "max_drawdown_bps": 19.206546668176177,
+          "hit_rate": 0.0,
+          "turnover_units": 16,
+          "threshold": 0.4
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 0.5
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 0.6
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 0.7
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 1.0
+        }
+      ],
+      "uncalibrated_metrics": {
+        "balanced_accuracy": 0.33819628647214856,
+        "macro_f1": 0.26391279403327594,
+        "log_loss": 1.3353051150793347,
+        "brier_score": 0.8136402758445156,
+        "ece": 0.3327425405786467,
+        "per_class": {
+          "down": {
+            "precision": 0.3684210526315789,
+            "recall": 0.8076923076923077,
+            "f1": 0.5060240963855421,
+            "support": 26
+          },
+          "flat": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          "up": {
+            "precision": 0.46153846153846156,
+            "recall": 0.20689655172413793,
+            "f1": 0.2857142857142857,
+            "support": 29
+          }
+        },
+        "confusion_matrix": [
+          [
+            21,
+            0,
+            5
+          ],
+          [
+            13,
+            0,
+            2
+          ],
+          [
+            23,
+            0,
+            6
+          ]
+        ]
+      },
+      "metrics": {
+        "balanced_accuracy": 0.33819628647214856,
+        "macro_f1": 0.26391279403327594,
+        "log_loss": 1.078689331872574,
+        "brier_score": 0.6544923321122261,
+        "ece": 0.027977420988140933,
+        "per_class": {
+          "down": {
+            "precision": 0.3684210526315789,
+            "recall": 0.8076923076923077,
+            "f1": 0.5060240963855421,
+            "support": 26
+          },
+          "flat": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          "up": {
+            "precision": 0.46153846153846156,
+            "recall": 0.20689655172413793,
+            "f1": 0.2857142857142857,
+            "support": 29
+          }
+        },
+        "confusion_matrix": [
+          [
+            21,
+            0,
+            5
+          ],
+          [
+            13,
+            0,
+            2
+          ],
+          [
+            23,
+            0,
+            6
+          ]
+        ]
+      },
+      "trading": {
+        "trades": 0,
+        "gross_bps": 0.0,
+        "net_bps": 0.0,
+        "mean_trade_bps": 0.0,
+        "net_quote_currency": 0.0,
+        "max_drawdown_bps": 0.0,
+        "hit_rate": 0.0,
+        "turnover_units": 0,
+        "threshold": 1.0
+      },
+      "test_resources": {
+        "optimizer_iterations": 48,
+        "objective_evaluations": null,
+        "circuit_executions": 132,
+        "measurement_shots": 282240,
+        "state_preparation_seconds": 0.0038048330025048926,
+        "kernel_seconds": 0.00040191601146943867,
+        "repair_seconds": 7.662500138394535e-05,
+        "decode_seconds": 0.000451375002739951,
+        "backend": "PennyLane default.qubit CPU simulator",
+        "hardware": false,
+        "noise_model": "none",
+        "queue_seconds": 0.0,
+        "communication_seconds": 0.0,
+        "qpu_cost_usd": 0.0,
+        "circuit_construction_seconds": 0.00011649999942164868,
+        "fallback": null,
+        "sampled_overlap_estimates": 2205,
+        "negative_eigenvalues": 5,
+        "measurement_method": "binomial fidelity sampling",
+        "encoding_gate_count": 6
+      },
+      "latency": {
+        "samples": 5,
+        "p50_ms": 0.823959,
+        "p95_ms": 0.9662997999999999,
+        "p99_ms": 0.9907263599999999,
+        "max_ms": 0.996833,
+        "throughput_per_second": 1167.7351053635707,
+        "scope": "snapshot conversion + validation + causal features + scaling/PCA + model + calibration + decision",
+        "includes_network": false
+      },
+      "model_bytes": 8141,
+      "model_path": "models/quantum_kernel-q2-angle-s128-f0-seed11.pkl",
+      "resources_including_profile": {
+        "optimizer_iterations": 48,
+        "objective_evaluations": null,
+        "circuit_executions": 137,
+        "measurement_shots": 293760,
+        "state_preparation_seconds": 0.006387332992744632,
+        "kernel_seconds": 0.00048787498963065445,
+        "repair_seconds": 7.662500138394535e-05,
+        "decode_seconds": 0.0010090830037370324,
+        "backend": "PennyLane default.qubit CPU simulator",
+        "hardware": false,
+        "noise_model": "none",
+        "queue_seconds": 0.0,
+        "communication_seconds": 0.0,
+        "qpu_cost_usd": 0.0,
+        "circuit_construction_seconds": 0.00011649999942164868,
+        "fallback": null,
+        "sampled_overlap_estimates": 2295,
+        "negative_eigenvalues": 5,
+        "measurement_method": "binomial fidelity sampling",
+        "encoding_gate_count": 6
+      }
+    },
+    {
+      "id": "vqc-q2-angle-sNone-f0-seed11",
+      "model": "vqc",
+      "qubits": 2,
+      "encoding": "angle",
+      "shots": null,
+      "fold": 0,
+      "seed": 11,
+      "status": "ok",
+      "train_indices": [
+        7,
+        11,
+        13,
+        18,
+        19,
+        32,
+        43,
+        48,
+        49,
+        56,
+        57,
+        58,
+        68,
+        79,
+        89,
+        92,
+        99,
+        101
+      ],
+      "train_class_counts": [
+        10,
+        2,
+        6
+      ],
+      "timing": {
+        "preprocessing_seconds": 0.005799791993922554,
+        "model_initialization_seconds": 0.00022733400692231953,
+        "fit_seconds": 0.01333675000932999,
+        "calibration_seconds": 0.0010360000014770776,
+        "threshold_selection_seconds": 0.0009241660009138286,
+        "batch_test_inference_seconds": 0.0006952499970793724,
+        "stream_profile_seconds": 0.004832000005990267,
+        "artifact_writing_seconds": 0.0008126659959089011,
+        "trial_total_seconds": 0.03143533400725573
+      },
+      "warnings": [],
+      "training_resources": {
+        "optimizer_iterations": 3,
+        "objective_evaluations": 10,
+        "circuit_executions": 180,
+        "measurement_shots": 0,
+        "state_preparation_seconds": 0.012625582996406592,
+        "kernel_seconds": 0.0,
+        "repair_seconds": 0.0,
+        "decode_seconds": 0.0002397079806542024,
+        "backend": "PennyLane default.qubit CPU simulator",
+        "hardware": false,
+        "noise_model": "none",
+        "queue_seconds": 0.0,
+        "communication_seconds": 0.0,
+        "qpu_cost_usd": 0.0,
+        "circuit_construction_seconds": 0.0001550410088384524,
+        "fallback": null,
+        "training_loss": 0.9388483473699203,
+        "measurement_method": "exact probabilities",
+        "parameter_count": 23,
+        "encoding_gate_count": 3,
+        "variational_gate_count": 10
+      },
+      "temperature": 6.163164388865976,
+      "threshold_trials": [
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 0.4
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 0.5
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 0.6
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 0.7
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 1.0
+        }
+      ],
+      "uncalibrated_metrics": {
+        "balanced_accuracy": 0.3333333333333333,
+        "macro_f1": 0.18055555555555555,
+        "log_loss": 1.1057875521243694,
+        "brier_score": 0.6728465055030696,
+        "ece": 0.15244604717682575,
+        "per_class": {
+          "down": {
+            "precision": 0.37142857142857144,
+            "recall": 1.0,
+            "f1": 0.5416666666666666,
+            "support": 26
+          },
+          "flat": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          "up": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 29
+          }
+        },
+        "confusion_matrix": [
+          [
+            26,
+            0,
+            0
+          ],
+          [
+            15,
+            0,
+            0
+          ],
+          [
+            29,
+            0,
+            0
+          ]
+        ]
+      },
+      "metrics": {
+        "balanced_accuracy": 0.3333333333333333,
+        "macro_f1": 0.18055555555555555,
+        "log_loss": 1.0791989423563522,
+        "brier_score": 0.6542143974780255,
+        "ece": 0.0052732613708905696,
+        "per_class": {
+          "down": {
+            "precision": 0.37142857142857144,
+            "recall": 1.0,
+            "f1": 0.5416666666666666,
+            "support": 26
+          },
+          "flat": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          "up": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 29
+          }
+        },
+        "confusion_matrix": [
+          [
+            26,
+            0,
+            0
+          ],
+          [
+            15,
+            0,
+            0
+          ],
+          [
+            29,
+            0,
+            0
+          ]
+        ]
+      },
+      "trading": {
+        "trades": 0,
+        "gross_bps": 0.0,
+        "net_bps": 0.0,
+        "mean_trade_bps": 0.0,
+        "net_quote_currency": 0.0,
+        "max_drawdown_bps": 0.0,
+        "hit_rate": 0.0,
+        "turnover_units": 0,
+        "threshold": 1.0
+      },
+      "test_resources": {
+        "optimizer_iterations": 3,
+        "objective_evaluations": 10,
+        "circuit_executions": 294,
+        "measurement_shots": 0,
+        "state_preparation_seconds": 0.014677958999527618,
+        "kernel_seconds": 0.0,
+        "repair_seconds": 0.0,
+        "decode_seconds": 0.0002773329906631261,
+        "backend": "PennyLane default.qubit CPU simulator",
+        "hardware": false,
+        "noise_model": "none",
+        "queue_seconds": 0.0,
+        "communication_seconds": 0.0,
+        "qpu_cost_usd": 0.0,
+        "circuit_construction_seconds": 0.0001550410088384524,
+        "fallback": null,
+        "training_loss": 0.9388483473699203,
+        "measurement_method": "exact probabilities",
+        "parameter_count": 23,
+        "encoding_gate_count": 3,
+        "variational_gate_count": 10
+      },
+      "latency": {
+        "samples": 5,
+        "p50_ms": 0.88075,
+        "p95_ms": 1.097825,
+        "p99_ms": 1.130065,
+        "max_ms": 1.138125,
+        "throughput_per_second": 1085.4623592046773,
+        "scope": "snapshot conversion + validation + causal features + scaling/PCA + model + calibration + decision",
+        "includes_network": false
+      },
+      "model_bytes": 3208,
+      "model_path": "models/vqc-q2-angle-sNone-f0-seed11.pkl",
+      "resources_including_profile": {
+        "optimizer_iterations": 3,
+        "objective_evaluations": 10,
+        "circuit_executions": 299,
+        "measurement_shots": 0,
+        "state_preparation_seconds": 0.018039208007394336,
+        "kernel_seconds": 0.0,
+        "repair_seconds": 0.0,
+        "decode_seconds": 0.0003287089930381626,
+        "backend": "PennyLane default.qubit CPU simulator",
+        "hardware": false,
+        "noise_model": "none",
+        "queue_seconds": 0.0,
+        "communication_seconds": 0.0,
+        "qpu_cost_usd": 0.0,
+        "circuit_construction_seconds": 0.0001550410088384524,
+        "fallback": null,
+        "training_loss": 0.9388483473699203,
+        "measurement_method": "exact probabilities",
+        "parameter_count": 23,
+        "encoding_gate_count": 3,
+        "variational_gate_count": 10
+      }
+    },
+    {
+      "id": "vqc-q2-angle-s128-f0-seed11",
+      "model": "vqc",
+      "qubits": 2,
+      "encoding": "angle",
+      "shots": 128,
+      "fold": 0,
+      "seed": 11,
+      "status": "ok",
+      "train_indices": [
+        7,
+        11,
+        13,
+        18,
+        19,
+        32,
+        43,
+        48,
+        49,
+        56,
+        57,
+        58,
+        68,
+        79,
+        89,
+        92,
+        99,
+        101
+      ],
+      "train_class_counts": [
+        10,
+        2,
+        6
+      ],
+      "timing": {
+        "preprocessing_seconds": 0.005799791993922554,
+        "model_initialization_seconds": 0.00013012500130571425,
+        "fit_seconds": 0.013490875004208647,
+        "calibration_seconds": 0.001436999998986721,
+        "threshold_selection_seconds": 0.0014426249981625006,
+        "batch_test_inference_seconds": 0.0020061670074937865,
+        "stream_profile_seconds": 0.0066906249994644895,
+        "artifact_writing_seconds": 0.0010463750077178702,
+        "trial_total_seconds": 0.034973666988662444
+      },
+      "warnings": [],
+      "training_resources": {
+        "optimizer_iterations": 3,
+        "objective_evaluations": 10,
+        "circuit_executions": 180,
+        "measurement_shots": 23040,
+        "state_preparation_seconds": 0.013152750034350902,
+        "kernel_seconds": 0.0,
+        "repair_seconds": 0.0,
+        "decode_seconds": 0.00012495697592385113,
+        "backend": "PennyLane default.qubit CPU simulator",
+        "hardware": false,
+        "noise_model": "none",
+        "queue_seconds": 0.0,
+        "communication_seconds": 0.0,
+        "qpu_cost_usd": 0.0,
+        "circuit_construction_seconds": 9.608299296814948e-05,
+        "fallback": null,
+        "training_loss": 0.9381639031928668,
+        "measurement_method": "PennyLane finite-shot probabilities",
+        "parameter_count": 23,
+        "encoding_gate_count": 3,
+        "variational_gate_count": 10
+      },
+      "temperature": 6.564255934158129,
+      "threshold_trials": [
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 0.4
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 0.5
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 0.6
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 0.7
+        },
+        {
+          "trades": 0,
+          "gross_bps": 0.0,
+          "net_bps": 0.0,
+          "mean_trade_bps": 0.0,
+          "net_quote_currency": 0.0,
+          "max_drawdown_bps": 0.0,
+          "hit_rate": 0.0,
+          "turnover_units": 0,
+          "threshold": 1.0
+        }
+      ],
+      "uncalibrated_metrics": {
+        "balanced_accuracy": 0.3333333333333333,
+        "macro_f1": 0.18055555555555555,
+        "log_loss": 1.1056820166215748,
+        "brier_score": 0.6728264693737344,
+        "ece": 0.15361777352086903,
+        "per_class": {
+          "down": {
+            "precision": 0.37142857142857144,
+            "recall": 1.0,
+            "f1": 0.5416666666666666,
+            "support": 26
+          },
+          "flat": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          "up": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 29
+          }
+        },
+        "confusion_matrix": [
+          [
+            26,
+            0,
+            0
+          ],
+          [
+            15,
+            0,
+            0
+          ],
+          [
+            29,
+            0,
+            0
+          ]
+        ]
+      },
+      "metrics": {
+        "balanced_accuracy": 0.3333333333333333,
+        "macro_f1": 0.18055555555555555,
+        "log_loss": 1.080106501923545,
+        "brier_score": 0.6547595040973491,
+        "ece": 0.007150279929674097,
+        "per_class": {
+          "down": {
+            "precision": 0.37142857142857144,
+            "recall": 1.0,
+            "f1": 0.5416666666666666,
+            "support": 26
+          },
+          "flat": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          "up": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 29
+          }
+        },
+        "confusion_matrix": [
+          [
+            26,
+            0,
+            0
+          ],
+          [
+            15,
+            0,
+            0
+          ],
+          [
+            29,
+            0,
+            0
+          ]
+        ]
+      },
+      "trading": {
+        "trades": 0,
+        "gross_bps": 0.0,
+        "net_bps": 0.0,
+        "mean_trade_bps": 0.0,
+        "net_quote_currency": 0.0,
+        "max_drawdown_bps": 0.0,
+        "hit_rate": 0.0,
+        "turnover_units": 0,
+        "threshold": 1.0
+      },
+      "test_resources": {
+        "optimizer_iterations": 3,
+        "objective_evaluations": 10,
+        "circuit_executions": 294,
+        "measurement_shots": 37632,
+        "state_preparation_seconds": 0.017462833027821034,
+        "kernel_seconds": 0.0,
+        "repair_seconds": 0.0,
+        "decode_seconds": 0.0001605829893378541,
+        "backend": "PennyLane default.qubit CPU simulator",
+        "hardware": false,
+        "noise_model": "none",
+        "queue_seconds": 0.0,
+        "communication_seconds": 0.0,
+        "qpu_cost_usd": 0.0,
+        "circuit_construction_seconds": 9.608299296814948e-05,
+        "fallback": null,
+        "training_loss": 0.9381639031928668,
+        "measurement_method": "PennyLane finite-shot probabilities",
+        "parameter_count": 23,
+        "encoding_gate_count": 3,
+        "variational_gate_count": 10
+      },
+      "latency": {
+        "samples": 5,
+        "p50_ms": 1.21125,
+        "p95_ms": 1.520517,
+        "p99_ms": 1.547237,
+        "max_ms": 1.553917,
+        "throughput_per_second": 773.6992992914926,
+        "scope": "snapshot conversion + validation + causal features + scaling/PCA + model + calibration + decision",
+        "includes_network": false
+      },
+      "model_bytes": 3226,
+      "model_path": "models/vqc-q2-angle-s128-f0-seed11.pkl",
+      "resources_including_profile": {
+        "optimizer_iterations": 3,
+        "objective_evaluations": 10,
+        "circuit_executions": 299,
+        "measurement_shots": 38272,
+        "state_preparation_seconds": 0.022548541019205004,
+        "kernel_seconds": 0.0,
+        "repair_seconds": 0.0,
+        "decode_seconds": 0.00021341699175536633,
+        "backend": "PennyLane default.qubit CPU simulator",
+        "hardware": false,
+        "noise_model": "none",
+        "queue_seconds": 0.0,
+        "communication_seconds": 0.0,
+        "qpu_cost_usd": 0.0,
+        "circuit_construction_seconds": 9.608299296814948e-05,
+        "fallback": null,
+        "training_loss": 0.9381639031928668,
+        "measurement_method": "PennyLane finite-shot probabilities",
+        "parameter_count": 23,
+        "encoding_gate_count": 3,
+        "variational_gate_count": 10
+      }
+    }
+  ],
+  "shared_timing": {
+    "bootstrap_seconds": 0.9610999590076972,
+    "data_loading_seconds": 0.034437333000823855,
+    "features_labels_splits_seconds": 0.0012948749936185777
+  },
+  "budget": {
+    "max_training_rows": 18,
+    "fit_seconds_per_candidate": 30,
+    "candidates_per_model": 1,
+    "native_iteration_cap": 3,
+    "enforcement": "cooperative checks plus post-fit rejection; native calls may overrun before rejection",
+    "comparison": "same rows, reduced inputs, horizon, cost model, wall-time allowance; iterations are not equivalent work"
+  },
+  "execution": {
+    "unit_size": 1,
+    "delay_snapshots": 1,
+    "holding_exit": "signal index + horizon",
+    "fees_per_side_bps": 0.5,
+    "slippage_per_side_bps": 0.2,
+    "spread": "actual future touch quotes",
+    "overlap": "at most one position"
+  },
+  "hardware": false,
+  "notes": [
+    "Synthetic research experiment; no evidence of live profitability or quantum advantage.",
+    "Quantum kernel caches exact simulator states. Binomial shots are a CPU measurement model, not hardware queries.",
+    "Compilation is eager QNode construction/execution; no QPU compilation, queue or communication.",
+    "Training, calibration, threshold tuning and test windows are separate and purged."
+  ],
+  "wall_seconds": 1.8376996680017328
+}

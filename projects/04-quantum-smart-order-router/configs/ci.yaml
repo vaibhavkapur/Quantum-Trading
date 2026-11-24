@@ -1,0 +1,10 @@
+# Reduced instance sizes for a quick CPU-only reproducibility check (about a minute).
+extends: demo.yaml
+name: ci
+
+data: {seed: 7, steps: 6000}
+orders: {rate_per_s: 4.0}
+optimizer: {buckets_lots: [2, 4], calibration_probes: 100, nonfill_penalty_grid: [1.0, 4.0]}
+solvers:
+  qaoa: {layers: 1, maxiter: 20, shots: 128}
+seeds: [11, 23]

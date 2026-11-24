@@ -1,0 +1,28 @@
+schema_version: 1
+name: cpu-demo-v1
+dataset: data/demo-v1
+runs: runs
+data_seed: 2026
+instances:
+  - track: portfolio
+    sizes: [4, 6]
+  - track: basket
+    sizes: [4, 6]
+  - track: estimation
+    sizes: [4, 8]
+seeds: [11, 29, 47]
+warmups: 1
+budget:
+  wall_seconds: 30
+  max_evaluations: 256
+  max_shots: 4096
+  max_oracle_queries: 2048
+  mip_nodes: 10000
+algorithm:
+  qaoa_layers: 1
+  qaoa_iterations: 24
+  shots_per_circuit: 128
+  qae_powers: [0, 1, 2, 4]
+  repair: true
+solvers: [exact, milp, greedy, annealing, qaoa, exact-expectation, mc, mc-antithetic, qae]
+success_tolerance: 0.05

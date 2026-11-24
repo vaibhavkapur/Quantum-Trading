@@ -1,0 +1,8 @@
+name: shots
+data_path: data/demo.csv
+seeds: [11, 23, 37]
+qubits: [2]
+encodings: [angle]
+shots: [null, 128, 1024]
+max_iterations: 15
+latency_samples: 20

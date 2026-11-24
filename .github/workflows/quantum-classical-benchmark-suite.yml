@@ -1,0 +1,42 @@
+name: CPU benchmark verification
+on:
+  push:
+    paths:
+      - 'projects/12-quantum-classical-benchmark-suite/**'
+      - '.github/workflows/quantum-classical-benchmark-suite.yml'
+  pull_request:
+    paths:
+      - 'projects/12-quantum-classical-benchmark-suite/**'
+      - '.github/workflows/quantum-classical-benchmark-suite.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+defaults:
+  run:
+    working-directory: projects/12-quantum-classical-benchmark-suite
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: projects/12-quantum-classical-benchmark-suite/requirements.txt
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pytest -q
+      - run: python -m project.reproduce --config configs/ci.yaml --output reports/ci.html --strict
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cpu-benchmark-evidence
+          path: |
+            projects/12-quantum-classical-benchmark-suite/runs/
+            projects/12-quantum-classical-benchmark-suite/reports/
+            projects/12-quantum-classical-benchmark-suite/data/

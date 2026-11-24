@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp_ns": 84000000000,
+    "half_spread": 1.0,
+    "skew": 0.5,
+    "inventory_band": 4,
+    "version": 1,
+    "source": "classical"
+  },
+  {
+    "timestamp_ns": 96000000000,
+    "half_spread": 3.0,
+    "skew": 0.5,
+    "inventory_band": 4,
+    "version": 2,
+    "source": "classical"
+  },
+  {
+    "timestamp_ns": 108000000000,
+    "half_spread": 3.0,
+    "skew": 0.5,
+    "inventory_band": 4,
+    "version": 3,
+    "source": "classical"
+  }
+]

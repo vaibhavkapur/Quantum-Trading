@@ -1,0 +1,205 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order-book prediction benchmark</title><style>
+body{margin:0;background:#0b1220;color:#eef4ff;font:15px system-ui,sans-serif;line-height:1.6}main{max-width:1500px;margin:auto;padding:40px 28px}
+h1{font-size:36px;line-height:1.2;margin:10px 0}h2{font-size:19px}p,li{color:#c4cee0}.tag{color:#64d5b4;font-size:12px;letter-spacing:2px}
+section{margin:28px 0;padding:22px;background:#111d30;border:1px solid #23344d;border-radius:12px}.scroll{overflow:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:12px}td,th{padding:12px;text-align:right;border-bottom:1px solid #27364c;white-space:nowrap}td:first-child,th:first-child{text-align:left}
+th{color:#92a8c6}small{display:block;color:#92a8c6;font-size:10px}pre{overflow:auto;color:#b1c4df}svg{max-width:1000px;width:100%}a{color:#64d5b4}
+</style><main><div class="tag">REPRODUCIBLE CPU RESEARCH</div><h1>Quantum ML Order Book Predictor</h1>
+<p>Classical and simulated quantum models on identical chronological L2 prediction tasks. Synthetic data; no live-profitability or quantum-advantage claim.</p>
+<p>6 runs · 164 trials · 0 failed / over budget · 1 trials with warnings (see raw manifests)</p>
+<section><h2>Protocol 2cc05faafb3e1157</h2><p>Only rows within this protocol share data, source, splits and budgets.</p><svg role="img" aria-label="Balanced accuracy by model" viewBox="0 0 880 300"><text x="0" y="37" fill="#c4cee0" font-size="11">logistic / q2 / shared / exact</text><rect x="330" y="25" width="225.4" height="16" fill="#64d5b4"/><text x="563.4" y="37" fill="#eef4ff" font-size="11">0.470</text><text x="0" y="63" fill="#c4cee0" font-size="11">majority / q2 / shared / exact</text><rect x="330" y="51" width="160.0" height="16" fill="#64d5b4"/><text x="498.0" y="63" fill="#eef4ff" font-size="11">0.333</text><text x="0" y="89" fill="#c4cee0" font-size="11">mlp / q2 / shared / exact</text><rect x="330" y="77" width="227.5" height="16" fill="#64d5b4"/><text x="565.5" y="89" fill="#eef4ff" font-size="11">0.474</text><text x="0" y="115" fill="#c4cee0" font-size="11">quantum_kernel / q2 / angle / 1024</text><rect x="330" y="103" width="194.2" height="16" fill="#5ba7ff"/><text x="532.2" y="115" fill="#eef4ff" font-size="11">0.405</text><text x="0" y="141" fill="#c4cee0" font-size="11">quantum_kernel / q2 / angle / 128</text><rect x="330" y="129" width="194.5" height="16" fill="#5ba7ff"/><text x="532.5" y="141" fill="#eef4ff" font-size="11">0.405</text><text x="0" y="167" fill="#c4cee0" font-size="11">quantum_kernel / q2 / angle / exact</text><rect x="330" y="155" width="193.3" height="16" fill="#5ba7ff"/><text x="531.3" y="167" fill="#eef4ff" font-size="11">0.403</text><text x="0" y="193" fill="#c4cee0" font-size="11">vqc / q2 / angle / 1024</text><rect x="330" y="181" width="164.1" height="16" fill="#5ba7ff"/><text x="502.1" y="193" fill="#eef4ff" font-size="11">0.342</text><text x="0" y="219" fill="#c4cee0" font-size="11">vqc / q2 / angle / 128</text><rect x="330" y="207" width="164.8" height="16" fill="#5ba7ff"/><text x="502.8" y="219" fill="#eef4ff" font-size="11">0.343</text><text x="0" y="245" fill="#c4cee0" font-size="11">vqc / q2 / angle / exact</text><rect x="330" y="233" width="164.1" height="16" fill="#5ba7ff"/><text x="502.1" y="245" fill="#eef4ff" font-size="11">0.342</text><text x="0" y="271" fill="#c4cee0" font-size="11">xgboost / q2 / shared / exact</text><rect x="330" y="259" width="224.8" height="16" fill="#64d5b4"/><text x="562.8" y="271" fill="#eef4ff" font-size="11">0.468</text></svg><div class="scroll"><table><thead><tr><th>Model</th><th>Trials</th><th>Balanced accuracy / 95% CI</th><th>Macro F1</th><th>Brier</th><th>ECE</th><th>Net bps / fold</th><th>p99 ms</th><th>Rows/s</th><th>Fit s</th><th>Trial s</th><th>KiB</th><th>Shots incl. profile</th></tr></thead><tbody><tr><td>logistic<small>shared, 2 inputs/qubits, exact</small></td><td>6/6</td><td>0.470<small>0.451–0.488</small></td><td>0.434</td><td>0.492</td><td>0.073</td><td>0.00</td><td>0.243</td><td>5119</td><td>0.001</td><td>0.010</td><td>2.6</td><td>0</td></tr><tr><td>majority<small>shared, 2 inputs/qubits, exact</small></td><td>6/6</td><td>0.333<small>0.333–0.333</small></td><td>0.214</td><td>0.892</td><td>0.413</td><td>0.00</td><td>0.205</td><td>5989</td><td>0.000</td><td>0.009</td><td>2.3</td><td>0</td></tr><tr><td>mlp<small>shared, 2 inputs/qubits, exact</small></td><td>6/6</td><td>0.474<small>0.455–0.493</small></td><td>0.438</td><td>0.499</td><td>0.063</td><td>0.00</td><td>0.216</td><td>5781</td><td>0.174</td><td>0.190</td><td>5.0</td><td>0</td></tr><tr><td>quantum_kernel<small>angle, 2 inputs/qubits, 1024 shots</small></td><td>6/6</td><td>0.405<small>0.363–0.446</small></td><td>0.365</td><td>0.594</td><td>0.083</td><td>0.00</td><td>0.776</td><td>1479</td><td>0.001</td><td>0.024</td><td>50.3</td><td>28975104</td></tr><tr><td>quantum_kernel<small>angle, 2 inputs/qubits, 128 shots</small></td><td>6/6</td><td>0.405<small>0.345–0.465</small></td><td>0.366</td><td>0.592</td><td>0.069</td><td>0.00</td><td>0.765</td><td>1490</td><td>0.002</td><td>0.024</td><td>50.3</td><td>3621888</td></tr><tr><td>quantum_kernel<small>angle, 2 inputs/qubits, exact</small></td><td>6/6</td><td>0.403<small>0.357–0.448</small></td><td>0.363</td><td>0.595</td><td>0.074</td><td>0.00</td><td>0.861</td><td>1471</td><td>0.001</td><td>0.064</td><td>50.2</td><td>0</td></tr><tr><td>vqc<small>angle, 2 inputs/qubits, 1024 shots</small></td><td>6/6</td><td>0.342<small>0.320–0.364</small></td><td>0.237</td><td>0.606</td><td>0.055</td><td>0.00</td><td>1.045</td><td>1146</td><td>0.137</td><td>0.172</td><td>3.2</td><td>3757568</td></tr><tr><td>vqc<small>angle, 2 inputs/qubits, 128 shots</small></td><td>6/6</td><td>0.343<small>0.315–0.371</small></td><td>0.238</td><td>0.607</td><td>0.058</td><td>0.00</td><td>1.236</td><td>1133</td><td>0.074</td><td>0.105</td><td>3.2</td><td>469696</td></tr><tr><td>vqc<small>angle, 2 inputs/qubits, exact</small></td><td>6/6</td><td>0.342<small>0.320–0.364</small></td><td>0.237</td><td>0.606</td><td>0.054</td><td>0.00</td><td>0.754</td><td>1521</td><td>0.024</td><td>0.045</td><td>3.1</td><td>0</td></tr><tr><td>xgboost<small>shared, 2 inputs/qubits, exact</small></td><td>6/6</td><td>0.468<small>0.418–0.519</small></td><td>0.435</td><td>0.528</td><td>0.078</td><td>0.00</td><td>0.269</td><td>4539</td><td>0.004</td><td>0.015</td><td>58.1</td><td>0</td></tr></tbody></table></div><ul><li>classical: process 1.986s; bootstrap 0.581s; data 0.003s; features/splits 0.004s; status complete</li><li>quantum-sim: process 3.196s; bootstrap 0.496s; data 0.003s; features/splits 0.003s; status complete</li></ul><details><summary>Configuration and provenance</summary><pre>{
+  &quot;name&quot;: &quot;shots&quot;,
+  &quot;data_path&quot;: &quot;data/demo.csv&quot;,
+  &quot;runs_dir&quot;: &quot;runs&quot;,
+  &quot;n_snapshots&quot;: 900,
+  &quot;levels&quot;: 3,
+  &quot;interval_ms&quot;: 100,
+  &quot;data_seed&quot;: 31415,
+  &quot;horizon&quot;: 3,
+  &quot;label_threshold_bps&quot;: 0.5,
+  &quot;embargo&quot;: 3,
+  &quot;train_fraction&quot;: 0.45,
+  &quot;calibration_fraction&quot;: 0.12,
+  &quot;validation_fraction&quot;: 0.12,
+  &quot;folds&quot;: 2,
+  &quot;train_samples&quot;: 72,
+  &quot;seeds&quot;: [
+    11,
+    23,
+    37
+  ],
+  &quot;qubits&quot;: [
+    2
+  ],
+  &quot;encodings&quot;: [
+    &quot;angle&quot;
+  ],
+  &quot;shots&quot;: [
+    null,
+    128,
+    1024
+  ],
+  &quot;circuit_layers&quot;: 2,
+  &quot;max_iterations&quot;: 15,
+  &quot;fit_budget_seconds&quot;: 30.0,
+  &quot;fee_bps&quot;: 0.5,
+  &quot;slippage_bps&quot;: 0.2,
+  &quot;execution_delay&quot;: 1,
+  &quot;thresholds&quot;: [
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    1.0
+  ],
+  &quot;latency_samples&quot;: 20
+}</pre><pre>{
+  &quot;python&quot;: &quot;3.12.14 (main, Sep 24 2026, 17:46:32) [Clang 22.1.3 ]&quot;,
+  &quot;platform&quot;: &quot;macOS-26.5.1-arm64-arm-64bit&quot;,
+  &quot;machine&quot;: &quot;arm64&quot;,
+  &quot;packages&quot;: {
+    &quot;numpy&quot;: &quot;2.5.5&quot;,
+    &quot;scipy&quot;: &quot;1.18.1&quot;,
+    &quot;scikit-learn&quot;: &quot;1.9.1&quot;,
+    &quot;polars&quot;: &quot;2.1.0&quot;,
+    &quot;pennylane&quot;: &quot;0.45.1&quot;,
+    &quot;torch&quot;: &quot;2.15.0&quot;,
+    &quot;xgboost&quot;: &quot;3.4.1&quot;,
+    &quot;PyYAML&quot;: &quot;6.0.4&quot;
+  },
+  &quot;blas_threads&quot;: 1,
+  &quot;torch_threads&quot;: 1,
+  &quot;xgboost_threads&quot;: 1
+}</pre><p>Dataset SHA-256: 500d0bcc491c0202a10e71776fa8ae1f4f1945e2b9cc6a09ec115a457c3344c5</p></details></section><section><h2>Protocol 4d75ffb1d7d0b3fc</h2><p>Only rows within this protocol share data, source, splits and budgets.</p><svg role="img" aria-label="Balanced accuracy by model" viewBox="0 0 880 248"><text x="0" y="37" fill="#c4cee0" font-size="11">logistic / q2 / shared / exact</text><rect x="330" y="25" width="238.9" height="16" fill="#64d5b4"/><text x="576.9" y="37" fill="#eef4ff" font-size="11">0.498</text><text x="0" y="63" fill="#c4cee0" font-size="11">majority / q2 / shared / exact</text><rect x="330" y="51" width="160.0" height="16" fill="#64d5b4"/><text x="498.0" y="63" fill="#eef4ff" font-size="11">0.333</text><text x="0" y="89" fill="#c4cee0" font-size="11">mlp / q2 / shared / exact</text><rect x="330" y="77" width="217.5" height="16" fill="#64d5b4"/><text x="555.5" y="89" fill="#eef4ff" font-size="11">0.453</text><text x="0" y="115" fill="#c4cee0" font-size="11">quantum_kernel / q2 / angle / 128</text><rect x="330" y="103" width="183.1" height="16" fill="#5ba7ff"/><text x="521.1" y="115" fill="#eef4ff" font-size="11">0.382</text><text x="0" y="141" fill="#c4cee0" font-size="11">quantum_kernel / q2 / angle / exact</text><rect x="330" y="129" width="181.2" height="16" fill="#5ba7ff"/><text x="519.2" y="141" fill="#eef4ff" font-size="11">0.378</text><text x="0" y="167" fill="#c4cee0" font-size="11">vqc / q2 / angle / 128</text><rect x="330" y="155" width="165.5" height="16" fill="#5ba7ff"/><text x="503.5" y="167" fill="#eef4ff" font-size="11">0.345</text><text x="0" y="193" fill="#c4cee0" font-size="11">vqc / q2 / angle / exact</text><rect x="330" y="181" width="165.5" height="16" fill="#5ba7ff"/><text x="503.5" y="193" fill="#eef4ff" font-size="11">0.345</text><text x="0" y="219" fill="#c4cee0" font-size="11">xgboost / q2 / shared / exact</text><rect x="330" y="207" width="190.6" height="16" fill="#64d5b4"/><text x="528.6" y="219" fill="#eef4ff" font-size="11">0.397</text></svg><div class="scroll"><table><thead><tr><th>Model</th><th>Trials</th><th>Balanced accuracy / 95% CI</th><th>Macro F1</th><th>Brier</th><th>ECE</th><th>Net bps / fold</th><th>p99 ms</th><th>Rows/s</th><th>Fit s</th><th>Trial s</th><th>KiB</th><th>Shots incl. profile</th></tr></thead><tbody><tr><td>logistic<small>shared, 2 inputs/qubits, exact</small></td><td>1/1</td><td>0.498<small>single seed</small></td><td>0.438</td><td>0.617</td><td>0.156</td><td>0.00</td><td>0.250</td><td>4565</td><td>0.001</td><td>0.009</td><td>2.6</td><td>0</td></tr><tr><td>majority<small>shared, 2 inputs/qubits, exact</small></td><td>1/1</td><td>0.333<small>single seed</small></td><td>0.181</td><td>1.066</td><td>0.517</td><td>0.00</td><td>0.241</td><td>5147</td><td>0.000</td><td>0.009</td><td>2.3</td><td>0</td></tr><tr><td>mlp<small>shared, 2 inputs/qubits, exact</small></td><td>1/1</td><td>0.453<small>single seed</small></td><td>0.395</td><td>0.615</td><td>0.054</td><td>0.00</td><td>0.305</td><td>4824</td><td>1.070</td><td>1.118</td><td>5.0</td><td>0</td></tr><tr><td>quantum_kernel<small>angle, 2 inputs/qubits, 128 shots</small></td><td>1/1</td><td>0.382<small>single seed</small></td><td>0.328</td><td>0.682</td><td>0.144</td><td>0.00</td><td>0.855</td><td>1366</td><td>0.001</td><td>0.013</td><td>8.0</td><td>293760</td></tr><tr><td>quantum_kernel<small>angle, 2 inputs/qubits, exact</small></td><td>1/1</td><td>0.378<small>single seed</small></td><td>0.332</td><td>0.694</td><td>0.172</td><td>0.00</td><td>0.840</td><td>1322</td><td>0.002</td><td>0.267</td><td>8.0</td><td>0</td></tr><tr><td>vqc<small>angle, 2 inputs/qubits, 128 shots</small></td><td>1/1</td><td>0.345<small>single seed</small></td><td>0.207</td><td>0.639</td><td>0.041</td><td>0.00</td><td>0.874</td><td>1201</td><td>0.009</td><td>0.023</td><td>3.2</td><td>38272</td></tr><tr><td>vqc<small>angle, 2 inputs/qubits, exact</small></td><td>1/1</td><td>0.345<small>single seed</small></td><td>0.207</td><td>0.640</td><td>0.041</td><td>0.00</td><td>0.839</td><td>1414</td><td>0.005</td><td>0.017</td><td>3.1</td><td>0</td></tr><tr><td>xgboost<small>shared, 2 inputs/qubits, exact</small></td><td>1/1</td><td>0.397<small>single seed</small></td><td>0.333</td><td>0.629</td><td>0.064</td><td>0.00</td><td>0.296</td><td>4064</td><td>0.015</td><td>0.024</td><td>20.3</td><td>0</td></tr></tbody></table></div><ul><li>classical: process 1.717s; bootstrap 0.532s; data 0.003s; features/splits 0.001s; status complete</li><li>quantum-sim: process 0.909s; bootstrap 0.564s; data 0.003s; features/splits 0.001s; status complete</li></ul><details><summary>Configuration and provenance</summary><pre>{
+  &quot;name&quot;: &quot;ci&quot;,
+  &quot;data_path&quot;: &quot;data/ci.csv&quot;,
+  &quot;runs_dir&quot;: &quot;runs&quot;,
+  &quot;n_snapshots&quot;: 240,
+  &quot;levels&quot;: 3,
+  &quot;interval_ms&quot;: 100,
+  &quot;data_seed&quot;: 31415,
+  &quot;horizon&quot;: 3,
+  &quot;label_threshold_bps&quot;: 0.5,
+  &quot;embargo&quot;: 3,
+  &quot;train_fraction&quot;: 0.45,
+  &quot;calibration_fraction&quot;: 0.12,
+  &quot;validation_fraction&quot;: 0.12,
+  &quot;folds&quot;: 1,
+  &quot;train_samples&quot;: 18,
+  &quot;seeds&quot;: [
+    11
+  ],
+  &quot;qubits&quot;: [
+    2
+  ],
+  &quot;encodings&quot;: [
+    &quot;angle&quot;
+  ],
+  &quot;shots&quot;: [
+    null,
+    128
+  ],
+  &quot;circuit_layers&quot;: 2,
+  &quot;max_iterations&quot;: 3,
+  &quot;fit_budget_seconds&quot;: 30,
+  &quot;fee_bps&quot;: 0.5,
+  &quot;slippage_bps&quot;: 0.2,
+  &quot;execution_delay&quot;: 1,
+  &quot;thresholds&quot;: [
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    1.0
+  ],
+  &quot;latency_samples&quot;: 5
+}</pre><pre>{
+  &quot;python&quot;: &quot;3.12.14 (main, Sep 24 2026, 17:46:32) [Clang 22.1.3 ]&quot;,
+  &quot;platform&quot;: &quot;macOS-26.5.1-arm64-arm-64bit&quot;,
+  &quot;machine&quot;: &quot;arm64&quot;,
+  &quot;packages&quot;: {
+    &quot;numpy&quot;: &quot;2.5.5&quot;,
+    &quot;scipy&quot;: &quot;1.18.1&quot;,
+    &quot;scikit-learn&quot;: &quot;1.9.1&quot;,
+    &quot;polars&quot;: &quot;2.1.0&quot;,
+    &quot;pennylane&quot;: &quot;0.45.1&quot;,
+    &quot;torch&quot;: &quot;2.15.0&quot;,
+    &quot;xgboost&quot;: &quot;3.4.1&quot;,
+    &quot;PyYAML&quot;: &quot;6.0.4&quot;
+  },
+  &quot;blas_threads&quot;: 1,
+  &quot;torch_threads&quot;: 1,
+  &quot;xgboost_threads&quot;: 1
+}</pre><p>Dataset SHA-256: de0cb19816114f2941ffed8fb14bd8a42b2991ff2ab674f108f8500774d40bfa</p></details></section><section><h2>Protocol a989c1c105bfb2ef</h2><p>Only rows within this protocol share data, source, splits and budgets.</p><svg role="img" aria-label="Balanced accuracy by model" viewBox="0 0 880 456"><text x="0" y="37" fill="#c4cee0" font-size="11">logistic / q2 / shared / exact</text><rect x="330" y="25" width="225.4" height="16" fill="#64d5b4"/><text x="563.4" y="37" fill="#eef4ff" font-size="11">0.470</text><text x="0" y="63" fill="#c4cee0" font-size="11">logistic / q3 / shared / exact</text><rect x="330" y="51" width="222.9" height="16" fill="#64d5b4"/><text x="560.9" y="63" fill="#eef4ff" font-size="11">0.464</text><text x="0" y="89" fill="#c4cee0" font-size="11">majority / q2 / shared / exact</text><rect x="330" y="77" width="160.0" height="16" fill="#64d5b4"/><text x="498.0" y="89" fill="#eef4ff" font-size="11">0.333</text><text x="0" y="115" fill="#c4cee0" font-size="11">majority / q3 / shared / exact</text><rect x="330" y="103" width="160.0" height="16" fill="#64d5b4"/><text x="498.0" y="115" fill="#eef4ff" font-size="11">0.333</text><text x="0" y="141" fill="#c4cee0" font-size="11">mlp / q2 / shared / exact</text><rect x="330" y="129" width="229.8" height="16" fill="#64d5b4"/><text x="567.8" y="141" fill="#eef4ff" font-size="11">0.479</text><text x="0" y="167" fill="#c4cee0" font-size="11">mlp / q3 / shared / exact</text><rect x="330" y="155" width="222.0" height="16" fill="#64d5b4"/><text x="560.0" y="167" fill="#eef4ff" font-size="11">0.462</text><text x="0" y="193" fill="#c4cee0" font-size="11">quantum_kernel / q2 / angle / exact</text><rect x="330" y="181" width="193.3" height="16" fill="#5ba7ff"/><text x="531.3" y="193" fill="#eef4ff" font-size="11">0.403</text><text x="0" y="219" fill="#c4cee0" font-size="11">quantum_kernel / q2 / iqp / exact</text><rect x="330" y="207" width="176.4" height="16" fill="#5ba7ff"/><text x="514.4" y="219" fill="#eef4ff" font-size="11">0.367</text><text x="0" y="245" fill="#c4cee0" font-size="11">quantum_kernel / q3 / angle / exact</text><rect x="330" y="233" width="207.5" height="16" fill="#5ba7ff"/><text x="545.5" y="245" fill="#eef4ff" font-size="11">0.432</text><text x="0" y="271" fill="#c4cee0" font-size="11">quantum_kernel / q3 / iqp / exact</text><rect x="330" y="259" width="191.1" height="16" fill="#5ba7ff"/><text x="529.1" y="271" fill="#eef4ff" font-size="11">0.398</text><text x="0" y="297" fill="#c4cee0" font-size="11">vqc / q2 / angle / exact</text><rect x="330" y="285" width="164.1" height="16" fill="#5ba7ff"/><text x="502.1" y="297" fill="#eef4ff" font-size="11">0.342</text><text x="0" y="323" fill="#c4cee0" font-size="11">vqc / q2 / iqp / exact</text><rect x="330" y="311" width="160.0" height="16" fill="#5ba7ff"/><text x="498.0" y="323" fill="#eef4ff" font-size="11">0.333</text><text x="0" y="349" fill="#c4cee0" font-size="11">vqc / q3 / angle / exact</text><rect x="330" y="337" width="163.3" height="16" fill="#5ba7ff"/><text x="501.3" y="349" fill="#eef4ff" font-size="11">0.340</text><text x="0" y="375" fill="#c4cee0" font-size="11">vqc / q3 / iqp / exact</text><rect x="330" y="363" width="160.0" height="16" fill="#5ba7ff"/><text x="498.0" y="375" fill="#eef4ff" font-size="11">0.333</text><text x="0" y="401" fill="#c4cee0" font-size="11">xgboost / q2 / shared / exact</text><rect x="330" y="389" width="231.5" height="16" fill="#64d5b4"/><text x="569.5" y="401" fill="#eef4ff" font-size="11">0.482</text><text x="0" y="427" fill="#c4cee0" font-size="11">xgboost / q3 / shared / exact</text><rect x="330" y="415" width="229.9" height="16" fill="#64d5b4"/><text x="567.9" y="427" fill="#eef4ff" font-size="11">0.479</text></svg><div class="scroll"><table><thead><tr><th>Model</th><th>Trials</th><th>Balanced accuracy / 95% CI</th><th>Macro F1</th><th>Brier</th><th>ECE</th><th>Net bps / fold</th><th>p99 ms</th><th>Rows/s</th><th>Fit s</th><th>Trial s</th><th>KiB</th><th>Shots incl. profile</th></tr></thead><tbody><tr><td>logistic<small>shared, 2 inputs/qubits, exact</small></td><td>6/6</td><td>0.470<small>0.451–0.488</small></td><td>0.434</td><td>0.492</td><td>0.073</td><td>0.00</td><td>0.421</td><td>3779</td><td>0.001</td><td>0.020</td><td>2.6</td><td>0</td></tr><tr><td>logistic<small>shared, 3 inputs/qubits, exact</small></td><td>6/6</td><td>0.464<small>0.452–0.477</small></td><td>0.435</td><td>0.505</td><td>0.087</td><td>0.00</td><td>0.513</td><td>3593</td><td>0.001</td><td>0.020</td><td>2.7</td><td>0</td></tr><tr><td>majority<small>shared, 2 inputs/qubits, exact</small></td><td>6/6</td><td>0.333<small>0.333–0.333</small></td><td>0.214</td><td>0.892</td><td>0.413</td><td>0.00</td><td>0.832</td><td>3931</td><td>0.000</td><td>0.021</td><td>2.3</td><td>0</td></tr><tr><td>majority<small>shared, 3 inputs/qubits, exact</small></td><td>6/6</td><td>0.333<small>0.333–0.333</small></td><td>0.214</td><td>0.892</td><td>0.413</td><td>0.00</td><td>0.319</td><td>4556</td><td>0.000</td><td>0.016</td><td>2.4</td><td>0</td></tr><tr><td>mlp<small>shared, 2 inputs/qubits, exact</small></td><td>6/6</td><td>0.479<small>0.459–0.499</small></td><td>0.442</td><td>0.491</td><td>0.076</td><td>0.00</td><td>0.343</td><td>4327</td><td>0.172</td><td>0.190</td><td>5.0</td><td>0</td></tr><tr><td>mlp<small>shared, 3 inputs/qubits, exact</small></td><td>6/6</td><td>0.462<small>0.425–0.500</small></td><td>0.433</td><td>0.510</td><td>0.088</td><td>0.00</td><td>1.621</td><td>3759</td><td>0.011</td><td>0.037</td><td>5.2</td><td>0</td></tr><tr><td>quantum_kernel<small>angle, 2 inputs/qubits, exact</small></td><td>6/6</td><td>0.403<small>0.357–0.448</small></td><td>0.363</td><td>0.595</td><td>0.074</td><td>0.00</td><td>1.162</td><td>1195</td><td>0.002</td><td>0.096</td><td>50.2</td><td>0</td></tr><tr><td>quantum_kernel<small>iqp, 2 inputs/qubits, exact</small></td><td>6/6</td><td>0.367<small>0.338–0.396</small></td><td>0.305</td><td>0.616</td><td>0.042</td><td>0.00</td><td>1.180</td><td>1100</td><td>0.002</td><td>0.049</td><td>50.3</td><td>0</td></tr><tr><td>quantum_kernel<small>angle, 3 inputs/qubits, exact</small></td><td>6/6</td><td>0.432<small>0.378–0.487</small></td><td>0.401</td><td>0.572</td><td>0.062</td><td>0.00</td><td>1.220</td><td>992</td><td>0.002</td><td>0.052</td><td>54.9</td><td>0</td></tr><tr><td>quantum_kernel<small>iqp, 3 inputs/qubits, exact</small></td><td>6/6</td><td>0.398<small>0.336–0.460</small></td><td>0.353</td><td>0.600</td><td>0.033</td><td>0.00</td><td>1.465</td><td>875</td><td>0.002</td><td>0.058</td><td>54.9</td><td>0</td></tr><tr><td>vqc<small>angle, 2 inputs/qubits, exact</small></td><td>6/6</td><td>0.342<small>0.320–0.364</small></td><td>0.237</td><td>0.605</td><td>0.058</td><td>0.00</td><td>1.109</td><td>1220</td><td>0.062</td><td>0.105</td><td>3.1</td><td>0</td></tr><tr><td>vqc<small>iqp, 2 inputs/qubits, exact</small></td><td>6/6</td><td>0.333<small>0.333–0.333</small></td><td>0.214</td><td>0.608</td><td>0.042</td><td>0.00</td><td>1.176</td><td>1118</td><td>0.065</td><td>0.110</td><td>3.1</td><td>0</td></tr><tr><td>vqc<small>angle, 3 inputs/qubits, exact</small></td><td>6/6</td><td>0.340<small>0.336–0.344</small></td><td>0.236</td><td>0.603</td><td>0.073</td><td>-1.64</td><td>1.937</td><td>879</td><td>0.085</td><td>0.142</td><td>3.4</td><td>0</td></tr><tr><td>vqc<small>iqp, 3 inputs/qubits, exact</small></td><td>6/6</td><td>0.333<small>0.333–0.333</small></td><td>0.214</td><td>0.609</td><td>0.040</td><td>0.00</td><td>6.802</td><td>774</td><td>0.097</td><td>0.168</td><td>3.4</td><td>0</td></tr><tr><td>xgboost<small>shared, 2 inputs/qubits, exact</small></td><td>6/6</td><td>0.482<small>0.421–0.544</small></td><td>0.466</td><td>0.532</td><td>0.071</td><td>0.00</td><td>0.468</td><td>3298</td><td>0.006</td><td>0.027</td><td>102.0</td><td>0</td></tr><tr><td>xgboost<small>shared, 3 inputs/qubits, exact</small></td><td>6/6</td><td>0.479<small>0.474–0.484</small></td><td>0.466</td><td>0.526</td><td>0.079</td><td>0.00</td><td>0.599</td><td>3149</td><td>0.004</td><td>0.027</td><td>102.9</td><td>0</td></tr></tbody></table></div><ul><li>classical: process 3.178s; bootstrap 0.841s; data 0.004s; features/splits 0.006s; status complete</li><li>quantum-sim: process 5.521s; bootstrap 0.634s; data 0.005s; features/splits 0.005s; status complete</li></ul><details><summary>Configuration and provenance</summary><pre>{
+  &quot;name&quot;: &quot;demo&quot;,
+  &quot;data_path&quot;: &quot;data/demo.csv&quot;,
+  &quot;runs_dir&quot;: &quot;runs&quot;,
+  &quot;n_snapshots&quot;: 900,
+  &quot;levels&quot;: 3,
+  &quot;interval_ms&quot;: 100,
+  &quot;data_seed&quot;: 31415,
+  &quot;horizon&quot;: 3,
+  &quot;label_threshold_bps&quot;: 0.5,
+  &quot;embargo&quot;: 3,
+  &quot;train_fraction&quot;: 0.45,
+  &quot;calibration_fraction&quot;: 0.12,
+  &quot;validation_fraction&quot;: 0.12,
+  &quot;folds&quot;: 2,
+  &quot;train_samples&quot;: 72,
+  &quot;seeds&quot;: [
+    11,
+    23,
+    37
+  ],
+  &quot;qubits&quot;: [
+    2,
+    3
+  ],
+  &quot;encodings&quot;: [
+    &quot;angle&quot;,
+    &quot;iqp&quot;
+  ],
+  &quot;shots&quot;: [
+    null
+  ],
+  &quot;circuit_layers&quot;: 2,
+  &quot;max_iterations&quot;: 30,
+  &quot;fit_budget_seconds&quot;: 30,
+  &quot;fee_bps&quot;: 0.5,
+  &quot;slippage_bps&quot;: 0.2,
+  &quot;execution_delay&quot;: 1,
+  &quot;thresholds&quot;: [
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    1.0
+  ],
+  &quot;latency_samples&quot;: 40
+}</pre><pre>{
+  &quot;python&quot;: &quot;3.12.14 (main, Sep 24 2026, 17:46:32) [Clang 22.1.3 ]&quot;,
+  &quot;platform&quot;: &quot;macOS-26.5.1-arm64-arm-64bit&quot;,
+  &quot;machine&quot;: &quot;arm64&quot;,
+  &quot;packages&quot;: {
+    &quot;numpy&quot;: &quot;2.5.5&quot;,
+    &quot;scipy&quot;: &quot;1.18.1&quot;,
+    &quot;scikit-learn&quot;: &quot;1.9.1&quot;,
+    &quot;polars&quot;: &quot;2.1.0&quot;,
+    &quot;pennylane&quot;: &quot;0.45.1&quot;,
+    &quot;torch&quot;: &quot;2.15.0&quot;,
+    &quot;xgboost&quot;: &quot;3.4.1&quot;,
+    &quot;PyYAML&quot;: &quot;6.0.4&quot;
+  },
+  &quot;blas_threads&quot;: 1,
+  &quot;torch_threads&quot;: 1,
+  &quot;xgboost_threads&quot;: 1
+}</pre><p>Dataset SHA-256: 500d0bcc491c0202a10e71776fa8ae1f4f1945e2b9cc6a09ec115a457c3344c5</p></details></section><section><h2>Measurement notes</h2><ul>
+<li>Separate training, probability calibration, threshold tuning and test windows. Label endpoints crossing a boundary are purged; embargo removes initial rows from later windows. PCA is fitted only on the shared training sample.</li>
+<li>Means average folds within seed. 95% Student-t intervals describe seed variability on this one dataset; they do not quantify market uncertainty. A single seed has no interval. Incomplete groups must not be ranked as complete benchmarks.</li>
+<li>p99 measures snapshot conversion, validation, feature generation, PCA, encoding, model inference, calibration and decision. Small samples make tail estimates unstable. Rows/s is serial in-process throughput, not network service capacity.</li>
+<li>Net bps sums independent trade returns with one unit, observed bid/ask spreads, delayed fills, fees and adverse slippage. It is not a compounded portfolio return. Test trades do not overlap. Thresholds may select abstention.</li>
+<li>Quantum runs use a noiseless local simulator. Finite-shot kernels sample exact overlaps with a binomial distribution and repair the training Gram matrix; VQC shots use PennyLane measurements. Cached simulator states cannot be assumed on hardware.</li>
+<li>Trial time includes preprocessing, model initialization, training, calibration, threshold selection, test evaluation, streaming profiling and artifact writes. Shared process/data costs are shown separately. Native training calls can exceed the wall budget before being rejected.</li>
+</ul><p><a href="all-runs.csv">Summary CSV</a> · <a href="all-runs.json">Summary JSON and failures</a></p></section>
+<section><h2>Failures</h2><ul><li>None recorded.</li></ul></section></main></html>

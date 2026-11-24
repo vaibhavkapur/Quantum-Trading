@@ -1,0 +1,7 @@
+matplotlib==3.9.4
+numpy==2.0.2
+pytest==8.4.2
+PyYAML==6.0.3
+qiskit==2.2.3
+rustworkx==0.17.1
+scipy==1.13.1

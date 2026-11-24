@@ -1,0 +1,10 @@
+[
+  {
+    "timestamp_ns": 84000000000,
+    "half_spread": 1.0,
+    "skew": 0.0,
+    "inventory_band": 12,
+    "version": 0,
+    "source": "fixed-spread"
+  }
+]

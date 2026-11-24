@@ -1,0 +1,28 @@
+{
+  "assets": [
+    "SYNTH_A",
+    "SYNTH_B"
+  ],
+  "frequency": "daily UTC date labels",
+  "generator": "regime-logreturns-v1",
+  "kind": "synthetic",
+  "license": "CC0-1.0; generated synthetic prices, no vendor market data",
+  "parameters": {
+    "assets": [
+      "SYNTH_A",
+      "SYNTH_B"
+    ],
+    "periods": 504,
+    "seed": 2026,
+    "start": "2020-01-02"
+  },
+  "price_convention": "Synthetic total-return close levels, no dividends or splits",
+  "rows": 504,
+  "schema_version": 1,
+  "sha256": "af9a5cf71a31c506937f74a48f057f1bb8015e570813f1215b92f85b926a71d3",
+  "source_id": "b7b86c13d6301926d4993ea8a8586fb13a6584e32948bada65d0d66f77de340a",
+  "source_name": null,
+  "source_sha256": null,
+  "timestamp_convention": "Dates converted to UTC then normalized to midnight; labels are not execution timestamps",
+  "timezone": "UTC"
+}

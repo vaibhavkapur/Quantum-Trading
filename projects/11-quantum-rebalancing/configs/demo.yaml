@@ -1,0 +1,20 @@
+schema_version: 1
+dataset: ../data/synthetic-v1.json
+runs: ../runs/demo
+generator:
+  seed: 7
+  assets: 3
+  max_trade_lots: 1
+budget:
+  seed: 7
+  max_evaluations: 60
+  time_limit_s: 10.0
+  repair_time_limit_s: 10.0
+  shots: 512
+  qaoa_depth: 1
+  max_qubits: 16
+benchmark:
+  seeds: [7, 19, 41]
+  asset_counts: [2, 3, 4, 6]
+  solvers: [classical, greedy, convex-round, anneal, quantum-sim]
+

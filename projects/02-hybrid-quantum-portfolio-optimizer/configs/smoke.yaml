@@ -1,0 +1,32 @@
+# Reduced-size reproducibility run (CPU only, about a minute). Same pipeline as demo.yaml.
+name: smoke
+seeds: [11, 23]
+data:
+  source: synthetic
+  path: data/smoke_prices.csv
+  synthetic: {n_assets: 4, n_sectors: 2, n_days: 520, start: "2021-01-04", seed: 3}
+splits: {train_end: "2021-12-31", validation_end: "2022-06-30"}
+estimation: {lookback_days: 126, covariance: ledoit_wolf, expected_return: shrunk_mean}
+portfolio: {mode: long_only, lots: 4, max_weight: 0.5, cardinality: 3, risk_aversion: 4.0,
+            turnover_penalty: 0.05}
+backtest: {rebalance_every_days: 63, cost_bps: 10}
+budget: {wall_time_s: 1.0, max_evals: 20000}
+penalty: {method: gradient_bound, scale: 1.0}
+solvers:
+  classical: [cvxpy-relax, miqp, greedy, sa]
+  quantum-sim: [qaoa]
+  anneal-sim: [qubo-sa]
+solver_params:
+  qaoa: {p: 1, shots: 256, maxiter: 40, restarts: 1}
+  qaoa-noisy: {p: 1, shots: 256, maxiter: 40, restarts: 1, max_qubits: 12}
+benchmark:
+  instance_seeds: [101]
+  solvers: [cvxpy-relax, miqp, cpsat, greedy, sa, qubo-sa, random-qubo, qaoa, qaoa-noisy]
+  instances:
+    - {n: 4, lots: 4, max_weight: 0.5, cardinality: 3}
+    - {n: 12, lots: 12, max_weight: 0.25, cardinality: 6, sector_cap: 0.5}
+  penalty_sweep:
+    scales: [0.02, 0.2, 1.0]
+    instances: [{n: 4, lots: 4, max_weight: 0.5, cardinality: 3}]
+  frontier: {risk_aversions: [1.0, 8.0], solvers: [miqp, qaoa]}
+  qubit_growth: {sizes: [4, 16, 64]}

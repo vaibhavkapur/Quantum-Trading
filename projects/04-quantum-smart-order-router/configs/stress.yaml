@@ -1,0 +1,74 @@
+# Stress scenario: heavier order flow, larger parents, frequent outages, tight
+# throttles and a short policy lifetime, so reject / failover / cancel-replace /
+# stale-policy paths are exercised constantly.
+extends: demo.yaml
+name: stress
+
+data:
+  seed: 20260202
+  steps: 30000
+  mid_move_prob: 0.08     # faster market: passive orders need repricing
+
+venues:
+  - name: FAST
+    depth_lots: 3
+    taker_fee: 0.0030
+    maker_fee: -0.0020
+    order_fee: 0.30
+    latency_ms: 0.2
+    latency_jitter_ms: 0.05
+    md_latency_ms: 0.2
+    fade_coeff: 0.3
+    fade_delay_ms: 0.3
+    est_fade_coeff: 0.25
+    impact_coeff: 0.01
+    flow_rate: 30
+    throttle_max_orders: 6
+    throttle_window_ms: 100
+    outage_rate_per_min: 4.0
+    outage_ms: 500
+  - name: MID
+    depth_lots: 3
+    taker_fee: 0.0018
+    maker_fee: -0.0012
+    order_fee: 0.30
+    latency_ms: 1.0
+    latency_jitter_ms: 0.3
+    md_latency_ms: 1.0
+    fade_coeff: 0.8
+    fade_delay_ms: 0.5
+    est_fade_coeff: 0.5
+    impact_coeff: 0.015
+    flow_rate: 20
+    throttle_max_orders: 3
+    throttle_window_ms: 100
+    outage_rate_per_min: 4.0
+    outage_ms: 800
+  - name: SLOW
+    depth_lots: 2
+    taker_fee: 0.0005
+    maker_fee: 0.0
+    order_fee: 0.60
+    latency_ms: 3.0
+    latency_jitter_ms: 1.0
+    md_latency_ms: 2.5
+    fade_coeff: 1.0
+    fade_delay_ms: 1.0
+    est_fade_coeff: 0.9
+    impact_coeff: 0.02
+    flow_rate: 10
+    throttle_max_orders: 3
+    throttle_window_ms: 100
+    outage_rate_per_min: 6.0
+    outage_ms: 1000
+
+orders: {rate_per_s: 8.0, sizes_lots: [4, 6, 8, 12], horizon_ms: 300}
+
+optimizer:
+  refresh_ms: 500
+  publish_delay_ms: 100
+  max_policy_age_ms: 450   # shorter than refresh + delay: some decisions must use the fallback
+  timeout_ms: 60           # QAOA overruns on some refreshes -> classical fallback
+  buckets_lots: [4, 8, 12]
+
+seeds: [11, 23, 37]

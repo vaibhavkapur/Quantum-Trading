@@ -1,0 +1,10 @@
+# TYPE mm_net_pnl gauge
+mm_net_pnl{solver="avellaneda-stoikov",scenario="liquidity_crisis",seed="37"} 22.752003600000265
+# TYPE mm_quote_ack_p99_seconds gauge
+mm_quote_ack_p99_seconds{solver="avellaneda-stoikov",scenario="liquidity_crisis",seed="37"} 2.392220000000001e-06
+# TYPE mm_inventory_max gauge
+mm_inventory_max{solver="avellaneda-stoikov",scenario="liquidity_crisis",seed="37"} 10
+# TYPE mm_fallbacks_total gauge
+mm_fallbacks_total{solver="avellaneda-stoikov",scenario="liquidity_crisis",seed="37"} 0
+# TYPE mm_risk_halted gauge
+mm_risk_halted{solver="avellaneda-stoikov",scenario="liquidity_crisis",seed="37"} 0

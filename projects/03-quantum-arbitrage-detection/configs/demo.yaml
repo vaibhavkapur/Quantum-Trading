@@ -1,0 +1,49 @@
+# Demo experiment: 5 currencies x 3 venues, 5 predeclared seeds.
+# Small enough that every QAOA sub-problem fits a 12-qubit statevector on a laptop CPU.
+# Anything not set here takes the default in src/qarb/config.py.
+name: demo
+seeds: [11, 23, 37, 41, 59]        # predeclared; every seed is reported, including failures
+numeraire: USD
+runs_dir: runs
+
+data:
+  dir: data/demo
+  currencies: [USD, USDT, BTC, ETH, SOL]
+  venues:
+    - {name: alpha, fee_bps: 5.0,  feed_delay_ms: [5, 30],  symbol_style: dash}
+    - {name: beta,  fee_bps: 7.5,  feed_delay_ms: [10, 50], symbol_style: concat_xbt}
+    - {name: gamma, fee_bps: 10.0, feed_delay_ms: [15, 80], symbol_style: underscore_lower}
+  n_ticks: 60
+  tick_ms: 250
+  planted: {n_profitable: 5, lengths: [2, 3, 4], edge_bps: [12, 35], duration_ticks: [3, 8]}
+  decoys: {n_thin: 2, n_stale: 2, stale_ticks: 8, stale_jump_bps: 70}
+
+graph:
+  probe_notional: 500        # edge weights are -log R(q) at this size (USD)
+  stale_timeout_ms: 300      # quotes older than this are not edges
+  min_cycle_len: 2
+  max_cycle_len: 4
+
+sizing:
+  max_notional: 10000
+  min_profit: 1.0            # cost gate: sized net profit (USD) a cycle must clear
+  venue_top_k: 2
+  inventory_notional: 100000 # pre-funded balance per venue and currency
+
+execution:
+  decision_interval_ms: 250
+  latency_ms: 40
+  slippage_bps: 0.5
+
+budget:                      # per solver, per decision; identical for every solver
+  max_objective_evals: 100000
+  max_wall_ms: 20000
+
+solvers:
+  classical: [enumeration, bellman_ford, bounded_dp, random_search, qubo_sa, naive_mid]
+  quantum-sim: [qaoa]
+
+qubo: {penalty: auto, anchored: true}
+qaoa: {layers: 2, maxiter: 30, shots_per_iter: 128, final_shots: 512, cvar_alpha: 0.3, max_qubits: 16, engine: numpy, fallback: bounded_dp}
+sa: {reads: 32, sweeps: 60}
+random_search: {samples: 5000}

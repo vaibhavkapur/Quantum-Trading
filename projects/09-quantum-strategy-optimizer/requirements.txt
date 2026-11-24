@@ -1,0 +1,10 @@
+# CPU environment verified on Python 3.9.6. Direct dependencies are pinned;
+# each run manifest records the complete installed distribution inventory.
+numpy==2.0.2
+pandas==2.3.3
+scipy==1.13.1
+PyYAML==6.0.3
+qiskit==2.2.3
+optuna==4.5.0
+pytest==8.4.2
+

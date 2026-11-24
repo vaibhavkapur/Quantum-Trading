@@ -1,0 +1,130 @@
+{
+  "spec": {
+    "schema": "mm-l2-v1",
+    "data": {
+      "seed": 1729,
+      "steps": 1200,
+      "interval_ns": 100000000,
+      "initial_mid_ticks": 10000,
+      "depth_levels": 5,
+      "depth_qty": 8,
+      "train_fraction": 0.5,
+      "validation_fraction": 0.2
+    },
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "scenarios": [
+      "normal",
+      "volatile",
+      "trend",
+      "liquidity_crisis"
+    ]
+  },
+  "dataset_id": "cce341cd8a165703a2abe9dfe18e7f8be4abdbf70c6a3258839ff3d381a6c64f",
+  "license": "CC0-1.0: generated synthetic data; no exchange data included",
+  "timestamps": "integer nanoseconds since synthetic epoch, UTC; strictly increasing",
+  "splits": {
+    "train": [
+      0,
+      600
+    ],
+    "validation": [
+      600,
+      840
+    ],
+    "test": [
+      840,
+      1200
+    ]
+  },
+  "queue_model": "L2 inferred FIFO: new quantity joins tail, reductions cancel newest external quantity first",
+  "files": [
+    {
+      "file": "normal-11.jsonl",
+      "seed": 11,
+      "scenario": "normal",
+      "sha256": "3e90e9a0a949bfb904eafe4f79ff0dbc36cf1f92874a3570350cf1dfa33acc22",
+      "rows": 1200
+    },
+    {
+      "file": "volatile-11.jsonl",
+      "seed": 11,
+      "scenario": "volatile",
+      "sha256": "3c6d1fccc8885b5d4aedf044ed92d1834f21b79d1d39941527b5c4a9c926a312",
+      "rows": 1200
+    },
+    {
+      "file": "trend-11.jsonl",
+      "seed": 11,
+      "scenario": "trend",
+      "sha256": "c5a952c20e1654df13b8962ae0ec64bdc11ca70e333686618926c04b856aae18",
+      "rows": 1200
+    },
+    {
+      "file": "liquidity_crisis-11.jsonl",
+      "seed": 11,
+      "scenario": "liquidity_crisis",
+      "sha256": "20b288247aa7ef2e7883c1d4ed71dc1aeaf9fa82355d36e119025319db10fdc8",
+      "rows": 1200
+    },
+    {
+      "file": "normal-23.jsonl",
+      "seed": 23,
+      "scenario": "normal",
+      "sha256": "1c36b76e7d08b034c62655875908b06b31860c5349eb3ac292632fb2ad93df4a",
+      "rows": 1200
+    },
+    {
+      "file": "volatile-23.jsonl",
+      "seed": 23,
+      "scenario": "volatile",
+      "sha256": "c59534c560ade1e6a7a7c3fc710c26fb8392863140c46ff215cfef4bbb1b7e73",
+      "rows": 1200
+    },
+    {
+      "file": "trend-23.jsonl",
+      "seed": 23,
+      "scenario": "trend",
+      "sha256": "74335e90971707d2ad51ef6f035876b5ed13d2fd50c41bf62e3c091fdbacec6c",
+      "rows": 1200
+    },
+    {
+      "file": "liquidity_crisis-23.jsonl",
+      "seed": 23,
+      "scenario": "liquidity_crisis",
+      "sha256": "2ad4f8fead7b82f9539c1e9f3e67f15f1da3efe4cdac27c462343b4263dee6d5",
+      "rows": 1200
+    },
+    {
+      "file": "normal-37.jsonl",
+      "seed": 37,
+      "scenario": "normal",
+      "sha256": "7a5e1c91a8bf50d7a4f6bf245a0e4d11f3ee443830589cf142bb7d075d38b3be",
+      "rows": 1200
+    },
+    {
+      "file": "volatile-37.jsonl",
+      "seed": 37,
+      "scenario": "volatile",
+      "sha256": "3423a362c36f4368c57ccd2522b4165a586909cecc070b91ed890d26f4ed5159",
+      "rows": 1200
+    },
+    {
+      "file": "trend-37.jsonl",
+      "seed": 37,
+      "scenario": "trend",
+      "sha256": "e60858f62a95ee4d63c159d6a95283ec2c48532f0cc2db8c673d394babd1621c",
+      "rows": 1200
+    },
+    {
+      "file": "liquidity_crisis-37.jsonl",
+      "seed": 37,
+      "scenario": "liquidity_crisis",
+      "sha256": "8ecfe0100cf8cd3727eb120cb9224cfab2b7f97aed2652546228cc58d1596581",
+      "rows": 1200
+    }
+  ]
+}

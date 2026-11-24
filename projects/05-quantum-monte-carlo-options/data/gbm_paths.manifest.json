@@ -1,0 +1,25 @@
+{
+ "path": "data/gbm_paths.npz",
+ "sha256": "7c431a8e3035c6b518ff58b7ba4eb0af5be17a63521c08e6bbf5142289ec0e90",
+ "content_sha256": "65bc3138d933bb3a271d0d3029164ea146811479d6b72b47caff2f7a822627f6",
+ "generator": "numpy.random.default_rng (PCG64), exact GBM transition",
+ "seed": 20240101,
+ "n_paths": 50000,
+ "market": {
+  "spot": 100.0,
+  "rate": 0.05,
+  "vol": 0.2
+ },
+ "arrays": {
+  "T1_steps1": [
+   50000,
+   1
+  ],
+  "T1_steps3": [
+   50000,
+   3
+  ]
+ },
+ "license": "synthetic; no third-party data",
+ "config_sha256": "fa43059dbbb085531330322f42cc8bd924bdd44ae9175303f9da4afcafdbf568"
+}

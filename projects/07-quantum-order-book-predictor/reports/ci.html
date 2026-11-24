@@ -1,0 +1,79 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order-book prediction benchmark</title><style>
+body{margin:0;background:#0b1220;color:#eef4ff;font:15px system-ui,sans-serif;line-height:1.6}main{max-width:1500px;margin:auto;padding:40px 28px}
+h1{font-size:36px;line-height:1.2;margin:10px 0}h2{font-size:19px}p,li{color:#c4cee0}.tag{color:#64d5b4;font-size:12px;letter-spacing:2px}
+section{margin:28px 0;padding:22px;background:#111d30;border:1px solid #23344d;border-radius:12px}.scroll{overflow:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:12px}td,th{padding:12px;text-align:right;border-bottom:1px solid #27364c;white-space:nowrap}td:first-child,th:first-child{text-align:left}
+th{color:#92a8c6}small{display:block;color:#92a8c6;font-size:10px}pre{overflow:auto;color:#b1c4df}svg{max-width:1000px;width:100%}a{color:#64d5b4}
+</style><main><div class="tag">REPRODUCIBLE CPU RESEARCH</div><h1>Quantum ML Order Book Predictor</h1>
+<p>Classical and simulated quantum models on identical chronological L2 prediction tasks. Synthetic data; no live-profitability or quantum-advantage claim.</p>
+<p>2 runs · 8 trials · 0 failed / over budget · 1 trials with warnings (see raw manifests)</p>
+<section><h2>Protocol 4d75ffb1d7d0b3fc</h2><p>Only rows within this protocol share data, source, splits and budgets.</p><svg role="img" aria-label="Balanced accuracy by model" viewBox="0 0 880 248"><text x="0" y="37" fill="#c4cee0" font-size="11">logistic / q2 / shared / exact</text><rect x="330" y="25" width="238.9" height="16" fill="#64d5b4"/><text x="576.9" y="37" fill="#eef4ff" font-size="11">0.498</text><text x="0" y="63" fill="#c4cee0" font-size="11">majority / q2 / shared / exact</text><rect x="330" y="51" width="160.0" height="16" fill="#64d5b4"/><text x="498.0" y="63" fill="#eef4ff" font-size="11">0.333</text><text x="0" y="89" fill="#c4cee0" font-size="11">mlp / q2 / shared / exact</text><rect x="330" y="77" width="217.5" height="16" fill="#64d5b4"/><text x="555.5" y="89" fill="#eef4ff" font-size="11">0.453</text><text x="0" y="115" fill="#c4cee0" font-size="11">quantum_kernel / q2 / angle / 128</text><rect x="330" y="103" width="183.1" height="16" fill="#5ba7ff"/><text x="521.1" y="115" fill="#eef4ff" font-size="11">0.382</text><text x="0" y="141" fill="#c4cee0" font-size="11">quantum_kernel / q2 / angle / exact</text><rect x="330" y="129" width="181.2" height="16" fill="#5ba7ff"/><text x="519.2" y="141" fill="#eef4ff" font-size="11">0.378</text><text x="0" y="167" fill="#c4cee0" font-size="11">vqc / q2 / angle / 128</text><rect x="330" y="155" width="165.5" height="16" fill="#5ba7ff"/><text x="503.5" y="167" fill="#eef4ff" font-size="11">0.345</text><text x="0" y="193" fill="#c4cee0" font-size="11">vqc / q2 / angle / exact</text><rect x="330" y="181" width="165.5" height="16" fill="#5ba7ff"/><text x="503.5" y="193" fill="#eef4ff" font-size="11">0.345</text><text x="0" y="219" fill="#c4cee0" font-size="11">xgboost / q2 / shared / exact</text><rect x="330" y="207" width="190.6" height="16" fill="#64d5b4"/><text x="528.6" y="219" fill="#eef4ff" font-size="11">0.397</text></svg><div class="scroll"><table><thead><tr><th>Model</th><th>Trials</th><th>Balanced accuracy / 95% CI</th><th>Macro F1</th><th>Brier</th><th>ECE</th><th>Net bps / fold</th><th>p99 ms</th><th>Rows/s</th><th>Fit s</th><th>Trial s</th><th>KiB</th><th>Shots incl. profile</th></tr></thead><tbody><tr><td>logistic<small>shared, 2 inputs/qubits, exact</small></td><td>1/1</td><td>0.498<small>single seed</small></td><td>0.438</td><td>0.617</td><td>0.156</td><td>0.00</td><td>0.250</td><td>4565</td><td>0.001</td><td>0.009</td><td>2.6</td><td>0</td></tr><tr><td>majority<small>shared, 2 inputs/qubits, exact</small></td><td>1/1</td><td>0.333<small>single seed</small></td><td>0.181</td><td>1.066</td><td>0.517</td><td>0.00</td><td>0.241</td><td>5147</td><td>0.000</td><td>0.009</td><td>2.3</td><td>0</td></tr><tr><td>mlp<small>shared, 2 inputs/qubits, exact</small></td><td>1/1</td><td>0.453<small>single seed</small></td><td>0.395</td><td>0.615</td><td>0.054</td><td>0.00</td><td>0.305</td><td>4824</td><td>1.070</td><td>1.118</td><td>5.0</td><td>0</td></tr><tr><td>quantum_kernel<small>angle, 2 inputs/qubits, 128 shots</small></td><td>1/1</td><td>0.382<small>single seed</small></td><td>0.328</td><td>0.682</td><td>0.144</td><td>0.00</td><td>0.855</td><td>1366</td><td>0.001</td><td>0.013</td><td>8.0</td><td>293760</td></tr><tr><td>quantum_kernel<small>angle, 2 inputs/qubits, exact</small></td><td>1/1</td><td>0.378<small>single seed</small></td><td>0.332</td><td>0.694</td><td>0.172</td><td>0.00</td><td>0.840</td><td>1322</td><td>0.002</td><td>0.267</td><td>8.0</td><td>0</td></tr><tr><td>vqc<small>angle, 2 inputs/qubits, 128 shots</small></td><td>1/1</td><td>0.345<small>single seed</small></td><td>0.207</td><td>0.639</td><td>0.041</td><td>0.00</td><td>0.874</td><td>1201</td><td>0.009</td><td>0.023</td><td>3.2</td><td>38272</td></tr><tr><td>vqc<small>angle, 2 inputs/qubits, exact</small></td><td>1/1</td><td>0.345<small>single seed</small></td><td>0.207</td><td>0.640</td><td>0.041</td><td>0.00</td><td>0.839</td><td>1414</td><td>0.005</td><td>0.017</td><td>3.1</td><td>0</td></tr><tr><td>xgboost<small>shared, 2 inputs/qubits, exact</small></td><td>1/1</td><td>0.397<small>single seed</small></td><td>0.333</td><td>0.629</td><td>0.064</td><td>0.00</td><td>0.296</td><td>4064</td><td>0.015</td><td>0.024</td><td>20.3</td><td>0</td></tr></tbody></table></div><ul><li>classical: process 1.717s; bootstrap 0.532s; data 0.003s; features/splits 0.001s; status complete</li><li>quantum-sim: process 0.909s; bootstrap 0.564s; data 0.003s; features/splits 0.001s; status complete</li></ul><details><summary>Configuration and provenance</summary><pre>{
+  &quot;name&quot;: &quot;ci&quot;,
+  &quot;data_path&quot;: &quot;data/ci.csv&quot;,
+  &quot;runs_dir&quot;: &quot;runs&quot;,
+  &quot;n_snapshots&quot;: 240,
+  &quot;levels&quot;: 3,
+  &quot;interval_ms&quot;: 100,
+  &quot;data_seed&quot;: 31415,
+  &quot;horizon&quot;: 3,
+  &quot;label_threshold_bps&quot;: 0.5,
+  &quot;embargo&quot;: 3,
+  &quot;train_fraction&quot;: 0.45,
+  &quot;calibration_fraction&quot;: 0.12,
+  &quot;validation_fraction&quot;: 0.12,
+  &quot;folds&quot;: 1,
+  &quot;train_samples&quot;: 18,
+  &quot;seeds&quot;: [
+    11
+  ],
+  &quot;qubits&quot;: [
+    2
+  ],
+  &quot;encodings&quot;: [
+    &quot;angle&quot;
+  ],
+  &quot;shots&quot;: [
+    null,
+    128
+  ],
+  &quot;circuit_layers&quot;: 2,
+  &quot;max_iterations&quot;: 3,
+  &quot;fit_budget_seconds&quot;: 30,
+  &quot;fee_bps&quot;: 0.5,
+  &quot;slippage_bps&quot;: 0.2,
+  &quot;execution_delay&quot;: 1,
+  &quot;thresholds&quot;: [
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    1.0
+  ],
+  &quot;latency_samples&quot;: 5
+}</pre><pre>{
+  &quot;python&quot;: &quot;3.12.14 (main, Sep 24 2026, 17:46:32) [Clang 22.1.3 ]&quot;,
+  &quot;platform&quot;: &quot;macOS-26.5.1-arm64-arm-64bit&quot;,
+  &quot;machine&quot;: &quot;arm64&quot;,
+  &quot;packages&quot;: {
+    &quot;numpy&quot;: &quot;2.5.5&quot;,
+    &quot;scipy&quot;: &quot;1.18.1&quot;,
+    &quot;scikit-learn&quot;: &quot;1.9.1&quot;,
+    &quot;polars&quot;: &quot;2.1.0&quot;,
+    &quot;pennylane&quot;: &quot;0.45.1&quot;,
+    &quot;torch&quot;: &quot;2.15.0&quot;,
+    &quot;xgboost&quot;: &quot;3.4.1&quot;,
+    &quot;PyYAML&quot;: &quot;6.0.4&quot;
+  },
+  &quot;blas_threads&quot;: 1,
+  &quot;torch_threads&quot;: 1,
+  &quot;xgboost_threads&quot;: 1
+}</pre><p>Dataset SHA-256: de0cb19816114f2941ffed8fb14bd8a42b2991ff2ab674f108f8500774d40bfa</p></details></section><section><h2>Measurement notes</h2><ul>
+<li>Separate training, probability calibration, threshold tuning and test windows. Label endpoints crossing a boundary are purged; embargo removes initial rows from later windows. PCA is fitted only on the shared training sample.</li>
+<li>Means average folds within seed. 95% Student-t intervals describe seed variability on this one dataset; they do not quantify market uncertainty. A single seed has no interval. Incomplete groups must not be ranked as complete benchmarks.</li>
+<li>p99 measures snapshot conversion, validation, feature generation, PCA, encoding, model inference, calibration and decision. Small samples make tail estimates unstable. Rows/s is serial in-process throughput, not network service capacity.</li>
+<li>Net bps sums independent trade returns with one unit, observed bid/ask spreads, delayed fills, fees and adverse slippage. It is not a compounded portfolio return. Test trades do not overlap. Thresholds may select abstention.</li>
+<li>Quantum runs use a noiseless local simulator. Finite-shot kernels sample exact overlaps with a binomial distribution and repair the training Gram matrix; VQC shots use PennyLane measurements. Cached simulator states cannot be assumed on hardware.</li>
+<li>Trial time includes preprocessing, model initialization, training, calibration, threshold selection, test evaluation, streaming profiling and artifact writes. Shared process/data costs are shown separately. Native training calls can exceed the wall budget before being rejected.</li>
+</ul><p><a href="ci.csv">Summary CSV</a> · <a href="ci.json">Summary JSON and failures</a></p></section>
+<section><h2>Failures</h2><ul><li>None recorded.</li></ul></section></main></html>

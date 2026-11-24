@@ -1,0 +1,31 @@
+data:
+  path: ../data/ci.csv
+  seed: 2026
+  periods: 160
+  start: '2020-01-02'
+  assets: [SYNTH_A]
+strategies:
+  windows: [3, 10]
+backtest:
+  annualization: 252
+  train_cost_bps: 2.0
+  evaluation_cost_bps: 3.0
+walk_forward:
+  train: 64
+  validation: 24
+  test: 24
+optimization:
+  max_selected: 2
+  risk_aversion: [0.5, 2.0]
+  cardinality_cost: 0.001
+  evaluations: 32
+  seeds: [7, 19]
+  qaoa_layers: 1
+  shots_per_evaluation: 4
+  max_qubits: 8
+report:
+  bootstrap_samples: 100
+  block_length: 5
+output:
+  runs: ../runs-ci
+

@@ -1,0 +1,4754 @@
+{
+  "candidate_failures": 0,
+  "candidates": [
+    {
+      "objective_gap": 0.0219649707862752,
+      "reference_objective": -0.04721463582918168,
+      "result": {
+        "elapsed_s": 0.02942983299999824,
+        "error": null,
+        "evaluations": 128,
+        "feasible_evaluations": 9,
+        "objective": -0.025249665042906478,
+        "resources": {
+          "backend": "qiskit-statevector",
+          "circuit_depth_with_preparation": 20,
+          "circuit_evaluations": 16,
+          "hamiltonian_scale": 7.722363108727102,
+          "hardware": false,
+          "layers": 1,
+          "noise_model": null,
+          "qpu_cost": 0.0,
+          "qubits": 10,
+          "queue_s": 0.0,
+          "repair": "none",
+          "shots": 128,
+          "shots_per_evaluation": 8,
+          "statevector_bytes": 16384,
+          "two_qubit_gates": 45
+        },
+        "seed": 369571992,
+        "selected": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "solver": "qaoa",
+        "status": "ok",
+        "timing": {
+          "communication_s": 0.0,
+          "compilation_s": 0.0017358750000013856,
+          "objective_scoring_s": 0.0027492870000020986,
+          "optimizer_and_setup_s": 0.0006616699999977271,
+          "repair_s": 0.0,
+          "sampling_decoding_s": 0.00039737599999867257,
+          "simulation_s": 0.02354379199999812,
+          "state_preparation_s": 0.00034183300000023564
+        },
+        "trace": [
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.2518328479216185,
+            "evaluation": 1,
+            "feasible": false,
+            "objective": 0.07394236093993695
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 1.584018677951109,
+            "evaluation": 2,
+            "feasible": false,
+            "objective": 0.039546056205688726
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 38.76440319064792,
+            "evaluation": 3,
+            "feasible": false,
+            "objective": 0.1525876470124064
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 1.5444726217454203,
+            "evaluation": 4,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 98.99883543871931,
+            "evaluation": 5,
+            "feasible": false,
+            "objective": 0.1525876470124064
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 1.5738541330533558,
+            "evaluation": 6,
+            "feasible": false,
+            "objective": 0.029381511307935003
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 55.75360202984754,
+            "evaluation": 7,
+            "feasible": false,
+            "objective": 0.1525876470124064
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 14.011060008471109,
+            "evaluation": 8,
+            "feasible": false,
+            "objective": 0.11080641276232504
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 24.885027541156603,
+            "evaluation": 9,
+            "feasible": false,
+            "objective": 0.17346559322987923
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.185708523140172,
+            "evaluation": 10,
+            "feasible": false,
+            "objective": 0.007818036158490495
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 24.81862715816487,
+            "evaluation": 11,
+            "feasible": false,
+            "objective": 0.10706521023814249
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 24.837183061183584,
+            "evaluation": 12,
+            "feasible": false,
+            "objective": 0.12562111325685793
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 1.5444726217454203,
+            "evaluation": 13,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 1.5444726217454203,
+            "evaluation": 14,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 24.820038533273454,
+            "evaluation": 15,
+            "feasible": false,
+            "objective": 0.10847658534672869
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.265561745950079,
+            "evaluation": 16,
+            "feasible": false,
+            "objective": 0.08767125896839606
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 6.261123308649124,
+            "evaluation": 17,
+            "feasible": false,
+            "objective": 0.08323282166744325
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 1.6265840634156543,
+            "evaluation": 18,
+            "feasible": false,
+            "objective": 0.08211144167023236
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "energy": 1.615209665373186,
+            "evaluation": 19,
+            "feasible": false,
+            "objective": 0.07073704362776419
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "energy": 1.5522906579039102,
+            "evaluation": 20,
+            "feasible": false,
+            "objective": 0.007818036158490495
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 38.79006217287029,
+            "evaluation": 21,
+            "feasible": false,
+            "objective": 0.17824662923478296
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 38.76440319064792,
+            "evaluation": 22,
+            "feasible": false,
+            "objective": 0.1525876470124064
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "energy": 1.584018677951109,
+            "evaluation": 23,
+            "feasible": false,
+            "objective": 0.039546056205688726
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1
+            ],
+            "energy": 6.233997570562156,
+            "evaluation": 24,
+            "feasible": false,
+            "objective": 0.05610708358047442
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "energy": 1.5500593709985644,
+            "evaluation": 25,
+            "feasible": false,
+            "objective": 0.00558674925314356
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 38.707051847253766,
+            "evaluation": 26,
+            "feasible": false,
+            "objective": 0.09523630361825716
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "energy": 24.791278010530903,
+            "evaluation": 27,
+            "feasible": false,
+            "objective": 0.079716062604177
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1
+            ],
+            "energy": 38.815669811865575,
+            "evaluation": 28,
+            "feasible": false,
+            "objective": 0.20385426823006042
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "energy": 13.962474909231457,
+            "evaluation": 29,
+            "feasible": false,
+            "objective": 0.06222131352267411
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 38.75694805337101,
+            "evaluation": 30,
+            "feasible": false,
+            "objective": 0.14513250973550523
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            "energy": 0.0788462974627695,
+            "evaluation": 31,
+            "feasible": true,
+            "objective": 0.07884629746277022
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 13.921440965791671,
+            "evaluation": 32,
+            "feasible": false,
+            "objective": 0.02118737008288713
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1
+            ],
+            "energy": 24.800393664524243,
+            "evaluation": 33,
+            "feasible": false,
+            "objective": 0.08883171659752084
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1
+            ],
+            "energy": 38.72029212898224,
+            "evaluation": 34,
+            "feasible": false,
+            "objective": 0.10847658534672869
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 14.059872487296543,
+            "evaluation": 35,
+            "feasible": false,
+            "objective": 0.15961889158775858
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1
+            ],
+            "energy": 24.72925692051667,
+            "evaluation": 36,
+            "feasible": false,
+            "objective": 0.017694972589944423
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1
+            ],
+            "energy": 24.71714869717987,
+            "evaluation": 37,
+            "feasible": false,
+            "objective": 0.00558674925314356
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1
+            ],
+            "energy": 38.8019728755409,
+            "evaluation": 38,
+            "feasible": false,
+            "objective": 0.19015733190539194
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 13.91106576500221,
+            "evaluation": 39,
+            "feasible": false,
+            "objective": 0.010812169293426994
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "energy": 24.851729527531344,
+            "evaluation": 40,
+            "feasible": false,
+            "objective": 0.14016757960461865
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 6.275230102743615,
+            "evaluation": 41,
+            "feasible": false,
+            "objective": 0.09733961576193247
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 38.712806648564445,
+            "evaluation": 42,
+            "feasible": false,
+            "objective": 0.10099110492893619
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.381744755211742,
+            "evaluation": 43,
+            "feasible": false,
+            "objective": 0.20385426823006042
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1
+            ],
+            "energy": 38.72218695786944,
+            "evaluation": 44,
+            "feasible": false,
+            "objective": 0.11037141423393629
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 38.66777069605205,
+            "evaluation": 45,
+            "feasible": false,
+            "objective": 0.05595515241654367
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "energy": 1.514296727666867,
+            "evaluation": 46,
+            "feasible": false,
+            "objective": -0.030175894078555147
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1
+            ],
+            "energy": 38.72218695786944,
+            "evaluation": 47,
+            "feasible": false,
+            "objective": 0.11037141423393629
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1
+            ],
+            "energy": 55.74909676647409,
+            "evaluation": 48,
+            "feasible": false,
+            "objective": 0.1480823836389508
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1
+            ],
+            "energy": 6.21408491448226,
+            "evaluation": 49,
+            "feasible": false,
+            "objective": 0.03619442750057947
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "energy": 1.6005797053258952,
+            "evaluation": 50,
+            "feasible": false,
+            "objective": 0.05610708358047442
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.185708523140172,
+            "evaluation": 51,
+            "feasible": false,
+            "objective": 0.007818036158490495
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 0.030941669038632824,
+            "evaluation": 52,
+            "feasible": true,
+            "objective": 0.030941669038632953
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 0.00781803615848986,
+            "evaluation": 53,
+            "feasible": true,
+            "objective": 0.007818036158490495
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 1.5444726217454203,
+            "evaluation": 54,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1
+            ],
+            "energy": 1.5754142907840532,
+            "evaluation": 55,
+            "feasible": false,
+            "objective": 0.030941669038632953
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "energy": 1.6184149826853584,
+            "evaluation": 56,
+            "feasible": false,
+            "objective": 0.07394236093993695
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.24323120552737,
+            "evaluation": 57,
+            "feasible": false,
+            "objective": 0.06534071854568763
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 1.5444726217454203,
+            "evaluation": 58,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "energy": 6.245507339216221,
+            "evaluation": 59,
+            "feasible": false,
+            "objective": 0.06761685223453877
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 55.75360202984754,
+            "evaluation": 60,
+            "feasible": false,
+            "objective": 0.1525876470124064
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "energy": 24.88980857716151,
+            "evaluation": 61,
+            "feasible": false,
+            "objective": 0.17824662923478296
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 38.69516367452455,
+            "evaluation": 62,
+            "feasible": false,
+            "objective": 0.08334813088904186
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 98.99883543871931,
+            "evaluation": 63,
+            "feasible": false,
+            "objective": 0.1525876470124064
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "energy": 6.163323113015604,
+            "evaluation": 64,
+            "feasible": false,
+            "objective": -0.014567373966077587
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.171490730718222,
+            "evaluation": 65,
+            "feasible": false,
+            "objective": -0.006399756263459366
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 75.84080886091445,
+            "evaluation": 66,
+            "feasible": false,
+            "objective": 0.1616503953888504
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 1.5444726217454203,
+            "evaluation": 67,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 13.900253595708783,
+            "evaluation": 68,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.24323120552737,
+            "evaluation": 69,
+            "feasible": false,
+            "objective": 0.06534071854568763
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 24.773727706638937,
+            "evaluation": 70,
+            "feasible": false,
+            "objective": 0.06216575871220782
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 13.900253595708783,
+            "evaluation": 71,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 24.851997368991423,
+            "evaluation": 72,
+            "feasible": false,
+            "objective": 0.14043542106469675
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 6.251434488960679,
+            "evaluation": 73,
+            "feasible": false,
+            "objective": 0.07354400197899662
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": -0.0252496650429066,
+            "evaluation": 74,
+            "feasible": true,
+            "objective": -0.025249665042906478
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 38.77346593902436,
+            "evaluation": 75,
+            "feasible": false,
+            "objective": 0.1616503953888504
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 6.222497476351961,
+            "evaluation": 76,
+            "feasible": false,
+            "objective": 0.044606989370282346
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 13.900253595708783,
+            "evaluation": 77,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.185708523140172,
+            "evaluation": 78,
+            "feasible": false,
+            "objective": 0.007818036158490495
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1
+            ],
+            "energy": 55.78041595014884,
+            "evaluation": 79,
+            "feasible": false,
+            "objective": 0.17940156731370593
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "energy": 14.06803730657421,
+            "evaluation": 80,
+            "feasible": false,
+            "objective": 0.16778371086542757
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 14.02686535072396,
+            "evaluation": 81,
+            "feasible": false,
+            "objective": 0.1266117550151764
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 75.8242909752611,
+            "evaluation": 82,
+            "feasible": false,
+            "objective": 0.14513250973550523
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 75.8242909752611,
+            "evaluation": 83,
+            "feasible": false,
+            "objective": 0.14513250973550523
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "energy": 1.5955903162767697,
+            "evaluation": 84,
+            "feasible": false,
+            "objective": 0.051117694531349504
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 55.74366359879803,
+            "evaluation": 85,
+            "feasible": false,
+            "objective": 0.1426492159629003
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 75.75963658760027,
+            "evaluation": 86,
+            "feasible": false,
+            "objective": 0.08047812207466815
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 75.75963658760027,
+            "evaluation": 87,
+            "feasible": false,
+            "objective": 0.08047812207466815
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.2518328479216185,
+            "evaluation": 88,
+            "feasible": false,
+            "objective": 0.07394236093993695
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 55.66523042305019,
+            "evaluation": 89,
+            "feasible": false,
+            "objective": 0.06421604021506086
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 55.75360202984754,
+            "evaluation": 90,
+            "feasible": false,
+            "objective": 0.1525876470124064
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "energy": 13.929670454465388,
+            "evaluation": 91,
+            "feasible": false,
+            "objective": 0.029416858756600692
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 13.988413365344725,
+            "evaluation": 92,
+            "feasible": false,
+            "objective": 0.08815976963594119
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 55.75360202984754,
+            "evaluation": 93,
+            "feasible": false,
+            "objective": 0.1525876470124064
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "energy": 6.256144580155848,
+            "evaluation": 94,
+            "feasible": false,
+            "objective": 0.07825409317416578
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 6.302841801851249,
+            "evaluation": 95,
+            "feasible": false,
+            "objective": 0.12495131486956784
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 6.331353355335841,
+            "evaluation": 96,
+            "feasible": false,
+            "objective": 0.15346286835415934
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 24.885027541156603,
+            "evaluation": 97,
+            "feasible": false,
+            "objective": 0.17346559322987923
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 55.6906295008443,
+            "evaluation": 98,
+            "feasible": false,
+            "objective": 0.08961511800917338
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 24.775777988141783,
+            "evaluation": 99,
+            "feasible": false,
+            "objective": 0.06421604021506086
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "energy": 1.550691114974212,
+            "evaluation": 100,
+            "feasible": false,
+            "objective": 0.006218493228791529
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1
+            ],
+            "energy": 38.59197418133572,
+            "evaluation": 101,
+            "feasible": false,
+            "objective": -0.019841362299783137
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.208832156020314,
+            "evaluation": 102,
+            "feasible": false,
+            "objective": 0.030941669038632953
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "energy": 24.85964433156568,
+            "evaluation": 103,
+            "feasible": false,
+            "objective": 0.1480823836389508
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 75.8585600328393,
+            "evaluation": 104,
+            "feasible": false,
+            "objective": 0.17940156731370593
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "energy": 6.163225302323686,
+            "evaluation": 105,
+            "feasible": false,
+            "objective": -0.014665184657996046
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "energy": 0.029381511307935426,
+            "evaluation": 106,
+            "feasible": true,
+            "objective": 0.029381511307935003
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "energy": -0.019850830521626506,
+            "evaluation": 107,
+            "feasible": true,
+            "objective": -0.019850830521624816
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "energy": 0.02944767442039975,
+            "evaluation": 108,
+            "feasible": true,
+            "objective": 0.029447674420399576
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 6.273318268982536,
+            "evaluation": 109,
+            "feasible": false,
+            "objective": 0.0954277820008542
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "energy": 1.5049313044628807,
+            "evaluation": 110,
+            "feasible": false,
+            "objective": -0.03954131728253973
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 1.5738541330533558,
+            "evaluation": 111,
+            "feasible": false,
+            "objective": 0.029381511307935003
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 6.242061336728295,
+            "evaluation": 112,
+            "feasible": false,
+            "objective": 0.06417084974661436
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "energy": 13.88870453517502,
+            "evaluation": 113,
+            "feasible": false,
+            "objective": -0.011549060533763141
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 14.014973798848965,
+            "evaluation": 114,
+            "feasible": false,
+            "objective": 0.11472020314018128
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 0.021783524299216594,
+            "evaluation": 115,
+            "feasible": true,
+            "objective": 0.02178352429921704
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "energy": 24.86143632789252,
+            "evaluation": 116,
+            "feasible": false,
+            "objective": 0.1498743799657974
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1
+            ],
+            "energy": 55.750888762800926,
+            "evaluation": 117,
+            "feasible": false,
+            "objective": 0.1498743799657974
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1
+            ],
+            "energy": 24.736507476904656,
+            "evaluation": 118,
+            "feasible": false,
+            "objective": 0.024945528977931557
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "energy": 14.017920620036799,
+            "evaluation": 119,
+            "feasible": false,
+            "objective": 0.11766702432801382
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "energy": 1.5049313044628807,
+            "evaluation": 120,
+            "feasible": false,
+            "objective": -0.03954131728253973
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 13.97556088794908,
+            "evaluation": 121,
+            "feasible": false,
+            "objective": 0.0753072922402972
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "energy": 0.05950203254863062,
+            "evaluation": 122,
+            "feasible": true,
+            "objective": 0.05950203254863275
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 75.75963658760027,
+            "evaluation": 123,
+            "feasible": false,
+            "objective": 0.08047812207466815
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 13.900253595708783,
+            "evaluation": 124,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 55.75360202984754,
+            "evaluation": 125,
+            "feasible": false,
+            "objective": 0.1525876470124064
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "energy": 14.009528944218589,
+            "evaluation": 126,
+            "feasible": false,
+            "objective": 0.10927534850980675
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 13.900253595708783,
+            "evaluation": 127,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0
+            ],
+            "energy": 13.953413250957146,
+            "evaluation": 128,
+            "feasible": false,
+            "objective": 0.05315965524836496
+          }
+        ]
+      },
+      "risk_aversion": 0.5,
+      "validation_sharpe": -4.742751858658061
+    },
+    {
+      "objective_gap": 0.025512836239340097,
+      "reference_objective": -0.03658970342393169,
+      "result": {
+        "elapsed_s": 0.02914358400000161,
+        "error": null,
+        "evaluations": 128,
+        "feasible_evaluations": 9,
+        "objective": -0.011076867184591593,
+        "resources": {
+          "backend": "qiskit-statevector",
+          "circuit_depth_with_preparation": 20,
+          "circuit_evaluations": 16,
+          "hamiltonian_scale": 8.433654175427696,
+          "hardware": false,
+          "layers": 1,
+          "noise_model": null,
+          "qpu_cost": 0.0,
+          "qubits": 10,
+          "queue_s": 0.0,
+          "repair": "none",
+          "shots": 128,
+          "shots_per_evaluation": 8,
+          "statevector_bytes": 16384,
+          "two_qubit_gates": 45
+        },
+        "seed": 582607262,
+        "selected": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "solver": "qaoa",
+        "status": "ok",
+        "timing": {
+          "communication_s": 0.0,
+          "compilation_s": 0.0014663749999996867,
+          "objective_scoring_s": 0.0026995880000058037,
+          "optimizer_and_setup_s": 0.0005547449999934173,
+          "repair_s": 0.0,
+          "sampling_decoding_s": 0.0003839150000022329,
+          "simulation_s": 0.02377908599999934,
+          "state_preparation_s": 0.00025987500000113073
+        },
+        "trace": [
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1
+            ],
+            "energy": 27.173395233209703,
+            "evaluation": 1,
+            "feasible": false,
+            "objective": 0.1857018718410713
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 1.724682318241019,
+            "evaluation": 2,
+            "feasible": false,
+            "objective": 0.037951483155479
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 15.378829455805015,
+            "evaluation": 3,
+            "feasible": false,
+            "objective": 0.1982519400351582
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 27.01811868547599,
+            "evaluation": 4,
+            "feasible": false,
+            "objective": 0.030425324107355996
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 6.852892549458243,
+            "evaluation": 5,
+            "feasible": false,
+            "objective": 0.10596920911608113
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1
+            ],
+            "energy": 60.86960630241367,
+            "evaluation": 6,
+            "feasible": false,
+            "objective": 0.1472962393342456
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.822311711965439,
+            "evaluation": 7,
+            "feasible": false,
+            "objective": 0.07538837162328042
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 0.02661137616966691,
+            "evaluation": 8,
+            "feasible": true,
+            "objective": 0.026611376169666804
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.782681711151405,
+            "evaluation": 9,
+            "feasible": false,
+            "objective": 0.03575837080924647
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1
+            ],
+            "energy": 27.002587003549557,
+            "evaluation": 10,
+            "feasible": false,
+            "objective": 0.014893642180922052
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "energy": 6.957439246575943,
+            "evaluation": 11,
+            "feasible": false,
+            "objective": 0.210515906233785
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 1.6899313825761002,
+            "evaluation": 12,
+            "feasible": false,
+            "objective": 0.003200547490558997
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 42.26617067598161,
+            "evaluation": 13,
+            "feasible": false,
+            "objective": 0.0978997988431265
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 1.724682318241019,
+            "evaluation": 14,
+            "feasible": false,
+            "objective": 0.037951483155479
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 1.771996704806348,
+            "evaluation": 15,
+            "feasible": false,
+            "objective": 0.08526586972080866
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": -0.0020087353397304497,
+            "evaluation": 16,
+            "feasible": true,
+            "objective": -0.0020087353397310924
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "energy": 0.035229367573441195,
+            "evaluation": 17,
+            "feasible": true,
+            "objective": 0.035229367573441576
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.825663327394972,
+            "evaluation": 18,
+            "feasible": false,
+            "objective": 0.07873998705281302
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 0.02736157907303216,
+            "evaluation": 19,
+            "feasible": true,
+            "objective": 0.027361579073031463
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "energy": 15.3059617632015,
+            "evaluation": 20,
+            "feasible": false,
+            "objective": 0.12538424743164456
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "energy": 1.7983649109965025,
+            "evaluation": 21,
+            "feasible": false,
+            "objective": 0.11163407591096042
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 15.383726697875815,
+            "evaluation": 22,
+            "feasible": false,
+            "objective": 0.20314918210596067
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.726072312818719,
+            "evaluation": 23,
+            "feasible": false,
+            "objective": -0.020851027523439702
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 0.08168499987410094,
+            "evaluation": 24,
+            "feasible": true,
+            "objective": 0.08168499987409844
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 0.03575837080924593,
+            "evaluation": 25,
+            "feasible": true,
+            "objective": 0.03575837080924647
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "energy": 1.7522785976259723,
+            "evaluation": 26,
+            "feasible": false,
+            "objective": 0.0655477625404299
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 15.267156081652923,
+            "evaluation": 27,
+            "feasible": false,
+            "objective": 0.0865785658830632
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 1.703744135303607,
+            "evaluation": 28,
+            "feasible": false,
+            "objective": 0.017013300218067004
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "energy": 6.888738033368261,
+            "evaluation": 29,
+            "feasible": false,
+            "objective": 0.14181469302610256
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 6.817975027848911,
+            "evaluation": 30,
+            "feasible": false,
+            "objective": 0.07105168750674958
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 60.89161850496657,
+            "evaluation": 31,
+            "feasible": false,
+            "objective": 0.16930844188714464
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 82.80247669279028,
+            "evaluation": 32,
+            "feasible": false,
+            "objective": 0.15266577359884692
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 27.14623309519724,
+            "evaluation": 33,
+            "feasible": false,
+            "objective": 0.15853973382859973
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "energy": 15.1775964749699,
+            "evaluation": 34,
+            "feasible": false,
+            "objective": -0.0029810407999613445
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 15.322392208795959,
+            "evaluation": 35,
+            "feasible": false,
+            "objective": 0.14181469302610256
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 6.878349294099115,
+            "evaluation": 36,
+            "feasible": false,
+            "objective": 0.1314259537569536
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 15.180577515769857,
+            "evaluation": 37,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 27.14623309519724,
+            "evaluation": 38,
+            "feasible": false,
+            "objective": 0.15853973382859973
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "energy": 1.7077722221049019,
+            "evaluation": 39,
+            "feasible": false,
+            "objective": 0.02104138701935936
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 6.786561157310269,
+            "evaluation": 40,
+            "feasible": false,
+            "objective": 0.03963781696810674
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "energy": 27.068653146854825,
+            "evaluation": 41,
+            "feasible": false,
+            "objective": 0.08095978548618935
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 15.180577515769857,
+            "evaluation": 42,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 15.311707716512743,
+            "evaluation": 43,
+            "feasible": false,
+            "objective": 0.1311302007428865
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "energy": 27.154009407766445,
+            "evaluation": 44,
+            "feasible": false,
+            "objective": 0.16631604639780784
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "energy": 15.3059617632015,
+            "evaluation": 45,
+            "feasible": false,
+            "objective": 0.12538424743164456
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "energy": 15.310203575761417,
+            "evaluation": 46,
+            "feasible": false,
+            "objective": 0.12962605999155863
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1
+            ],
+            "energy": 27.198209267602415,
+            "evaluation": 47,
+            "feasible": false,
+            "objective": 0.210515906233785
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1
+            ],
+            "energy": 15.265679671919788,
+            "evaluation": 48,
+            "feasible": false,
+            "objective": 0.08510215614992901
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 15.188002213973396,
+            "evaluation": 49,
+            "feasible": false,
+            "objective": 0.007424698203536407
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "energy": 42.282300254532736,
+            "evaluation": 50,
+            "feasible": false,
+            "objective": 0.11402937739423596
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "energy": 15.33217266722603,
+            "evaluation": 51,
+            "feasible": false,
+            "objective": 0.15159515145617125
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 1.7891386993672391,
+            "evaluation": 52,
+            "feasible": false,
+            "objective": 0.10240786428169842
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 15.211002839877215,
+            "evaluation": 53,
+            "feasible": false,
+            "objective": 0.030425324107355996
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "energy": 1.8728084602474286,
+            "evaluation": 54,
+            "feasible": false,
+            "objective": 0.18607762516188595
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 15.339683075840636,
+            "evaluation": 55,
+            "feasible": false,
+            "objective": 0.15910556007077653
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 0.021211794816046847,
+            "evaluation": 56,
+            "feasible": true,
+            "objective": 0.021211794816046795
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 27.10656796116914,
+            "evaluation": 57,
+            "feasible": false,
+            "objective": 0.11887459980050877
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 27.15418051037085,
+            "evaluation": 58,
+            "feasible": false,
+            "objective": 0.16648714900221534
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1
+            ],
+            "energy": 27.118920558905735,
+            "evaluation": 59,
+            "feasible": false,
+            "objective": 0.13122719753710238
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "energy": 15.316282730168327,
+            "evaluation": 60,
+            "feasible": false,
+            "objective": 0.13570521439846858
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.759143643927061,
+            "evaluation": 61,
+            "feasible": false,
+            "objective": 0.01222030358490232
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 27.19084254347459,
+            "evaluation": 62,
+            "feasible": false,
+            "objective": 0.20314918210596067
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "energy": 15.350711037263478,
+            "evaluation": 63,
+            "feasible": false,
+            "objective": 0.17013352149362182
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 27.0913748340451,
+            "evaluation": 64,
+            "feasible": false,
+            "objective": 0.10368147267646613
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "energy": 82.83178006487024,
+            "evaluation": 65,
+            "feasible": false,
+            "objective": 0.18196914567881442
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 15.294348886848972,
+            "evaluation": 66,
+            "feasible": false,
+            "objective": 0.11377137107911395
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "energy": 15.266121145194967,
+            "evaluation": 67,
+            "feasible": false,
+            "objective": 0.08554362942510682
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 15.391093422003642,
+            "evaluation": 68,
+            "feasible": false,
+            "objective": 0.210515906233785
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 15.383726697875815,
+            "evaluation": 69,
+            "feasible": false,
+            "objective": 0.20314918210596067
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "energy": 15.270226692299817,
+            "evaluation": 70,
+            "feasible": false,
+            "objective": 0.0896491765299566
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 15.259642059569313,
+            "evaluation": 71,
+            "feasible": false,
+            "objective": 0.07906454379945344
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "energy": 15.155386643358195,
+            "evaluation": 72,
+            "feasible": false,
+            "objective": -0.02519087241166527
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "energy": 15.210669914442695,
+            "evaluation": 73,
+            "feasible": false,
+            "objective": 0.030092398672834305
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "energy": 6.844427255813304,
+            "evaluation": 74,
+            "feasible": false,
+            "objective": 0.09750391547114501
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 1.6867308350855392,
+            "evaluation": 75,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 1.7959981341736775,
+            "evaluation": 76,
+            "feasible": false,
+            "objective": 0.1092672990881376
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 27.08874240068912,
+            "evaluation": 77,
+            "feasible": false,
+            "objective": 0.10104903932048132
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1
+            ],
+            "energy": 82.83613961593467,
+            "evaluation": 78,
+            "feasible": false,
+            "objective": 0.1863286967432371
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "energy": 15.226445320978195,
+            "evaluation": 79,
+            "feasible": false,
+            "objective": 0.045867805208334514
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.782681711151405,
+            "evaluation": 80,
+            "feasible": false,
+            "objective": 0.03575837080924647
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 1.73452631581093,
+            "evaluation": 81,
+            "feasible": false,
+            "objective": 0.0477954807253899
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1
+            ],
+            "energy": 27.002587003549557,
+            "evaluation": 82,
+            "feasible": false,
+            "objective": 0.014893642180922052
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1
+            ],
+            "energy": 27.118823562111523,
+            "evaluation": 83,
+            "feasible": false,
+            "objective": 0.1311302007428865
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "energy": 6.746923340342159,
+            "evaluation": 84,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 27.10910858587168,
+            "evaluation": 85,
+            "feasible": false,
+            "objective": 0.12141522450304244
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 27.16562769165916,
+            "evaluation": 86,
+            "feasible": false,
+            "objective": 0.17793433029052488
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0
+            ],
+            "energy": 1.749213797592306,
+            "evaluation": 87,
+            "feasible": false,
+            "objective": 0.06248296250676629
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1
+            ],
+            "energy": 82.81911936107858,
+            "evaluation": 88,
+            "feasible": false,
+            "objective": 0.16930844188714464
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1
+            ],
+            "energy": 27.03353852445732,
+            "evaluation": 89,
+            "feasible": false,
+            "objective": 0.045845163088690855
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 15.358386024337428,
+            "evaluation": 90,
+            "feasible": false,
+            "objective": 0.17780850856756858
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "energy": 6.741331967905728,
+            "evaluation": 91,
+            "feasible": false,
+            "objective": -0.005591372436435013
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1
+            ],
+            "energy": 27.091913528500804,
+            "evaluation": 92,
+            "feasible": false,
+            "objective": 0.10422016713217047
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "energy": 15.255303578203613,
+            "evaluation": 93,
+            "feasible": false,
+            "objective": 0.07472606243375424
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 6.744914605002428,
+            "evaluation": 94,
+            "feasible": false,
+            "objective": -0.0020087353397310924
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 15.19733880142978,
+            "evaluation": 95,
+            "feasible": false,
+            "objective": 0.016761285659918607
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1
+            ],
+            "energy": 6.8028630920950715,
+            "evaluation": 96,
+            "feasible": false,
+            "objective": 0.055939751752911326
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            "energy": 15.395117147975887,
+            "evaluation": 97,
+            "feasible": false,
+            "objective": 0.2145396322060264
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 6.753533387724673,
+            "evaluation": 98,
+            "feasible": false,
+            "objective": 0.006610047382510392
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 15.268515041544422,
+            "evaluation": 99,
+            "feasible": false,
+            "objective": 0.08793752577456232
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "energy": 15.321855585065077,
+            "evaluation": 100,
+            "feasible": false,
+            "objective": 0.14127806929521786
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 15.180577515769857,
+            "evaluation": 101,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "energy": 27.129508054394737,
+            "evaluation": 102,
+            "feasible": false,
+            "objective": 0.14181469302610256
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "energy": -0.011076867184591777,
+            "evaluation": 103,
+            "feasible": true,
+            "objective": -0.011076867184591593
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 15.20161890278922,
+            "evaluation": 104,
+            "feasible": false,
+            "objective": 0.02104138701935936
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1
+            ],
+            "energy": 82.81911936107858,
+            "evaluation": 105,
+            "feasible": false,
+            "objective": 0.16930844188714464
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0
+            ],
+            "energy": 15.248880957872924,
+            "evaluation": 106,
+            "feasible": false,
+            "objective": 0.06830344210305908
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 15.206564302119444,
+            "evaluation": 107,
+            "feasible": false,
+            "objective": 0.02598678634958359
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 15.276626869538898,
+            "evaluation": 108,
+            "feasible": false,
+            "objective": 0.09604935376904017
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "energy": 27.165501869936204,
+            "evaluation": 109,
+            "feasible": false,
+            "objective": 0.17780850856756858
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "energy": 6.833526778319333,
+            "evaluation": 110,
+            "feasible": false,
+            "objective": 0.08660343797717264
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 15.375099917528662,
+            "evaluation": 111,
+            "feasible": false,
+            "objective": 0.19452240175880564
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "energy": 15.351159748463509,
+            "evaluation": 112,
+            "feasible": false,
+            "objective": 0.17058223269365208
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 1.8416441215925268,
+            "evaluation": 113,
+            "feasible": false,
+            "objective": 0.15491328650698627
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1
+            ],
+            "energy": 15.143987812345928,
+            "evaluation": 114,
+            "feasible": false,
+            "objective": -0.03658970342393169
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 15.257757020119806,
+            "evaluation": 115,
+            "feasible": false,
+            "objective": 0.07717950434994705
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 15.301992740272903,
+            "evaluation": 116,
+            "feasible": false,
+            "objective": 0.12141522450304244
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "energy": 0.03009239867283675,
+            "evaluation": 117,
+            "feasible": true,
+            "objective": 0.030092398672834305
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1
+            ],
+            "energy": 15.366359078574746,
+            "evaluation": 118,
+            "feasible": false,
+            "objective": 0.18578156280488728
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "energy": 15.22991938951058,
+            "evaluation": 119,
+            "feasible": false,
+            "objective": 0.0493418737407205
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1
+            ],
+            "energy": 27.102299693191256,
+            "evaluation": 120,
+            "feasible": false,
+            "objective": 0.11460633182262014
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "energy": 15.301992740272903,
+            "evaluation": 121,
+            "feasible": false,
+            "objective": 0.12141522450304244
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "energy": 15.339964816057815,
+            "evaluation": 122,
+            "feasible": false,
+            "objective": 0.15938730028795617
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              1
+            ],
+            "energy": 15.283861211820911,
+            "evaluation": 123,
+            "feasible": false,
+            "objective": 0.10328369605105178
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1
+            ],
+            "energy": 27.051676016588555,
+            "evaluation": 124,
+            "feasible": false,
+            "objective": 0.0639826552199192
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "energy": 1.6867308350855392,
+            "evaluation": 125,
+            "feasible": false,
+            "objective": 0.0
+          },
+          {
+            "bits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "energy": 6.737184762008351,
+            "evaluation": 126,
+            "feasible": false,
+            "objective": -0.009738578333807889
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "energy": 27.20223299357466,
+            "evaluation": 127,
+            "feasible": false,
+            "objective": 0.2145396322060264
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1
+            ],
+            "energy": 15.169500648585267,
+            "evaluation": 128,
+            "feasible": false,
+            "objective": -0.011076867184591593
+          }
+        ]
+      },
+      "risk_aversion": 2.0,
+      "validation_sharpe": -4.557433854964902
+    }
+  ],
+  "elapsed_s": 0.062303542000000434,
+  "fold": 1,
+  "risk_aversion": 2.0,
+  "seed": 7,
+  "selected": [
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1
+  ],
+  "selected_candidate": 1,
+  "solver": "qaoa",
+  "status": "ok",
+  "test_metrics": {
+    "annualized_return": 0.37777882718215916,
+    "annualized_turnover": 101.33333333333334,
+    "annualized_volatility": 0.10803201364995547,
+    "bonferroni_pvalue": 1.0,
+    "hac_lags": 3,
+    "max_drawdown": -0.03192653763407993,
+    "multiplicity_trials": 11520,
+    "observations": 63,
+    "positive_mean_hac_pvalue": 0.05453705370626505,
+    "sharpe": 3.021551239471239,
+    "total_cost_return": 0.007599999999999999,
+    "total_return": 0.0834150810254628
+  }
+}

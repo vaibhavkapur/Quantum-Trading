@@ -1,0 +1,23 @@
+{
+  "assets": [
+    "SYNTH_A"
+  ],
+  "frequency": "synthetic business daily",
+  "generator": "regime-logreturns-v1",
+  "license": "CC0-1.0; generated synthetic prices, no vendor market data",
+  "parameters": {
+    "assets": [
+      "SYNTH_A"
+    ],
+    "periods": 160,
+    "seed": 2026,
+    "start": "2020-01-02"
+  },
+  "price_convention": "Synthetic total-return close levels, no dividends or splits",
+  "rows": 160,
+  "schema_version": 1,
+  "sha256": "712e235f43bfd0e46bc55fa4f66aaabfcbf3d2c15135c2e429ba4f7ad5edec83",
+  "source_id": "eaab76aac3b0c2637ee9e72e08f237680e1bfc7cb342a232947a3615fc56fb93",
+  "timestamp_convention": "UTC date labels, not actual exchange execution timestamps",
+  "timezone": "UTC"
+}

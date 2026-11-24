@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantum-market-making"
+version = "0.1.0"
+description = "Event-driven C++ market maker with verifiable classical and QAOA policy research"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=2.0", "scipy>=1.13", "PyYAML>=6.0", "qiskit>=2.2"]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+include = ["market_making*", "project*"]
+
+[tool.setuptools.package-data]
+market_making = ["native/*.cpp", "native/CMakeLists.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

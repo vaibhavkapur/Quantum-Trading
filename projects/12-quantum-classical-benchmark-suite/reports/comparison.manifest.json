@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-24T05:15:52.973535+00:00",
+  "artifacts": {
+    "comparison.html": "0a00d7fbc5ddbb393157ffef0998d5172580150e14841a9c53bd7cb73c075ec0",
+    "comparison.raw.csv": "82e6be03a53788d4d94473482d6388d588ebe44bd9b6e93393bd27a0caca36ca",
+    "comparison.summary.csv": "0d91948ef4674cc54e0a7e8132df0e0bc40d8e9acebfeb324e1f9be27a609ac8",
+    "comparison.parquet": "e132c637d1a3ebd1d7aa48823b71b4588efa2440cdcc1b8367da60682f8b7fe4"
+  },
+  "sources": [
+    {
+      "file": "/Users/vaibhavkapur/Desktop/quantum-trading-projects/12-quantum-classical-benchmark-suite/reports/sample/20261124T051444Z-0b1d13fa03/results.jsonl",
+      "sha256": "c5f6b838665965ea058d944db0be017dc34bd02f7b96599e9b1b450cff3b24e2",
+      "batch_id": "20261124T051444Z-0b1d13fa03",
+      "campaign_status": "complete"
+    }
+  ],
+  "measured_attempts": 84,
+  "summary_rows": 28
+}

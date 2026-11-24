@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hqpo"
+version = "0.1.0"
+description = "Hybrid quantum-classical portfolio optimizer: QUBO/QAOA vs classical baselines under equal budgets"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "scipy>=1.13",
+    "cvxpy>=1.5",
+    "ortools>=9.10",
+    "qiskit>=2.0",
+    "plotly>=5.20",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+scip = ["pyscipopt>=5.0"]            # exact MIQP baseline (falls back to CP-SAT without it)
+aer = ["qiskit-aer>=0.15"]           # noisy-simulation sampling
+qiskit-opt = ["qiskit-optimization>=0.7"]  # independent cross-check of the Ising mapping
+ocean = ["dwave-samplers>=1.4", "dimod>=0.12"]  # D-Wave Ocean simulated-annealing sampler
+yfinance = ["yfinance>=0.2"]         # optional public price download (check licence terms)
+dev = ["pytest>=8.0"]
+all = ["hqpo[scip,aer,qiskit-opt,ocean,dev]"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = ["slow: longer-running integration tests"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::PendingDeprecationWarning"]

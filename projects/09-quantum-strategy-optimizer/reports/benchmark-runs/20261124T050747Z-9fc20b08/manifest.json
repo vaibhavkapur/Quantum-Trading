@@ -1,0 +1,328 @@
+{
+  "artifacts": {
+    "cases/annealing-seed19-fold0.json": "4336377aaf33e86350ca7b8f00bc6d777050365c4b984c2ee653e87e50d293e6",
+    "cases/annealing-seed19-fold1.json": "b7f98d1894c7f179ec6afd812f9865261f2cb1951ec0149742fa5f59bd233f75",
+    "cases/annealing-seed19-fold2.json": "c6990e45958c4e89d3415c210ed6035e1cc6a5ee543946483b8ce2b00f31a92f",
+    "cases/annealing-seed41-fold0.json": "1eb7994902fbc1e5ac6a18e27ed7f4cc97967ddd0da6a7a93fd76f4637f5c7c1",
+    "cases/annealing-seed41-fold1.json": "5099c8045c35118110690b1959608a737187bf96d18626452e66fb7273649663",
+    "cases/annealing-seed41-fold2.json": "70600dd6a049e59538d880cedb8266e378dd69182cc046858ded97bcde78c022",
+    "cases/annealing-seed7-fold0.json": "c4f2356e90e5f03b4e3ec995e029477ae75f5b922ac819b5807df0967eb2c576",
+    "cases/annealing-seed7-fold1.json": "7e11009d9a9325ad5f2e0befda7f27a576587c4055d324a09521a27e64440296",
+    "cases/annealing-seed7-fold2.json": "8a5ceaa4e1899f8c15b91d631dcbfaeff06c0a9aaeed01746700eec96c0d8a59",
+    "cases/grid-seed19-fold0.json": "0344ad1b74c6514b536453fc39f91a0cc0f5aa770aa0f9e37b5279128d0d62fd",
+    "cases/grid-seed19-fold1.json": "20754c0902efec4541978d6b4eb561ca9f99ede5e0fd6e540eeef93aef67e001",
+    "cases/grid-seed19-fold2.json": "e0aee3521454c0be686d15353cf4cf0cd1f8ad2a9a3914234f64409660637871",
+    "cases/grid-seed41-fold0.json": "6f003ef3f29c914aad6ca13da290387ea4008cabcd7a73af606d8bca48e9b7f6",
+    "cases/grid-seed41-fold1.json": "0f76dad968988c2b1edb1659baaf1a42d84887d9616c8d013d4f80fef0c3256a",
+    "cases/grid-seed41-fold2.json": "fabb347a4f8694eece05a4eb92eddb0b92407370ec508184f6bcf38e81e6a4d5",
+    "cases/grid-seed7-fold0.json": "482780e2deb1c6af6c00d37a18f31471b839155303294b11ec36084a3a68c2f0",
+    "cases/grid-seed7-fold1.json": "3d22a92e56f2e919d63f227cddec9a81c256a4a9f289ac8435283b3452bf88ba",
+    "cases/grid-seed7-fold2.json": "62f1d5fe772a39a8e00ef3841671e395c7f28fc3677eb29d7b7ad6cf9b1f1f2e",
+    "cases/qaoa-seed19-fold0.json": "050fa068681e3900a5c7424572a4aba63143f24c0c69e4e7f125d890e6c3b29d",
+    "cases/qaoa-seed19-fold1.json": "d4e30d1658da698da71d745724ee894d51d93f3496496be98b3865fd26851156",
+    "cases/qaoa-seed19-fold2.json": "e9de6d344303022d2b4e54f55caefafad61a5bfe1d3736c7a35c9e4e7af83561",
+    "cases/qaoa-seed41-fold0.json": "9b3ab70e97b4e7216f1ceb48e7d86523f2ae661fce3e8819a72ef123f626a087",
+    "cases/qaoa-seed41-fold1.json": "3be72b447351750978d838fdbf7c1f2617f3b8c297f16e0dda6b72a6bb35de7b",
+    "cases/qaoa-seed41-fold2.json": "9faf4478d8577541733f7851e56816784a4ad4c764a2246eb52099541c0b85b8",
+    "cases/qaoa-seed7-fold0.json": "92da5a5f9285f8f67818c669ee393f2fd5eca01c757cc47dc336dbb6aad3ebfb",
+    "cases/qaoa-seed7-fold1.json": "e303b6d05be7d4a9733f2f7b5f888e9eb1c521e8396b589de57e2484f3a6cfa6",
+    "cases/qaoa-seed7-fold2.json": "e521cf2388943d785f406be274c3fca775b2a288a3c21326ffe0e74ddf57e168",
+    "cases/random-seed19-fold0.json": "1485a440ba90645449bdada2e9577a543e7ff1418f377701add169c3516d264e",
+    "cases/random-seed19-fold1.json": "234705ff253abd3681b2ca549991e814d089d902fbbbbc622d077f3344a13c9d",
+    "cases/random-seed19-fold2.json": "95eed9ac6b392a64ff7c7213ad2be1f943dc293412eeb80c1c9e8ec29b3855e7",
+    "cases/random-seed41-fold0.json": "7ee6c1697cccddcc08625d9dcb74a6fb9e93b079e4fd6628924b3138308edd2b",
+    "cases/random-seed41-fold1.json": "0e24cda1659dabdf8555e94ef01517fa021ed826d7b3c25159a929df8082dcf3",
+    "cases/random-seed41-fold2.json": "d9149af6bf0d77514b3191854556d8c021b9d8f790f407bc8db14e0aa93dc992",
+    "cases/random-seed7-fold0.json": "300287a653ea9dafd5a98aeabd74d5c0cf86f73f4b1b66de0a90c4da67e54d32",
+    "cases/random-seed7-fold1.json": "925e47f8b6b159a71fe151a5e09471519cb02b0a9e6249398d01ac5b95984cea",
+    "cases/random-seed7-fold2.json": "a3c09b00d24d48f2c6f69f3e568886e9d31ce46bcf3b208d215fd109d4330294",
+    "cases/tpe-seed19-fold0.json": "24423641f73c7222bc53d44663f3ff3fb9f74b34647964a3cf61df73c49b3f87",
+    "cases/tpe-seed19-fold1.json": "a965b477efb48c52c9d220e49aed2a4bff587354d84db2d010f31d33fd0e50bd",
+    "cases/tpe-seed19-fold2.json": "523d6cbda75977063eee9012bf6ac9eeea8fb02519d94eebf079e948d4ee27c3",
+    "cases/tpe-seed41-fold0.json": "d20ac0c33e072412ee9bc505e45e50ec3ae6cb2a97bb013f023cbe5c8e9bdb64",
+    "cases/tpe-seed41-fold1.json": "5eca441c0fbd0aa1b94a08da2e9f37d1ead30aeb65525c346b6a8cdd6002512c",
+    "cases/tpe-seed41-fold2.json": "c1737e6a90f70e9fadb44947bd1ba3f847bf1189ab80339a729078876813b09a",
+    "cases/tpe-seed7-fold0.json": "b41d79e531b948fd34cddf4979ea9556159c7faea80e2eb082fe6d6b67e69fdc",
+    "cases/tpe-seed7-fold1.json": "e8182c63f81fcf07baed1fa5b9933e722e13cb825fdfe454a79cc164fdcd4365",
+    "cases/tpe-seed7-fold2.json": "ba45136724865af65bbe8e6e1b7e9be233690e6081c8c51ed9977c7d364cb288",
+    "daily_returns.csv": "fd801cbbf969bbc589bd3fa4101ef8240efebf5a640c0519d47dd07d3acb4de2",
+    "instances.json": "c282e9f92d8b96d5706fc2beb63540854cf0630e1e7f9d8a5ce96c5428c2164b",
+    "summary.json": "d9a58bfc7217694d9c65eb5727dd5c5a6c973f23b79cb0df31637ad76dd81048"
+  },
+  "budget_unit": "individual QUBO candidate evaluations, including repeated/infeasible samples",
+  "comparison_key": "06dc86417b0b9d6b43cf2cfc193f3283d875856a0877c468ad8d23a8934bb0c0",
+  "config": {
+    "backtest": {
+      "annualization": 252,
+      "evaluation_cost_bps": 3.0,
+      "train_cost_bps": 2.0
+    },
+    "data": {
+      "assets": [
+        "SYNTH_A",
+        "SYNTH_B"
+      ],
+      "path": "/Users/vaibhavkapur/Desktop/quantum-trading-projects/09-quantum-strategy-optimizer/data/demo.csv",
+      "periods": 504,
+      "seed": 2026,
+      "start": "2020-01-02"
+    },
+    "optimization": {
+      "cardinality_cost": 0.001,
+      "evaluations": 128,
+      "max_qubits": 12,
+      "max_selected": 3,
+      "qaoa_layers": 1,
+      "risk_aversion": [
+        0.5,
+        2.0
+      ],
+      "seeds": [
+        7,
+        19,
+        41
+      ],
+      "shots_per_evaluation": 8
+    },
+    "output": {
+      "runs": "/Users/vaibhavkapur/Desktop/quantum-trading-projects/09-quantum-strategy-optimizer/runs"
+    },
+    "report": {
+      "block_length": 5,
+      "bootstrap_samples": 400
+    },
+    "strategies": {
+      "windows": [
+        5,
+        20
+      ]
+    },
+    "walk_forward": {
+      "test": 63,
+      "train": 252,
+      "validation": 63
+    }
+  },
+  "config_sha256": "cf29ca0992437e0ecf828ef39f54888ac62ae320ae34c15c77e7358c11d153ec",
+  "dataset": {
+    "assets": [
+      "SYNTH_A",
+      "SYNTH_B"
+    ],
+    "frequency": "daily UTC date labels",
+    "generator": "regime-logreturns-v1",
+    "kind": "synthetic",
+    "license": "CC0-1.0; generated synthetic prices, no vendor market data",
+    "parameters": {
+      "assets": [
+        "SYNTH_A",
+        "SYNTH_B"
+      ],
+      "periods": 504,
+      "seed": 2026,
+      "start": "2020-01-02"
+    },
+    "price_convention": "Synthetic total-return close levels, no dividends or splits",
+    "rows": 504,
+    "schema_version": 1,
+    "sha256": "af9a5cf71a31c506937f74a48f057f1bb8015e570813f1215b92f85b926a71d3",
+    "source_id": "b7b86c13d6301926d4993ea8a8586fb13a6584e32948bada65d0d66f77de340a",
+    "source_name": null,
+    "source_sha256": null,
+    "timestamp_convention": "Dates converted to UTC then normalized to midnight; labels are not execution timestamps",
+    "timezone": "UTC"
+  },
+  "execution": "CPU only; noiseless sampled Qiskit statevector, no QPU",
+  "fallback": "none",
+  "folds": [
+    {
+      "dates": {
+        "test": [
+          "2021-03-18T00:00:00+00:00",
+          "2021-06-14T00:00:00+00:00"
+        ],
+        "train": [
+          "2020-01-02T00:00:00+00:00",
+          "2020-12-18T00:00:00+00:00"
+        ],
+        "validation": [
+          "2020-12-21T00:00:00+00:00",
+          "2021-03-17T00:00:00+00:00"
+        ]
+      },
+      "fold": 0,
+      "test": [
+        315,
+        378
+      ],
+      "train": [
+        0,
+        252
+      ],
+      "validation": [
+        252,
+        315
+      ]
+    },
+    {
+      "dates": {
+        "test": [
+          "2021-06-15T00:00:00+00:00",
+          "2021-09-09T00:00:00+00:00"
+        ],
+        "train": [
+          "2020-03-31T00:00:00+00:00",
+          "2021-03-17T00:00:00+00:00"
+        ],
+        "validation": [
+          "2021-03-18T00:00:00+00:00",
+          "2021-06-14T00:00:00+00:00"
+        ]
+      },
+      "fold": 1,
+      "test": [
+        378,
+        441
+      ],
+      "train": [
+        63,
+        315
+      ],
+      "validation": [
+        315,
+        378
+      ]
+    },
+    {
+      "dates": {
+        "test": [
+          "2021-09-10T00:00:00+00:00",
+          "2021-12-07T00:00:00+00:00"
+        ],
+        "train": [
+          "2020-06-26T00:00:00+00:00",
+          "2021-06-14T00:00:00+00:00"
+        ],
+        "validation": [
+          "2021-06-15T00:00:00+00:00",
+          "2021-09-09T00:00:00+00:00"
+        ]
+      },
+      "fold": 2,
+      "test": [
+        441,
+        504
+      ],
+      "train": [
+        126,
+        378
+      ],
+      "validation": [
+        378,
+        441
+      ]
+    }
+  ],
+  "multiplicity_trials": 11520,
+  "package_version": "0.1.0",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "protocol": "fixed-sleeves-next-close-nested-walk-forward-v1",
+  "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "reference_budget": "exhaustive/MILP verification is outside search budgets and timed separately",
+  "run_id": "20261124T050747Z-9fc20b08",
+  "schema_version": 1,
+  "signal_cache_hit": false,
+  "solvers": [
+    "grid",
+    "random",
+    "tpe",
+    "annealing",
+    "qaoa"
+  ],
+  "source_sha256": "c9a9f02086d75cf88e3de19da8991d5e9e0d7c55fb14b68203332a589cdd4c80",
+  "started_utc": "2026-11-24T05:07:47.482530+00:00",
+  "status": "complete",
+  "strategy_library": [
+    {
+      "asset": "SYNTH_A",
+      "kind": "momentum",
+      "window": 5
+    },
+    {
+      "asset": "SYNTH_A",
+      "kind": "momentum",
+      "window": 20
+    },
+    {
+      "asset": "SYNTH_A",
+      "kind": "mean_reversion",
+      "window": 5
+    },
+    {
+      "asset": "SYNTH_A",
+      "kind": "mean_reversion",
+      "window": 20
+    },
+    {
+      "asset": "SYNTH_B",
+      "kind": "momentum",
+      "window": 5
+    },
+    {
+      "asset": "SYNTH_B",
+      "kind": "momentum",
+      "window": 20
+    },
+    {
+      "asset": "SYNTH_B",
+      "kind": "mean_reversion",
+      "window": 5
+    },
+    {
+      "asset": "SYNTH_B",
+      "kind": "mean_reversion",
+      "window": 20
+    }
+  ],
+  "timing": {
+    "artifacts_and_summary_s": 0.19912029300000156,
+    "data_loading_s": 0.004699291999999966,
+    "feature_cache_s": 0.002305041000000063,
+    "search_validation_test_s": 10.99483545500001,
+    "total_s": 12.866912750000001,
+    "training_validation_and_references_s": 0.012469999000000787
+  },
+  "versions": {
+    "Mako": "1.3.12",
+    "MarkupSafe": "3.0.4",
+    "PyYAML": "6.0.3",
+    "Pygments": "2.21.0",
+    "SQLAlchemy": "2.0.58",
+    "alembic": "1.16.5",
+    "colorlog": "6.12.0",
+    "dill": "0.4.1",
+    "exceptiongroup": "1.3.2",
+    "iniconfig": "2.1.0",
+    "numpy": "2.0.2",
+    "optuna": "4.5.0",
+    "packaging": "26.3",
+    "pandas": "2.3.3",
+    "pip": "25.3",
+    "pluggy": "1.6.0",
+    "pytest": "8.4.2",
+    "python-dateutil": "3.0.0",
+    "pytz": "2026.6",
+    "qiskit": "2.2.3",
+    "quantum-strategy-optimizer": "0.1.0",
+    "rustworkx": "0.17.1",
+    "scipy": "1.13.1",
+    "setuptools": "82.0.1",
+    "six": "1.17.0",
+    "stevedore": "5.5.0",
+    "tomli": "2.5.0",
+    "tqdm": "4.70.1",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.6",
+    "wheel": "0.48.0"
+  }
+}

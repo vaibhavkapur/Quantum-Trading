@@ -1,0 +1,33 @@
+name: Quantum risk engine tests
+on:
+  push:
+    paths:
+      - 'projects/08-quantum-risk-engine/**'
+      - '.github/workflows/quantum-risk-engine.yml'
+  pull_request:
+    paths:
+      - 'projects/08-quantum-risk-engine/**'
+      - '.github/workflows/quantum-risk-engine.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+defaults:
+  run:
+    working-directory: projects/08-quantum-risk-engine
+jobs:
+  cpu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install --no-deps -e .
+      - run: python -m pytest -q -W error::RuntimeWarning
+      - run: python -m project.reproduce --config configs/demo.yaml
+      - uses: actions/upload-artifact@v4
+        with:
+          name: risk-validation
+          path: projects/08-quantum-risk-engine/reports/reproduction/

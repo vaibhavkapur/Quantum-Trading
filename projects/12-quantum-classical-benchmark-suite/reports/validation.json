@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-11-24T05:15:52.981643+00:00",
+  "source_sha256": "39756bcbdbac535624d2cbc1670cd09d179a9e92f98eff52a33930929b892899",
+  "local_tests_passed": 59,
+  "docker_tests_passed": 59,
+  "docker_smoke_attempts": 28,
+  "demo_measured_attempts": 84,
+  "demo_warmups": 28,
+  "demo_status_counts": {
+    "ok": 84
+  },
+  "wheel_install_verified": true,
+  "editable_install_verified": true,
+  "browser_render_verified": true,
+  "remote_ci_executed": false,
+  "sample_campaign": "reports/sample/20261124T051444Z-0b1d13fa03"
+}

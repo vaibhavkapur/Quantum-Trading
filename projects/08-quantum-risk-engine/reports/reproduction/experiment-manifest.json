@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-24T05:05:51.485727+00:00",
+  "command": "python -m project.reproduce --config configs/demo.yaml --output reports/reproduction",
+  "config": {
+    "experiment": "synthetic-three-asset-v1",
+    "seed": 42,
+    "alpha": 0.99,
+    "portfolio": {
+      "assets": [
+        "EQUITY",
+        "BONDS",
+        "GOLD"
+      ],
+      "weights": [
+        0.6,
+        0.3,
+        0.1
+      ],
+      "value": 1000000.0
+    },
+    "model": {
+      "mean": [
+        0.0003,
+        0.0001,
+        0.00015
+      ],
+      "covariance": [
+        [
+          0.000144,
+          1.08e-05,
+          1.44e-05
+        ],
+        [
+          1.08e-05,
+          3.6e-05,
+          -4.8e-06
+        ],
+        [
+          1.44e-05,
+          -4.8e-06,
+          6.4e-05
+        ]
+      ],
+      "distribution": "gaussian",
+      "df": 5.0
+    },
+    "data": {
+      "directory": "data",
+      "observations": 1000,
+      "training_observations": 500,
+      "start_date": "2020-01-01"
+    },
+    "simulation": {
+      "samples": 20000,
+      "importance_shift": 2.0
+    },
+    "quantum": {
+      "qubits": 4,
+      "shots": 128,
+      "powers": [
+        0,
+        1,
+        2,
+        4,
+        8
+      ],
+      "support_std": 5.0,
+      "fallback": false
+    },
+    "benchmark": {
+      "seeds": [
+        11,
+        23,
+        37,
+        53,
+        71
+      ],
+      "powers": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "shots": 64
+    },
+    "stress": {
+      "Equity selloff": [
+        -0.15,
+        0.02,
+        0.04
+      ],
+      "Rates shock": [
+        -0.06,
+        -0.08,
+        -0.02
+      ],
+      "Liquidity shock": [
+        -0.12,
+        -0.05,
+        -0.09
+      ]
+    }
+  },
+  "config_sha256": "80b91afb3bd103a42d3284d2c931d138ca19fdbab9f8ca0199d805e58890a954",
+  "environment": {
+    "python": "3.9.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.0.2",
+      "scipy": "1.13.1",
+      "qiskit": "2.2.3",
+      "fastapi": "0.119.1",
+      "pydantic": "2.13.5"
+    }
+  },
+  "source_sha256": {
+    "risk/__init__.py": "17dcd5393536ad5283ed8e33d0880b3f1d15efd2940a6d4bb426d451cf2c5914",
+    "risk/backtest.py": "55f48bdfdc5243e7fbe61bb0f57fd0c922af3a90fa82b82e30f8dd9b0e31f954",
+    "risk/measures.py": "4e99efb18be688f82e1bfaa1401c6e8b651a61b47b7fdaeebc03c9a6097b9fb6",
+    "risk/models.py": "630188d5f993460e65d52c8a347e7b1d4c15b8e60b5d3fc80733cf6a831b7cdc",
+    "risk/native.py": "7b4f818f269a7d5fa4c0fa879ffb04469fd80fe94ef97fd7c9ef40bed83d0719",
+    "scenarios/__init__.py": "2df95261e793dbca3913ca57b485cc8f45576f88ef3d010be81bf8df23f03e3e",
+    "scenarios/generate.py": "2c37a8a08ba33d0b8fd3ec2d5fa86b4c611b9d650064dc47f406b28e7e905a6d",
+    "quantum/__init__.py": "f601ce66781cbf50162d6bb33f5bcee2a212ae9152226d88ff919b8539b69f01",
+    "quantum/distribution.py": "f2623395a1a57319d3c50109da7b23162886144222bfb3c7c912f3786fc55269",
+    "quantum/estimation.py": "6a1e606859910fe2dc5ca28ab02319a6f9d20c9ca6a5549030d1b46d9e4083eb",
+    "project/__init__.py": "8723e61720989080c52e1e6f3e959b16a44bf561b5110eb38601a04c316c6741",
+    "project/config.py": "8727bd02e7e5ee95adcc7e25698c31c035936429257a7fa961f6614e90737f89",
+    "project/data.py": "998e47dec3186acde19d446c0137df0148f086c9c19775346f8da917a8a0d778",
+    "project/prepare_data.py": "3024ffc1273bce9892d8d8329aff127054831f1b4a2f5f3928ef446cccadefd6",
+    "project/report.py": "b6888ae06994799b0f6c9b97540adeb34a1f442a28b1f0646bc22818009adf5f",
+    "project/reproduce.py": "372c5239ab8401bcd69efb9cf79f0c6d6fd12d5376d6b1186df331ce604426d8",
+    "project/run.py": "5a1d7e3da9df0cab3565a32fdad72ffee7e7e8f56c8108caf211006195f19c4e",
+    "project/workflow.py": "be3c474d2ae6eb80d2f86577868afe6a565b35b206f7cf217229cc1e875509b6",
+    "api/__init__.py": "aecb417718b40e8e6ecbac3c54fe14b16d75d92a14d94bf3bbc7bceba020fa45",
+    "api/app.py": "3ca0dec7db629440e830bd168d865c1d9c7dd542eca7f7d3f003cfa4de9ddf29",
+    "api/dashboard.html": "b193e16be6fb1b048b083ab77036402a5d112e2b6e376136d02803215081099d",
+    "benchmarks/__init__.py": "64941e98532157e8782c9df346967d87e0e6a8d4028a01b208caabaaba2b2fd2",
+    "benchmarks/run.py": "af0ccedeac8ff7fb32f67576053c41148380943d94abf2881f4ca07cfc3637a2",
+    "native/CMakeLists.txt": "a090c0823cb731aa37492a9acb4702bebe88c04a88eacf6ebb575e5547d20d3f",
+    "native/risk.cpp": "13a45fc7d8b21e74ca5b1d0b27042c2c6603dc39cc2ef8c511c6937a8a1b41fa",
+    "tests/conftest.py": "152f2687bcd6bf2abc92371bd734a0e7698eeb03c05e2a53c3b4696b7f3c60b8",
+    "tests/test_native.py": "96495451ed96c22be5697200aceed0bc2ddc3f9466266f7f2de4953d3210badf",
+    "tests/test_pipeline_api.py": "6989188310557138be0ad267a9075cdeb9b956242d792a7061c119fe3084537f",
+    "tests/test_quantum.py": "50146f1e439f68c903c843141898011695febe5a97141185baa3df7572524600",
+    "tests/test_risk.py": "55c90ed85b283058ef25cf3e3c5708ceeee1414985d735a2e9682e58bbbe5bdd",
+    "tests/test_scenarios_backtest.py": "4577ea3b96492d685e668b4f0fb41b38f360c2a46a2573349c8d01fcd5077769"
+  },
+  "artifacts": [
+    {
+      "path": "data/fa1b69f78d115975c16d.manifest.json",
+      "sha256": "ae599e748b96b31cd80369386a2846e2981374c9aa1327b820de6dbfefa9040f"
+    },
+    {
+      "path": "reports/reproduction/runs/synthetic-three-asset-v1-classical-9893201d-23b3-42df-8322-e60016130b67.json",
+      "sha256": "17dbe8f382849d2cdba4f86ac6a26146adeec64394d09ac5115a2353878927d2"
+    },
+    {
+      "path": "reports/reproduction/runs/synthetic-three-asset-v1-quantum-sim-7a3f9a89-3f27-4a8f-a467-9cc18789bc1e.json",
+      "sha256": "f240a47b1f0079d6a3f047c7976897944517ae44e55789288321220ae7bb11d7"
+    },
+    {
+      "path": "reports/reproduction/comparison.html",
+      "sha256": "6aac69053a105b3934429ac6e01dc5bcd4532d07189860aee9d6bc212f15a35f"
+    },
+    {
+      "path": "reports/reproduction/comparison.csv",
+      "sha256": "1cf01169fe60f35f0baa47cd3086c941566e7667d214b966f64de21ab26aea5d"
+    },
+    {
+      "path": "reports/reproduction/benchmark.json",
+      "sha256": "e440da2c8f7c13b2dafc628f2940a26199f23b0baeace44a3329056832e82b85"
+    },
+    {
+      "path": "reports/reproduction/benchmark.csv",
+      "sha256": "90bdc7ae092095c6dfa79e85421ae92941e350419e478ac0214bf3011f2ff7f9"
+    },
+    {
+      "path": "reports/reproduction/scaling.svg",
+      "sha256": "bd11022660db94af3c0473afab58c21b7e7fbf577019bee3e44b7c1646067c31"
+    }
+  ],
+  "benchmark_failed_trials": 0
+}

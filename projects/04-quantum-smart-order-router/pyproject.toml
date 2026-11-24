@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qsor"
+version = "0.1.0"
+description = "Research simulator: low-latency smart order router with asynchronously optimized (QUBO/QAOA) allocation policies"
+readme = "IMPLEMENTATION.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=2.0", "scipy>=1.13", "pyyaml>=6.0", "ortools>=9.10"]
+
+[project.optional-dependencies]
+qiskit = ["qiskit>=2.0"]   # only for cross-checking the built-in simulator
+test = ["pytest>=8.0", "qiskit>=2.0"]
+
+[tool.setuptools.packages.find]
+include = ["qsor*", "project*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

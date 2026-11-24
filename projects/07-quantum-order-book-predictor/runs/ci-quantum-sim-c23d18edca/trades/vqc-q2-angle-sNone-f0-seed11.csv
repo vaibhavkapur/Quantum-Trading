@@ -1,0 +1,1 @@
+signal_index,entry_index,exit_index,entry_timestamp_ms,exit_timestamp_ms,direction,entry_price,exit_price,gross_bps,spread_slippage_bps,fees_bps,net_bps,net_quote_currency

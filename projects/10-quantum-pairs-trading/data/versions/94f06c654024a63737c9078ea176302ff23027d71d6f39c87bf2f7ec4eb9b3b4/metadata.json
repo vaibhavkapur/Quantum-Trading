@@ -1,0 +1,25 @@
+{
+  "adjustments": "No corporate actions or dividends in this synthetic generator.",
+  "generator": "common-walk-plus-ar1-v1",
+  "license": "CC0-1.0 for generated sample data; no third-party market-data rights required.",
+  "prices_sha256": "eccc338a5bb786b74913111b0fd90ff1f327fbacb749e6fb1fcd2c821118023f",
+  "schema_version": 1,
+  "sectors": {
+    "S1A1": "sector-1",
+    "S1A2": "sector-1",
+    "S1A3": "sector-1",
+    "S2A1": "sector-2",
+    "S2A2": "sector-2",
+    "S2A3": "sector-2"
+  },
+  "settings": {
+    "assets_per_sector": 3,
+    "periods": 252,
+    "sectors": 2,
+    "seed": 2026,
+    "start": "2022-01-03"
+  },
+  "source": "Generated locally; no real securities or external market data.",
+  "timestamp_normalization": "UTC 21:00 on synthetic business days; not an exchange holiday calendar.",
+  "universe": "All synthetic assets exist throughout; no retrospective constituent selection."
+}

@@ -1,0 +1,77 @@
+# Demo experiment: small enough for a noiseless QAOA simulation on a laptop CPU.
+# Every solver (classical or quantum) receives exactly this problem and this budget.
+name: demo
+
+# Predeclared seeds for stochastic solvers (fair-comparison protocol, item 5).
+seeds: [11, 23, 37]
+
+data:
+  source: synthetic                 # synthetic | csv | yfinance
+  path: data/demo_prices.csv
+  synthetic: {n_assets: 6, n_sectors: 3, n_days: 1300, start: "2019-01-02", seed: 7}
+
+# Chronological windows: estimation only ever looks backwards from each signal date.
+splits:
+  train_end: "2020-12-31"           # first signal is after this date
+  validation_end: "2021-12-31"      # later trades are the untouched test window
+
+estimation:
+  lookback_days: 252
+  covariance: ledoit_wolf           # ledoit_wolf | sample
+  expected_return: shrunk_mean      # zero (= minimum variance) | mean | shrunk_mean | momentum
+  mean_shrinkage: 0.5
+
+portfolio:
+  mode: long_only                   # long_only | market_neutral
+  lots: 4                           # weights move in 1/lots steps (25%)
+  max_weight: 0.5                   # position limit -> 2 bits per asset
+  cardinality: 3                    # at most 3 names -> one indicator qubit per asset
+  sector_cap: null
+  risk_aversion: 4.0                # lambda
+  turnover_penalty: 0.05            # tau (quadratic trading-cost proxy in the objective)
+
+backtest:
+  rebalance_every_days: 63
+  cost_bps: 10                      # linear out-of-sample cost per unit of L1 turnover
+
+budget:                             # identical for every solver; both are reported
+  wall_time_s: 3.0
+  max_evals: 5000000               # cap in each solver's native unit; wall time binds first
+
+penalty: {method: gradient_bound, scale: 1.0}
+
+solvers:
+  classical: [cvxpy-relax, miqp, greedy, sa]
+  quantum-sim: [qaoa]
+  anneal-sim: [qubo-sa]
+
+solver_params:
+  qaoa: {p: 2, shots: 1024, cvar_alpha: 0.25, maxiter: 150, restarts: 2, max_qubits: 20}
+  qaoa-noisy: {p: 2, shots: 1024, cvar_alpha: 0.25, maxiter: 150, restarts: 2, max_qubits: 14,
+               noise: {p1: 0.001, p2: 0.01, readout: 0.01}}
+  qubo-sa: {sweeps: 400}
+
+benchmark:
+  instance_seeds: [101, 202, 303]
+  risk_aversion: 4.0
+  solvers: [cvxpy-relax, miqp, cpsat, greedy, sa, qubo-sa, random-qubo, qaoa, qaoa-noisy]
+  instances:                        # qubit counts are measured and reported, not assumed
+    - {n: 4,   lots: 4,  max_weight: 0.5,   cardinality: 3}
+    - {n: 6,   lots: 4,  max_weight: 0.5,   cardinality: 3}
+    - {n: 8,   lots: 8,  max_weight: 0.375}
+    - {n: 16,  lots: 16, max_weight: 0.25,  cardinality: 8,  sector_cap: 0.4}
+    - {n: 32,  lots: 20, max_weight: 0.2,   cardinality: 12, sector_cap: 0.35}
+    - {n: 64,  lots: 40, max_weight: 0.1,   cardinality: 20, sector_cap: 0.3, n_sectors: 5}
+    - {n: 128, lots: 50, max_weight: 0.1,   cardinality: 25, sector_cap: 0.3, n_sectors: 8}
+  penalty_sweep:
+    scales: [0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1.0, 2.0]
+    instances:
+      - {n: 4, lots: 4, max_weight: 0.5, cardinality: 3}
+      - {n: 6, lots: 4, max_weight: 0.5, cardinality: 3}
+      - {n: 5, lots: 4, max_weight: 0.5, sector_cap: 0.5}
+      - {n: 4, lots: 2, max_weight: 0.25, mode: market_neutral}
+  frontier:
+    risk_aversions: [0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]
+    solvers: [miqp, greedy, qaoa]
+  qubit_growth:
+    sizes: [4, 8, 16, 32, 64, 128, 256]

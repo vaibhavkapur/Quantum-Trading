@@ -1,0 +1,191 @@
+{
+  "schema": "mm-run-v1",
+  "created_utc": "2026-11-24T05:03:07.589444+00:00",
+  "solver": "quantum-sim",
+  "config": {
+    "name": "demo",
+    "data": {
+      "seed": 1729,
+      "steps": 1200,
+      "interval_ns": 100000000,
+      "initial_mid_ticks": 10000,
+      "depth_levels": 5,
+      "depth_qty": 8,
+      "train_fraction": 0.5,
+      "validation_fraction": 0.2
+    },
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "scenarios": [
+      "normal",
+      "volatile",
+      "trend",
+      "liquidity_crisis"
+    ],
+    "execution": {
+      "tick_value": 0.01,
+      "quote_size": 2,
+      "max_inventory": 12,
+      "maker_fee_bps": -0.2,
+      "taker_fee_bps": 2.0,
+      "cancel_cost": 0.0001,
+      "max_loss": 20.0,
+      "max_drawdown": 15.0,
+      "max_volatility_ticks": 8.0,
+      "adverse_horizon": 5
+    },
+    "optimizer": {
+      "spreads": [
+        1,
+        2,
+        3
+      ],
+      "skews": [
+        0.0,
+        0.25,
+        0.5
+      ],
+      "inventory_bands": [
+        4,
+        8,
+        12
+      ],
+      "inventory_penalty": 0.001,
+      "adverse_penalty": 0.5,
+      "update_interval": 120,
+      "rolling_window": 120,
+      "max_evaluations": 32,
+      "timeout_seconds": 15.0,
+      "qaoa_layers": 1,
+      "shots": 256
+    }
+  },
+  "compatibility": {
+    "config_id": "60a0ee8ac5825ac5f0f8f69681c5adf2b2f5b98b8a8e8adcf8c8f8b421bf1fe0",
+    "dataset_id": "cce341cd8a165703a2abe9dfe18e7f8be4abdbf70c6a3258839ff3d381a6c64f",
+    "source_id": "a1bd776db4597e514b6b5a1b1463b36c2d778a19549bc531dbcf817d45872580"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Sep 24 2026, 17:46:32) [Clang 22.1.3 ]",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "dependencies": {
+      "numpy": "2.5.5",
+      "scipy": "1.18.1",
+      "qiskit": "2.6.2",
+      "PyYAML": "6.0.4"
+    },
+    "native_library": "engine-650b28e61fbd386f.dylib",
+    "compiler_flags": "-std=c++20 -O3 -DNDEBUG -shared -fPIC"
+  },
+  "dataset": "/Users/vaibhavkapur/Desktop/quantum-trading-projects/06-quantum-market-making/data/cce341cd8a165703",
+  "splits": {
+    "train": [
+      0,
+      600
+    ],
+    "validation": [
+      600,
+      840
+    ],
+    "test": [
+      840,
+      1200
+    ]
+  },
+  "data_loading_seconds": 0.06902112500392832,
+  "native_build_or_cache_seconds": 5.987500480841845e-05,
+  "initialization_seconds": 0.0001582080003572628,
+  "activation": "offline deterministic barriers; bounded background optimizer; quote path never calls QAOA",
+  "trials": [
+    {
+      "scenario": "liquidity_crisis",
+      "seed": 11,
+      "status": "ok",
+      "directory": "liquidity_crisis/11",
+      "fallbacks": 0
+    },
+    {
+      "scenario": "liquidity_crisis",
+      "seed": 23,
+      "status": "ok",
+      "directory": "liquidity_crisis/23",
+      "fallbacks": 0
+    },
+    {
+      "scenario": "liquidity_crisis",
+      "seed": 37,
+      "status": "ok",
+      "directory": "liquidity_crisis/37",
+      "fallbacks": 0
+    },
+    {
+      "scenario": "normal",
+      "seed": 11,
+      "status": "ok",
+      "directory": "normal/11",
+      "fallbacks": 0
+    },
+    {
+      "scenario": "normal",
+      "seed": 23,
+      "status": "ok",
+      "directory": "normal/23",
+      "fallbacks": 0
+    },
+    {
+      "scenario": "normal",
+      "seed": 37,
+      "status": "ok",
+      "directory": "normal/37",
+      "fallbacks": 0
+    },
+    {
+      "scenario": "trend",
+      "seed": 11,
+      "status": "ok",
+      "directory": "trend/11",
+      "fallbacks": 0
+    },
+    {
+      "scenario": "trend",
+      "seed": 23,
+      "status": "ok",
+      "directory": "trend/23",
+      "fallbacks": 0
+    },
+    {
+      "scenario": "trend",
+      "seed": 37,
+      "status": "ok",
+      "directory": "trend/37",
+      "fallbacks": 0
+    },
+    {
+      "scenario": "volatile",
+      "seed": 11,
+      "status": "ok",
+      "directory": "volatile/11",
+      "fallbacks": 0
+    },
+    {
+      "scenario": "volatile",
+      "seed": 23,
+      "status": "ok",
+      "directory": "volatile/23",
+      "fallbacks": 0
+    },
+    {
+      "scenario": "volatile",
+      "seed": 37,
+      "status": "ok",
+      "directory": "volatile/37",
+      "fallbacks": 0
+    }
+  ],
+  "full_pipeline_seconds": 8.193542916007573,
+  "status": "complete"
+}

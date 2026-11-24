@@ -1,0 +1,51 @@
+experiment: synthetic-pairs-ci
+data:
+  pointer: data/ci.json
+  seed: 2026
+  periods: 252
+  sectors: 2
+  assets_per_sector: 3
+  start: '2022-01-03'
+research:
+  train: 126
+  validation: 42
+  test: 42
+  max_candidates: 4
+  pvalue: 0.10
+  min_half_life: 1.0
+  max_half_life: 60.0
+  same_sector_only: true
+selection:
+  max_pairs: 2
+  capital_budget: 2
+  asset_limit: 1
+  sector_limit: 1
+  correlation_penalty: 0.35
+solver:
+  seeds: [7]
+  max_evaluations: 12
+  wall_seconds: 5.0
+  qaoa_depth: 1
+  shots: 128
+  max_qubits: 12
+  backend: numpy
+  fallback: none
+execution:
+  initial_capital: 100000.0
+  entry_grid: [1.25, 1.75]
+  exit_z: 0.25
+  stop_z: 4.0
+  stop_loss_pct: 0.08
+  max_holding: 15
+  refit_every: 21
+  lookback: 126
+  commission_bps: 1.0
+  slippage_bps: 2.0
+  borrow_rate: 0.03
+  financing_rate: 0.01
+  max_gross: 1.0
+output:
+  runs: runs/ci
+  sensitivity_cost_multipliers: [2.0]
+  sensitivity_entry_offsets: [0.25]
+

@@ -1,0 +1,26 @@
+schema_version: 1
+name: cpu-smoke-v1
+dataset: data/ci-v1
+runs: runs/ci
+data_seed: 7
+instances:
+  - track: portfolio
+    sizes: [4]
+  - track: basket
+    sizes: [4]
+  - track: estimation
+    sizes: [4]
+seeds: [3, 5]
+warmups: 0
+budget:
+  wall_seconds: 30
+  max_evaluations: 64
+  max_shots: 512
+  max_oracle_queries: 256
+  mip_nodes: 1000
+algorithm:
+  qaoa_iterations: 8
+  shots_per_circuit: 32
+  qae_powers: [0, 1, 2]
+solvers: [exact, milp, greedy, annealing, qaoa, exact-expectation, mc, mc-antithetic, qae]
+success_tolerance: 0.1

@@ -1,0 +1,12 @@
+name: ci
+data_path: data/ci.csv
+n_snapshots: 240
+folds: 1
+train_samples: 18
+seeds: [11]
+qubits: [2]
+encodings: [angle]
+shots: [null, 128]
+max_iterations: 3
+latency_samples: 5
+fit_budget_seconds: 30

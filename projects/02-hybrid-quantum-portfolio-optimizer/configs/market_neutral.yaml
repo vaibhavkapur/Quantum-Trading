@@ -1,0 +1,35 @@
+# Dollar-neutral long/short configuration: w = lot * (p - q), each leg sums to 50 %,
+# an asset is never long and short at once.  Twice the position qubits of long-only.
+name: market_neutral
+seeds: [11, 23, 37]
+data:
+  source: synthetic
+  path: data/market_neutral_prices.csv
+  synthetic: {n_assets: 6, n_sectors: 3, n_days: 1300, start: "2019-01-02", seed: 21}
+splits: {train_end: "2020-12-31", validation_end: "2021-12-31"}
+estimation: {lookback_days: 252, covariance: ledoit_wolf, expected_return: momentum}
+portfolio:
+  mode: market_neutral
+  lots: 2                           # per leg: 25 % steps of gross exposure 1.0
+  max_weight: 0.25                  # one lot per name and side -> 1 bit each, 12 position qubits
+  sector_cap: 0.25                  # |net sector weight| <= 25 % -> slack qubits
+  risk_aversion: 4.0
+  turnover_penalty: 0.02
+backtest: {rebalance_every_days: 63, cost_bps: 10}
+budget: {wall_time_s: 2.0, max_evals: 5000000}
+penalty: {method: gradient_bound, scale: 1.0}
+solvers:
+  classical: [cvxpy-relax, miqp, greedy, sa]
+  quantum-sim: [qaoa]
+  anneal-sim: [qubo-sa]
+solver_params:
+  qaoa: {p: 2, shots: 1024, cvar_alpha: 0.25, maxiter: 150, restarts: 2, max_qubits: 20}
+benchmark:
+  instance_seeds: [101, 202, 303]
+  solvers: [cvxpy-relax, miqp, cpsat, greedy, sa, qubo-sa, random-qubo, qaoa]
+  instances:
+    - {n: 4,  lots: 2, max_weight: 0.25,  mode: market_neutral}
+    - {n: 6,  lots: 2, max_weight: 0.25,  mode: market_neutral, sector_cap: 0.25}
+    - {n: 16, lots: 8, max_weight: 0.125, mode: market_neutral, cardinality: 10, sector_cap: 0.2}
+    - {n: 48, lots: 16, max_weight: 0.0625, mode: market_neutral, cardinality: 24, sector_cap: 0.15, n_sectors: 6}
+  qubit_growth: {sizes: [4, 8, 16, 32, 64, 128]}

@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+project(quantum_risk_native LANGUAGES CXX)
+add_library(quantumrisk SHARED risk.cpp)
+target_compile_features(quantumrisk PRIVATE cxx_std_20)
+target_compile_options(quantumrisk PRIVATE -Wall -Wextra -Wpedantic)
